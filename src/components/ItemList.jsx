@@ -8,6 +8,7 @@ import InfoIcon from 'material-ui-icons/Info';
 
 const styles = {
   root: {
+    cursor: 'pointer',
     position: 'relative',
     '&:after': {
       content: '""',

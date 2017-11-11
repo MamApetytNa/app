@@ -9,6 +9,6 @@ import data from './items.data';
 
 storiesOf('ItemList', module)
   .add('default', () => (<ItemList
-    goToItem={linkTo('Item', 'default')}
+    goToItem={() => linkTo('Item', 'default')}
     items={data}
   />));
