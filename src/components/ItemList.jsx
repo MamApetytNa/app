@@ -6,6 +6,8 @@ import Grid from 'material-ui/Grid';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import InfoIcon from 'material-ui-icons/Info';
 
+import Price from './Price';
+
 const styles = {
   root: {
     cursor: 'pointer',
@@ -21,14 +23,6 @@ const styles = {
     position: 'absolute',
   },
 };
-
-const currencies = {
-  PLN: 'zł',
-};
-
-function printPrice({ value, currency }) {
-  return `od ${parseInt(value, 10)} ${currencies[currency]}`;
-}
 
 export default withStyles(styles)(({ goToItem, classes, items }) => (
   <Grid container>{items.map(({
@@ -46,7 +40,7 @@ export default withStyles(styles)(({ goToItem, classes, items }) => (
         <img src={thumbnail} alt={name} />
         <GridListTileBar
           title={name}
-          subtitle={printPrice(minPrice)}
+          subtitle={<Price {...minPrice} color="inherit" />}
           actionIcon={
             <IconButton>
               <InfoIcon />

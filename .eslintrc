@@ -2,6 +2,7 @@
     "extends": "airbnb",
     "parser": "babel-eslint",
     "rules": {
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["src/stories/**/*.jsx", "src/**/*.spec.js"]}]
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["src/stories/**/*.jsx", "src/**/*.spec.js"]}],
+        "react/prop-types": "off"
     }
 }
