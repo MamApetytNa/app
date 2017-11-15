@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Card, { CardContent, CardHeader } from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 
 import { withStyles } from 'material-ui/styles';
@@ -12,6 +13,7 @@ const styles = {
 };
 
 const texts = {
+  HEADER: 'Czas',
   LABEL: 'Planowany odbiór',
 };
 
@@ -46,16 +48,23 @@ export default pipe(
   currentDateTime,
   onDateTimeChange,
 }) => (
-  <TextField
-    id="datetime-local"
-    label={texts.LABEL}
-    type="datetime-local"
-    className={classes.textField}
-    inputProps={{
-      min: fromNow(6 * HOUR),
-      step: 30 * 60,
-    }}
-    value={currentDateTime}
-    onChange={pipe(getInputValue, onDateTimeChange)}
-  />
+  <Card>
+    <CardHeader
+      subheader={texts.HEADER}
+    />
+    <CardContent>
+      <TextField
+        id="datetime-local"
+        label={texts.LABEL}
+        type="datetime-local"
+        className={classes.textField}
+        inputProps={{
+          min: fromNow(6 * HOUR),
+          step: 30 * 60,
+        }}
+        value={currentDateTime}
+        onChange={pipe(getInputValue, onDateTimeChange)}
+      />
+    </CardContent>
+  </Card>
 ));
