@@ -4,9 +4,9 @@ import Card, { CardContent } from 'material-ui/Card';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
-import Showcase from './Showcase';
 
 import Price from './Price';
+import Showcase from './Showcase';
 
 const styles = {
   media: {

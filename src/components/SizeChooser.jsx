@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Card, { CardContent, CardHeader } from 'material-ui/Card';
 import Input, { InputLabel } from 'material-ui/Input';
 import { FormControl } from 'material-ui/Form';
 import Grid from 'material-ui/Grid';
@@ -24,7 +23,6 @@ const texts = {
   SIZE: 'Rozmiar',
   SLICES: 'kawałków',
   WEIGHT: '⚖',
-  HEADER: 'Rozmiar',
 };
 
 const getSelectValue = path(['target', 'value']);
@@ -47,65 +45,58 @@ export default pipe(
 }) => {
   const currentSize = sizes[currentSizeIndex];
   return (
-    <Card>
-      <CardHeader
-        subheader={texts.HEADER}
-      />
-      <CardContent>
-        <Grid container alignItems="center">
+    <Grid container alignItems="center">
+      <Grid item xs={6}>
+        <FormControl className={classes.formControl}>
+          <InputLabel htmlFor="size">{texts.SIZE}</InputLabel>
+          <Select
+            native
+            value={currentSizeIndex}
+            onChange={pipe(getSelectValue, onSizeChange)}
+            input={<Input id="size" />}
+          >{sizes.map(({ slices }, index) => (
+            <option value={index}>{slices} {texts.SLICES}</option>
+            ))}
+          </Select>
+        </FormControl>
+        <Grid container>
           <Grid item xs={6}>
-            <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="size">{texts.SIZE}</InputLabel>
-              <Select
-                native
-                value={currentSizeIndex}
-                onChange={pipe(getSelectValue, onSizeChange)}
-                input={<Input id="size" />}
-              >{sizes.map(({ slices }, index) => (
-                <option value={index}>{slices} {texts.SLICES}</option>
-                ))}
-              </Select>
-            </FormControl>
-            <Grid container>
-              <Grid item xs={6}>
-                <Typography component="p">
-                  {texts.DIAMETER}
-                    &nbsp;
-                  {currentSize.diameter.value}
-                    &nbsp;
-                  {currentSize.diameter.unit}
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography component="p">
-                  {texts.WEIGHT}
-                    &nbsp;
-                  {currentSize.weight.value}
-                    &nbsp;
-                  {currentSize.weight.unit}
-                </Typography>
-              </Grid>
-            </Grid>
+            <Typography component="p">
+              {texts.DIAMETER}
+                &nbsp;
+              {currentSize.diameter.value}
+                &nbsp;
+              {currentSize.diameter.unit}
+            </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Price
-              {...currentSize.price}
-              accent
-              align="center"
-              prefix=""
-              type="headline"
-            />
-            <Price
-              align="center"
-              color="secondary"
-              currency={currentSize.price.currency}
-              prefix={texts.FOR_ONE_SLICE}
-              type="subheading"
-              value={currentSize.price.value / currentSize.slices}
-            />
+            <Typography component="p">
+              {texts.WEIGHT}
+                &nbsp;
+              {currentSize.weight.value}
+                &nbsp;
+              {currentSize.weight.unit}
+            </Typography>
           </Grid>
         </Grid>
-      </CardContent>
-    </Card>
+      </Grid>
+      <Grid item xs={6}>
+        <Price
+          {...currentSize.price}
+          accent
+          align="center"
+          prefix=""
+          type="headline"
+        />
+        <Price
+          align="center"
+          color="secondary"
+          currency={currentSize.price.currency}
+          prefix={texts.FOR_ONE_SLICE}
+          type="subheading"
+          value={currentSize.price.value / currentSize.slices}
+        />
+      </Grid>
+    </Grid>
   );
 });
