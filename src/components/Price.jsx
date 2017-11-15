@@ -10,8 +10,12 @@ export default function Price({
   classes = {},
   value = 0,
   currency = 'PLN',
+  prefix = 'od',
+  suffix = '',
   ...props
 }) {
+  const int = parseInt(value, 10);
+  const fraction = parseFloat((value - int).toFixed(2), 10);
   return (
     <Typography
       {...props}
@@ -19,7 +23,12 @@ export default function Price({
       classes={classes}
       component="strong"
     >
-      {`od ${parseInt(value, 10)} ${currencies[currency]}`}
+      {prefix ? `${prefix} ` : ''}
+      {int}
+      {fraction ? fraction.toFixed(2).slice(1) : ''}
+      &nbsp;
+      {currencies[currency]}
+      {suffix ? ` ${suffix}` : ''}
     </Typography>
   );
 }

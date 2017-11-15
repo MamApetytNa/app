@@ -10,7 +10,12 @@ export default [{
     value: 80,
     currency: 'PLN',
   },
-  minSize: {
+  sizes: [{
+    price: {
+      value: 80,
+      currency: 'PLN',
+    },
+    slices: 8,
     diameter: {
       value: 18,
       unit: 'cm',
@@ -19,10 +24,35 @@ export default [{
       value: 1.5,
       unit: 'kg',
     },
-    slices: {
-      value: 10,
+  }, {
+    price: {
+      value: 100,
+      currency: 'PLN',
     },
-  },
+    slices: 12,
+    diameter: {
+      value: 22,
+      unit: 'cm',
+    },
+    weight: {
+      value: 2,
+      unit: 'kg',
+    },
+  }, {
+    price: {
+      value: 120,
+      currency: 'PLN',
+    },
+    slices: 16,
+    diameter: {
+      value: 24,
+      unit: 'cm',
+    },
+    weight: {
+      value: 2.5,
+      unit: 'kg',
+    },
+  }],
   features: {
     glutenFree: [true, false],
     lactoseFree: false,

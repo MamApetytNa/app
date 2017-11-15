@@ -32,7 +32,7 @@ export default pipe(
       currentImage: 0,
     },
     actions: {
-      onImageChange: (imageIndex, state) => ({ ...state, currentImage: imageIndex }),
+      onImageChange: currentImage => ({ currentImage }),
     },
   }),
   withStyles(styles),
