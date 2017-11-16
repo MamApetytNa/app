@@ -24,12 +24,16 @@ const styles = {
   },
 };
 
-export default withStyles(styles)(({ goToItem, classes, items }) => (
+export default withStyles(styles)(({
+  classes,
+  goToItem = () => {},
+  items = [],
+}) => (
   <Grid container>{items.map(({
-    id,
-    minPrice,
-    name,
-    thumbnail,
+    id = '',
+    minPrice = {},
+    name = '',
+    thumbnail = '',
   }) => (
     <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={id}>
       <GridListTile

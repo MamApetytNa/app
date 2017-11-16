@@ -23,11 +23,12 @@ const styles = {
 };
 
 const texts = {
-  HEADER: 'Dane do zamówienia',
+  TITLE: 'Dane do zamówienia',
   NAME_LABEL: 'Imię i nazwisko',
   PHONE_LABEL: 'Numer telefonu',
   CALL: 'Zadzwoń',
   CONFIRM: 'Potwierdź',
+  SUBHEADER: 'Wyślij formularz lub zadzwoń',
 };
 
 const getInputValue = path(['target', 'value']);
@@ -46,14 +47,17 @@ export default pipe(
   withStyles(styles),
 )(({
   classes,
-  currentName,
-  currentPhone,
-  onNameChange,
-  onPhoneChange,
-  onSubmit,
+  currentName = '',
+  currentPhone = '',
+  onNameChange = () => {},
+  onPhoneChange = () => {},
+  onSubmit = () => {},
 }) => (
   <Card>
-    <CardHeader title={texts.HEADER} />
+    <CardHeader
+      title={texts.TITLE}
+      subheader={texts.SUBHEADER}
+    />
     <form onSubmit={
         pipe(
             preventDefault,
@@ -93,18 +97,18 @@ export default pipe(
       <CardActions>
         <Button
           classes={{ root: classes.button }}
+          component="a"
+          href={`tel:${TEL}`}
+        >
+          {texts.CALL}
+        </Button>
+        <Button
+          classes={{ root: classes.button }}
           raised
           color="primary"
           type="submit"
         >
           {texts.CONFIRM}
-        </Button>
-        <Button
-          classes={{ root: classes.button }}
-          component="a"
-          href={`tel:${TEL}`}
-        >
-          {texts.CALL}
         </Button>
       </CardActions>
     </form>

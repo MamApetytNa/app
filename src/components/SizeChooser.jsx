@@ -39,9 +39,9 @@ export default pipe(
   withStyles(styles),
 )(({
   classes,
-  currentSizeIndex,
-  onSizeChange,
-  sizes,
+  currentSizeIndex = 0,
+  onSizeChange = () => {},
+  sizes = [],
 }) => {
   const currentSize = sizes[currentSizeIndex];
   return (
@@ -55,7 +55,7 @@ export default pipe(
             onChange={pipe(getSelectValue, onSizeChange)}
             input={<Input id="size" />}
           >{sizes.map(({ slices }, index) => (
-            <option value={index}>{slices} {texts.SLICES}</option>
+            <option value={index} key={slices}>{slices} {texts.SLICES}</option>
             ))}
           </Select>
         </FormControl>

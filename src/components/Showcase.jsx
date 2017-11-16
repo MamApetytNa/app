@@ -37,18 +37,19 @@ export default pipe(
   }),
   withStyles(styles),
 )(({
+  className,
   classes,
-  currentImage,
-  images,
-  onImageChange,
+  currentImage = 0,
+  images = [],
+  onImageChange = () => {},
 }) => (
-  <div className={classes.root}>
+  <div className={classNames(className, classes.root)}>
     <SwipableViews
       index={currentImage}
       onChangeIndex={onImageChange}
     >
       {images.map(({ title, url }, index) => (
-        <div className={classes.imageWrapper}>
+        <div className={classes.imageWrapper} key={url}>
           <img
             alt={title}
             src={url}

@@ -59,6 +59,16 @@ export default [{
     nutsFree: false,
     vegan: false,
   },
+  tags: [{
+    id: 1234,
+    label: 'sernik',
+  }, {
+    id: 3456,
+    label: 'karmel',
+  }, {
+    id: 5678,
+    label: 'orzeszki ziemne',
+  }],
   id: '1234',
   url: '/sernik-karmelowy-1234',
 }, {
@@ -73,7 +83,12 @@ export default [{
     value: 50,
     currency: 'PLN',
   },
-  minSize: {
+  sizes: [{
+    price: {
+      value: 50,
+      currency: 'PLN',
+    },
+    slices: 12,
     diameter: {
       value: 22,
       unit: 'cm',
@@ -82,16 +97,52 @@ export default [{
       value: 1.2,
       unit: 'kg',
     },
-    slices: {
-      value: 14,
+  }, {
+    price: {
+      value: 70,
+      currency: 'PLN',
     },
-  },
+    slices: 16,
+    diameter: {
+      value: 24,
+      unit: 'cm',
+    },
+    weight: {
+      value: 1.5,
+      unit: 'kg',
+    },
+  }],
   features: {
     glutenFree: false,
     lactoseFree: true,
     nutsFree: false,
     vegan: [true, false],
   },
+  tags: [{
+    id: 7890,
+    label: 'dynia',
+  }, {
+    id: 9012,
+    label: 'orzechy',
+  }, {
+    id: 2345,
+    label: 'orzechy włoskie',
+  }, {
+    id: 4567,
+    label: 'kajmak',
+  }, {
+    id: 6789,
+    label: 'śliwki',
+  }, {
+    id: 1345,
+    label: 'suszone śliwki',
+  }, {
+    id: 2456,
+    label: 'przyprawy korzenne',
+  }, {
+    id: 9120,
+    label: 'jesień',
+  }],
   id: '5678',
   url: '/ciasto-dyniowe-5678',
 }, {
@@ -106,7 +157,12 @@ export default [{
     value: 50,
     currency: 'PLN',
   },
-  minSize: {
+  sizes: [{
+    price: {
+      value: 50,
+      currency: 'PLN',
+    },
+    slices: 12,
     diameter: {
       value: 22,
       unit: 'cm',
@@ -115,16 +171,49 @@ export default [{
       value: 1.2,
       unit: 'kg',
     },
-    slices: {
-      value: 14,
+  }, {
+    price: {
+      value: 70,
+      currency: 'PLN',
     },
-  },
+    slices: 16,
+    diameter: {
+      value: 24,
+      unit: 'cm',
+    },
+    weight: {
+      value: 1.5,
+      unit: 'kg',
+    },
+  }],
   features: {
     glutenFree: false,
     lactoseFree: true,
     nutsFree: [true, false],
     vegan: false,
   },
+  tags: [{
+    id: 6789,
+    label: 'śliwki',
+  }, {
+    id: 3567,
+    label: 'tarta',
+  }, {
+    id: 9012,
+    label: 'orzechy',
+  }, {
+    id: 9120,
+    label: 'jesień',
+  }, {
+    id: 2345,
+    label: 'orzechy włoskie',
+  }, {
+    id: 4567,
+    label: 'kajmak',
+  }, {
+    id: 2456,
+    label: 'przyprawy korzenne',
+  }],
   id: '9012',
   url: '/tarta-ze-sliwkami-9012',
 }, {
@@ -139,7 +228,12 @@ export default [{
     value: 50,
     currency: 'PLN',
   },
-  minSize: {
+  sizes: [{
+    price: {
+      value: 50,
+      currency: 'PLN',
+    },
+    slices: 12,
     diameter: {
       value: 22,
       unit: 'cm',
@@ -148,16 +242,43 @@ export default [{
       value: 1.5,
       unit: 'kg',
     },
-    slices: {
-      value: 14,
+  }, {
+    price: {
+      value: 70,
+      currency: 'PLN',
     },
-  },
+    slices: 16,
+    diameter: {
+      value: 24,
+      unit: 'cm',
+    },
+    weight: {
+      value: 2,
+      unit: 'kg',
+    },
+  }],
   features: {
     glutenFree: false,
     lactoseFree: true,
     nutsFree: [true, false],
     vegan: false,
   },
+  tags: [{
+    id: 3456,
+    label: 'karmel',
+  }, {
+    id: 2456,
+    label: 'przyprawy korzenne',
+  }, {
+    id: 5789,
+    label: 'gruszki',
+  }, {
+    id: 6890,
+    label: 'cynamon',
+  }, {
+    id: 9120,
+    label: 'jesień',
+  }],
   id: '3456',
   url: '/ciasto-z-gruszkami-3456',
 }];
