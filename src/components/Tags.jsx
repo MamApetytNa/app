@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { withStyles } from 'material-ui/styles';
-import Card, { CardContent } from 'material-ui/Card';
 import Chip from 'material-ui/Chip';
 
 const styles = theme => ({
@@ -19,16 +18,24 @@ const styles = theme => ({
   },
 });
 
-export default withStyles(styles)(({ classes, tags = [] }) => (tags.length &&
-  <div className={classes.root}>
-    {tags.map(({ id, url, label }) => (
-      <Chip
-        key={id}
-        component="a"
-        href={url}
-        label={label}
-        className={classes.chip}
-      />
-    ))}
-  </div>
-));
+function Tags({ classes, tags = [] }) {
+  if (tags.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className={classes.root}>
+      {tags.map(({ id, url, label }) => (
+        <Chip
+          key={id}
+          component="a"
+          href={url}
+          label={label}
+          className={classes.chip}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default withStyles(styles)(Tags);

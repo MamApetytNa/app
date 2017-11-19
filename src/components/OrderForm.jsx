@@ -33,6 +33,78 @@ const texts = {
 
 const getInputValue = path(['target', 'value']);
 
+function OrderForm({
+  classes,
+  currentName = '',
+  currentPhone = '',
+  onNameChange = () => {},
+  onPhoneChange = () => {},
+  onSubmit = () => {},
+}) {
+  return (
+    <Card>
+      <CardHeader
+        title={texts.TITLE}
+        subheader={texts.SUBHEADER}
+      />
+      <form onSubmit={
+          pipe(
+              preventDefault,
+              () => onSubmit({
+                  name: currentName,
+                  phone: currentPhone,
+              }),
+          )
+      }
+      >
+        <CardContent>
+          <List>
+            <ListItem>
+              <TextField
+                id="name"
+                label={texts.NAME_LABEL}
+                type="text"
+                classes={{ root: classes.field }}
+                value={currentName}
+                placeholder="Jan Kowalski"
+                onChange={pipe(getInputValue, onNameChange)}
+              />
+            </ListItem>
+            <ListItem>
+              <TextField
+                id="phone"
+                label={texts.PHONE_LABEL}
+                type="tel"
+                classes={{ root: classes.field }}
+                value={currentPhone}
+                placeholder="987-654-321"
+                onChange={pipe(getInputValue, onPhoneChange)}
+              />
+            </ListItem>
+          </List>
+        </CardContent>
+        <CardActions>
+          <Button
+            classes={{ root: classes.button }}
+            component="a"
+            href={`tel:${TEL}`}
+          >
+            {texts.CALL}
+          </Button>
+          <Button
+            classes={{ root: classes.button }}
+            raised
+            color="primary"
+            type="submit"
+          >
+            {texts.CONFIRM}
+          </Button>
+        </CardActions>
+      </form>
+    </Card>
+  );
+}
+
 export default pipe(
   withState({
     state: {
@@ -45,72 +117,4 @@ export default pipe(
     },
   }),
   withStyles(styles),
-)(({
-  classes,
-  currentName = '',
-  currentPhone = '',
-  onNameChange = () => {},
-  onPhoneChange = () => {},
-  onSubmit = () => {},
-}) => (
-  <Card>
-    <CardHeader
-      title={texts.TITLE}
-      subheader={texts.SUBHEADER}
-    />
-    <form onSubmit={
-        pipe(
-            preventDefault,
-            () => onSubmit({
-                name: currentName,
-                phone: currentPhone,
-            }),
-        )
-    }
-    >
-      <CardContent>
-        <List>
-          <ListItem>
-            <TextField
-              id="name"
-              label={texts.NAME_LABEL}
-              type="text"
-              classes={{ root: classes.field }}
-              value={currentName}
-              placeholder="Jan Kowalski"
-              onChange={pipe(getInputValue, onNameChange)}
-            />
-          </ListItem>
-          <ListItem>
-            <TextField
-              id="phone"
-              label={texts.PHONE_LABEL}
-              type="tel"
-              classes={{ root: classes.field }}
-              value={currentPhone}
-              placeholder="987-654-321"
-              onChange={pipe(getInputValue, onPhoneChange)}
-            />
-          </ListItem>
-        </List>
-      </CardContent>
-      <CardActions>
-        <Button
-          classes={{ root: classes.button }}
-          component="a"
-          href={`tel:${TEL}`}
-        >
-          {texts.CALL}
-        </Button>
-        <Button
-          classes={{ root: classes.button }}
-          raised
-          color="primary"
-          type="submit"
-        >
-          {texts.CONFIRM}
-        </Button>
-      </CardActions>
-    </form>
-  </Card>
-));
+)(OrderForm);

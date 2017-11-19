@@ -27,22 +27,12 @@ const texts = {
 
 const getSelectValue = path(['target', 'value']);
 
-export default pipe(
-  withState({
-    state: {
-      currentSizeIndex: 0,
-    },
-    actions: {
-      onSizeChange: currentSizeIndex => ({ currentSizeIndex }),
-    },
-  }),
-  withStyles(styles),
-)(({
+function SizeChooser({
   classes,
   currentSizeIndex = 0,
   onSizeChange = () => {},
   sizes = [],
-}) => {
+}) {
   const currentSize = sizes[currentSizeIndex];
   return (
     <Grid container alignItems="center">
@@ -99,4 +89,16 @@ export default pipe(
       </Grid>
     </Grid>
   );
-});
+}
+
+export default pipe(
+  withState({
+    state: {
+      currentSizeIndex: 0,
+    },
+    actions: {
+      onSizeChange: currentSizeIndex => ({ currentSizeIndex }),
+    },
+  }),
+  withStyles(styles),
+)(SizeChooser);

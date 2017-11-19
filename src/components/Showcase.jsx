@@ -26,6 +26,60 @@ const styles = {
   },
 };
 
+function Showcase({
+  className,
+  classes,
+  currentImage = 0,
+  images = [],
+  onImageChange = () => {},
+}) {
+  return (
+    <div className={classNames(className, classes.root)}>
+      <SwipableViews
+        index={currentImage}
+        onChangeIndex={onImageChange}
+      >
+        {images.map(({ title, url }, index) => (
+          <div className={classes.imageWrapper} key={url}>
+            <img
+              alt={title}
+              src={url}
+              className={classNames(classes.image, {
+              [classes.activeImage]: index === currentImage,
+            })}
+            />
+          </div>
+      ))}
+      </SwipableViews>
+      <MobileStepper
+        type="dots"
+        steps={images.length}
+        position="static"
+        activeStep={currentImage}
+        classes={{ root: classes.stepper }}
+        backButton={
+          <Button
+            dense
+            onClick={() => onImageChange(currentImage - 1)}
+            disabled={currentImage === 0}
+          >
+            <KeyboardArrowLeft />
+          </Button>
+      }
+        nextButton={
+          <Button
+            dense
+            onClick={() => onImageChange(currentImage + 1)}
+            disabled={currentImage === images.length - 1}
+          >
+            <KeyboardArrowRight />
+          </Button>
+      }
+      />
+    </div>
+  );
+}
+
 export default pipe(
   withState({
     state: {
@@ -36,54 +90,4 @@ export default pipe(
     },
   }),
   withStyles(styles),
-)(({
-  className,
-  classes,
-  currentImage = 0,
-  images = [],
-  onImageChange = () => {},
-}) => (
-  <div className={classNames(className, classes.root)}>
-    <SwipableViews
-      index={currentImage}
-      onChangeIndex={onImageChange}
-    >
-      {images.map(({ title, url }, index) => (
-        <div className={classes.imageWrapper} key={url}>
-          <img
-            alt={title}
-            src={url}
-            className={classNames(classes.image, {
-              [classes.activeImage]: index === currentImage,
-            })}
-          />
-        </div>
-      ))}
-    </SwipableViews>
-    <MobileStepper
-      type="dots"
-      steps={images.length}
-      position="static"
-      activeStep={currentImage}
-      classes={{ root: classes.stepper }}
-      backButton={
-        <Button
-          dense
-          onClick={() => onImageChange(currentImage - 1)}
-          disabled={currentImage === 0}
-        >
-          <KeyboardArrowLeft />
-        </Button>
-      }
-      nextButton={
-        <Button
-          dense
-          onClick={() => onImageChange(currentImage + 1)}
-          disabled={currentImage === images.length - 1}
-        >
-          <KeyboardArrowRight />
-        </Button>
-      }
-    />
-  </div>
-));
+)(Showcase);

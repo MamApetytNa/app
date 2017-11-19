@@ -3,7 +3,7 @@ import React from 'react';
 import TextField from 'material-ui/TextField';
 
 import { withStyles } from 'material-ui/styles';
-import { path, pipe, tap } from 'ramda';
+import { path, pipe } from 'ramda';
 
 import withState from '../utils/with-state';
 
@@ -17,7 +17,7 @@ const texts = {
 
 const HOUR = 60 * 60 * 1000;
 
-const getInputValue = pipe(path(['target', 'value']), tap(console.log));
+const getInputValue = path(['target', 'value']);
 
 function fromNow(ms) {
   const date = new Date(Date.now() + ms);
@@ -31,6 +31,27 @@ function fromNow(ms) {
   return date.toISOString().slice(0, -5);
 }
 
+function TimeChooser({
+  classes,
+  currentDateTime,
+  onDateTimeChange,
+}) {
+  return (
+    <TextField
+      id="datetime-local"
+      label={texts.LABEL}
+      type="datetime-local"
+      className={classes.textField}
+      inputProps={{
+        min: fromNow(6 * HOUR),
+        step: 30 * 60,
+      }}
+      value={currentDateTime}
+      onChange={pipe(getInputValue, onDateTimeChange)}
+    />
+  );
+}
+
 export default pipe(
   withState({
     state: {
@@ -41,21 +62,4 @@ export default pipe(
     },
   }),
   withStyles(styles),
-)(({
-  classes,
-  currentDateTime,
-  onDateTimeChange,
-}) => (
-  <TextField
-    id="datetime-local"
-    label={texts.LABEL}
-    type="datetime-local"
-    className={classes.textField}
-    inputProps={{
-      min: fromNow(6 * HOUR),
-      step: 30 * 60,
-    }}
-    value={currentDateTime}
-    onChange={pipe(getInputValue, onDateTimeChange)}
-  />
-));
+)(TimeChooser);

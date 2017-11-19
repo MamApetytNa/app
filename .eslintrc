@@ -1,8 +1,15 @@
 {
     "extends": "airbnb",
     "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
     "rules": {
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["src/stories/**/*.jsx", "src/**/*.spec.js"]}],
+        "import/no-extraneous-dependencies": ["error", {
+            "devDependencies": ["config/**/*.js", "scripts/**/*.js", "src/stories/**/*.jsx", "src/**/*.spec.js"]
+            }],
+        "jsx-a11y/anchor-is-valid": "off",
         "react/prop-types": "off"
     }
 }
