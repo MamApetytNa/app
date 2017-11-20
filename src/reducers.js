@@ -4,10 +4,28 @@ import { pages } from './routes';
 import data from './items.data';
 
 global.REDUX_INITIAL_STATE = {
+  featured: [
+    {
+      name: 'Na jesień',
+      items: data,
+    },
+    {
+      name: 'Z orzechami',
+      items: data,
+    },
+    {
+      name: 'Ze śliwkami',
+      items: data,
+    },
+  ],
   item: null,
   itemList: data,
   order: null,
 };
+
+export function featured(state = []) {
+  return state;
+}
 
 export function item(state = null, { type, payload: { id } = {} } = {}) {
   if (type === 'ITEM') {

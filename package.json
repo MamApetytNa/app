@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "2.2.5",
+    "decorate-component-with-props": "^1.1.0",
     "history": "4.7.2",
     "material-ui": "1.0.0-beta.18",
     "material-ui-icons": "1.0.0-beta.17",
