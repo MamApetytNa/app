@@ -37,6 +37,8 @@ const styles = theme => ({
   },
   tileLink: {
     display: 'block',
+    height: '100%',
+    width: '100%',
   },
   tileImage: {
     objectFit: 'cover',

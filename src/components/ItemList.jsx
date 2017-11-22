@@ -29,8 +29,16 @@ const styles = theme => ({
   tile: {
     position: 'absolute',
   },
+  tileImage: {
+    top: 'auto',
+    height: '100%',
+    objectFit: 'cover',
+    transform: 'none',
+  },
   tileLink: {
     display: 'block',
+    height: '100%',
+    width: '100%',
   },
 });
 
@@ -43,6 +51,7 @@ function ItemList({
     <Grid container className={classes.root}>{items.map(({
       id = '',
       minPrice = {},
+      sizes = [],
       name = '',
       thumbnail = '',
     }) => (
@@ -52,10 +61,10 @@ function ItemList({
             component="span"
             classes={{ root: classes.tileRoot, tile: classes.tile }}
           >
-            <img src={thumbnail} alt={name} />
+            <img src={thumbnail} alt={name} className={classes.tileImage} />
             <GridListTileBar
               title={name}
-              subtitle={<Price {...minPrice} color="inherit" />}
+              subtitle={<Price {...minPrice} {...(sizes.length > 1 ? null : { prefix: '' })} color="inherit" />}
               actionIcon={
                 <IconButton>
                   <InfoIcon />

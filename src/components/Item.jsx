@@ -50,11 +50,11 @@ function Item({
   classes,
   description = '',
   minPrice = { value: 0, currency: 'PLN' },
+  sizes = [],
   name = '',
   orderLink: OrderLink = () => {},
   photos = [],
   tags,
-  ...props
 }) {
   return (
     <Card className={classNames(className, classes.root)}>
@@ -64,6 +64,7 @@ function Item({
           {...minPrice}
           accent
           type="subheading"
+          {...(sizes.length > 1 ? null : { prefix: '' })}
         />}
       />
       <CardContent>
@@ -85,7 +86,7 @@ function Item({
               <Grid item xs={12}>
                 <Grid container>
                   <Grid item xs={12}>
-                    <SizeChooser sizes={props.sizes} />
+                    <SizeChooser sizes={sizes} />
                   </Grid>
                   <Grid item xs={12}>
                     <TimeChooser />

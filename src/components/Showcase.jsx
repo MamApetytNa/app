@@ -13,11 +13,12 @@ import withState from '../utils/with-state';
 
 const styles = {
   image: {
-    left: '50%',
-    position: 'absolute',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
+    top: 'auto',
+    height: '100%',
+    objectFit: 'cover',
+    transform: 'none',
     width: '100%',
+    position: 'absolute',
   },
   imageWrapper: {
     height: 0,
@@ -51,7 +52,7 @@ function Showcase({
           </div>
       ))}
       </SwipableViews>
-      <MobileStepper
+      {images.length > 1 && <MobileStepper
         type="dots"
         steps={images.length}
         position="static"
@@ -75,7 +76,7 @@ function Showcase({
             <KeyboardArrowRight />
           </Button>
       }
-      />
+      />}
     </div>
   );
 }

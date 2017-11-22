@@ -51,13 +51,14 @@ function SizeChooser({
         </FormControl>
         <Grid container>
           <Grid item xs={6}>
-            <Typography component="p">
-              {texts.DIAMETER}
-                &nbsp;
-              {currentSize.diameter.value}
-                &nbsp;
-              {currentSize.diameter.unit}
-            </Typography>
+            {currentSize.diameter &&
+              <Typography component="p">
+                {texts.DIAMETER}
+                  &nbsp;
+                {currentSize.diameter.value}
+                  &nbsp;
+                {currentSize.diameter.unit}
+              </Typography>}
           </Grid>
           <Grid item xs={6}>
             <Typography component="p">
