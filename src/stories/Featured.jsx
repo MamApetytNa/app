@@ -7,7 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import Featured from '../components/Featured';
 
-import data from '../items.data';
+import data from '../data';
 
 function ItemLink({ name, ...props }) {
   return (
@@ -32,7 +32,7 @@ function MoreLink(props) {
 storiesOf('Featured', module)
   .add('default', () => (<Featured
     name="Wyróżnione ciasta"
-    items={data}
+    items={data.slice(0, 4)}
     itemLink={ItemLink}
     moreLink={MoreLink}
   />));

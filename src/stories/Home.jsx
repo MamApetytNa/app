@@ -7,7 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import Home from '../components/Home';
 
-import data from '../items.data';
+import data from '../data';
 
 function withTag(tag, items) {
   return items.filter(({ tags }) => tags.find(({ label }) => label === tag));

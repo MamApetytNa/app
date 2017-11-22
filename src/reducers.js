@@ -1,21 +1,21 @@
 import { propEq } from 'ramda';
 
 import { pages } from './routes';
-import data from './items.data';
+import data from './data';
 
 global.REDUX_INITIAL_STATE = {
   featured: [
     {
       name: 'Na jesień',
-      items: data,
+      items: data.slice(0, 4),
     },
     {
       name: 'Z orzechami',
-      items: data,
+      items: data.slice(0, 4),
     },
     {
       name: 'Ze śliwkami',
-      items: data,
+      items: data.slice(0, 4),
     },
   ],
   item: null,
