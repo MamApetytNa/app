@@ -8,13 +8,7 @@ import InfoIcon from 'material-ui-icons/Info';
 
 import Price from '../components/Price';
 
-const styles = theme => ({
-  root: {
-    maxWidth: theme.spacing.unit * 96,
-    [theme.breakpoints.up('md')]: {
-      margin: '0 auto',
-    },
-  },
+const styles = {
   tileRoot: {
     cursor: 'pointer',
     display: 'block',
@@ -40,7 +34,7 @@ const styles = theme => ({
     height: '100%',
     width: '100%',
   },
-});
+};
 
 function ItemList({
   classes,

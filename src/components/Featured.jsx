@@ -10,11 +10,6 @@ import { linearGradient, rgba } from '../utils/css';
 
 const styles = theme => ({
   root: {
-    maxWidth: theme.spacing.unit * 96,
-    [theme.breakpoints.up('md')]: {
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    },
     marginTop: theme.spacing.unit,
   },
   header: {

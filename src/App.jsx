@@ -10,7 +10,7 @@ import PageSwitcher from './components/PageSwitcher';
 
 const styles = theme => ({
   container: {
-    maxWidth: theme.spacing.unit * 96,
+    maxWidth: theme.spacing.unit * 128,
     [theme.breakpoints.up('md')]: {
       marginLeft: 'auto',
       marginRight: 'auto',
