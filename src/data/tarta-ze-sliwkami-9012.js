@@ -68,5 +68,8 @@ export default {
   }, {
     id: 2456,
     label: 'przyprawy korzenne',
+  }, {
+    id: 7007,
+    label: 'ciasto kruche',
   }],
 };

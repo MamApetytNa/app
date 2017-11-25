@@ -41,6 +41,9 @@ export default {
   }, {
     id: 3567,
     label: 'tarta',
+  }, {
+    id: 7007,
+    label: 'ciasto kruche',
   }],
 };
 
