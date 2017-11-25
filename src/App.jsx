@@ -1,10 +1,11 @@
 import React from 'react';
 
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
+import Link from 'redux-first-router-link';
 import withStyles from 'material-ui/styles/withStyles';
 
+import { goHome } from './actions';
+
+import Header from './components/Header';
 import ScrollContext from './components/ScrollContext';
 import PageSwitcher from './components/PageSwitcher';
 
@@ -19,19 +20,13 @@ const styles = theme => ({
   },
 });
 
-const texts = {
-  TITLE: 'Olga ma wypieki',
-};
+function HomeLink({ children, ...props }) {
+  return (<Link to={goHome()} {...props}>{children}</Link>);
+}
 
 export default withStyles(styles)(({ classes }) => (
   <ScrollContext>
-    <AppBar position="static">
-      <Toolbar>
-        <Typography type="title" color="inherit">
-          {texts.TITLE}
-        </Typography>
-      </Toolbar>
-    </AppBar>
+    <Header homeLink={HomeLink} />
     <div className={classes.container} >
       <PageSwitcher />
     </div>

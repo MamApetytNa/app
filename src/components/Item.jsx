@@ -12,6 +12,7 @@ import Showcase from '../components/Showcase';
 import SizeChooser from '../components/SizeChooser';
 import TimeChooser from '../components/TimeChooser';
 import Tags from '../components/Tags';
+import { rules } from '../utils/css';
 
 const styles = theme => ({
   root: {
@@ -38,6 +39,11 @@ const styles = theme => ({
     marginRight: 'auto',
     maxWidth: theme.spacing.unit * 24,
     width: '100%',
+  },
+  orderLink: {
+    ...rules.unstyledLink,
+    ...rules.absoluteFill,
+    ...rules.flexCenter,
   },
 });
 
@@ -94,15 +100,15 @@ function Item({
                 </Grid>
               </Grid>
               <Grid item xs={12} className={classes.ctaContainer}>
-                <OrderLink>
-                  <Button
-                    raised
-                    color="primary"
-                    classes={{ root: classes.cta }}
-                  >
+                <Button
+                  raised
+                  color="primary"
+                  classes={{ root: classes.cta }}
+                >
+                  <OrderLink className={classes.orderLink}>
                     {texts.ORDER}
-                  </Button>
-                </OrderLink>
+                  </OrderLink>
+                </Button>
               </Grid>
             </Grid>
           </Grid>

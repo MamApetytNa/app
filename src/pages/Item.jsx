@@ -7,8 +7,8 @@ import Link from 'redux-first-router-link';
 import { goToOrder } from '../actions';
 import Item from '../components/Item';
 
-function OrderLink({ id, children }) {
-  return <Link to={goToOrder(id)}>{children}</Link>;
+function OrderLink({ id, children, ...props }) {
+  return <Link to={goToOrder(id)} {...props}>{children}</Link>;
 }
 
 export default connect(propOr({}, 'item'))(withProps(Item, { orderLink: OrderLink }));
