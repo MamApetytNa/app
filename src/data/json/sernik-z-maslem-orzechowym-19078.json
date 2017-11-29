@@ -1,0 +1,74 @@
+{
+  "id": "19078",
+  "url": "/sernik-z-maslem-orzechowym-19078",
+  "description": "Najlepsze na świecie jest masło orzechowe. A z czekoladą, to już w ogóle. Mamy zatem sernik z masłem orzechowym, polany czekoladą na spodzie z ciasteczek, orzeszków i tamtych dwóch.",
+  "minPrice": {
+    "value": 70,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 18,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 80,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.2,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 100,
+        "currency": "PLN"
+      },
+      "slices": 16,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.6,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": false,
+    "vegan": false
+  },
+  "name": "Sernik z masłem orzechowym",
+  "photos": [
+    "59304",
+    "36373"
+  ],
+  "thumbnail": "29308",
+  "tags": [
+    "04434",
+    "56181",
+    "07673",
+    "30644"
+  ]
+}

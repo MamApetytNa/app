@@ -1,0 +1,63 @@
+{
+  "id": "54132",
+  "url": "/ciasto-z-gruszkami-54132",
+  "description": "Jak jest jesień, to jemy gruszki i cynamon. Stąd ciasto cynamonowe z karmelizowanymi gruszkami i kremem karmelowym (bo karmel jemy cały rok).",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 22,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 16,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 2,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": [
+      true,
+      false
+    ],
+    "vegan": false
+  },
+  "name": "Ciasto z gruszkami",
+  "photos": [
+    "20765",
+    "45126"
+  ],
+  "thumbnail": "21485",
+  "tags": [
+    "51988",
+    "12115",
+    "40005",
+    "23443",
+    "34968"
+  ]
+}

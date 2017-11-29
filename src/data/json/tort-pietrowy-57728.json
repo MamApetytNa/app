@@ -1,0 +1,44 @@
+{
+  "id": "57728",
+  "url": "/tort-pietrowy-57728",
+  "description": "Tort, który powstał dla Dziarczyńcy. Bałam się, że będzie weselny, ale był raczej wesoły.",
+  "minPrice": {
+    "value": 250,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 250,
+        "currency": "PLN"
+      },
+      "slices": 40,
+      "diameter": {
+        "value": 28,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 4,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tort piętrowy",
+  "photos": [
+    "11839",
+    "43924"
+  ],
+  "thumbnail": "61515",
+  "tags": [
+    "27151",
+    "00417",
+    "57509",
+    "31511"
+  ]
+}

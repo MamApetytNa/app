@@ -1,0 +1,42 @@
+{
+  "id": "50602",
+  "url": "/chalka-z-makiem-50602",
+  "description": "Chałka najlepsza jeszcze ciepła. Niekoniecznie na śniadanie, można też na kolację.",
+  "minPrice": {
+    "value": 8,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 8,
+        "currency": "PLN"
+      },
+      "slices": 1,
+      "diameter": null,
+      "weight": {
+        "value": 350,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Chałka z makiem",
+  "photos": [
+    "21276",
+    "23157",
+    "56770"
+  ],
+  "thumbnail": "23278",
+  "tags": [
+    "49820",
+    "02700",
+    "41721",
+    "46583"
+  ]
+}

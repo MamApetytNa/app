@@ -1,0 +1,63 @@
+{
+  "id": "44127",
+  "url": "/tarta-mocno-czekoladowa-44127",
+  "description": "Czekoladowa tarta dobra zawsze! Do tego krem śmietankowy i garść owoców.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 13,
+      "diameter": {
+        "value": 22,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": [
+      true,
+      false
+    ],
+    "vegan": false
+  },
+  "name": "Tarta mocno czekoladowa",
+  "photos": [
+    "49503",
+    "14825"
+  ],
+  "thumbnail": "45684",
+  "tags": [
+    "01257",
+    "43423",
+    "56181",
+    "45331",
+    "48358"
+  ]
+}

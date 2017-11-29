@@ -1,0 +1,76 @@
+{
+  "id": "51839",
+  "url": "/sernik-jagodowy-51839",
+  "description": "Sernik bardzo jagodowy, żeby wykorzystać ten krótki sezon na jagody intensywnie.",
+  "minPrice": {
+    "value": 80,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 80,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 18,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 90,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.8,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 110,
+        "currency": "PLN"
+      },
+      "slices": 16,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 2.5,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": [
+      true,
+      false
+    ],
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Sernik jagodowy",
+  "photos": [
+    "02083",
+    "28679"
+  ],
+  "thumbnail": "12195",
+  "tags": [
+    "04434",
+    "41515",
+    "35184"
+  ]
+}

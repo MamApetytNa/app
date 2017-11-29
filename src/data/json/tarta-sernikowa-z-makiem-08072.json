@@ -1,0 +1,64 @@
+{
+  "id": "08072",
+  "url": "/tarta-sernikowa-z-makiem-08072",
+  "description": "Tarta sernikowa z makiem, domową konfiturą aroniowo-jabłkową, kremem z białej czekolady i granatem.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 13,
+      "diameter": {
+        "value": 22,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tarta sernikowa z makiem",
+  "photos": [
+    "62713",
+    "49398",
+    "44147"
+  ],
+  "thumbnail": "37294",
+  "tags": [
+    "01257",
+    "04434",
+    "41721",
+    "02979",
+    "12712",
+    "42773",
+    "35431",
+    "14104"
+  ]
+}

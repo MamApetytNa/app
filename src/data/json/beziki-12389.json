@@ -1,0 +1,38 @@
+{
+  "id": "12389",
+  "url": "/beziki-12389",
+  "description": "Klasyczne beziki.",
+  "minPrice": {
+    "value": 20,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 20,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": null,
+      "weight": {
+        "value": 100,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": true,
+    "lactoseFree": true,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Beziki",
+  "photos": [
+    "51026",
+    "28945"
+  ],
+  "thumbnail": "60441",
+  "tags": [
+    "12269"
+  ]
+}

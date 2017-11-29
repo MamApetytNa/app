@@ -1,0 +1,61 @@
+{
+  "id": "27802",
+  "url": "/brownie-z-kremem-orzechowym-27802",
+  "description": "Brownie. Dużo czekolady, lekko słony krem z masłem orzechowym i krówki na wierzchu. Dobre też z prażonymi orzechami włoskimi.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 13,
+      "diameter": {
+        "value": 22,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": false,
+    "vegan": false
+  },
+  "name": "Brownie z kremem orzechowym",
+  "photos": [
+    "60854",
+    "39669"
+  ],
+  "thumbnail": "11823",
+  "tags": [
+    "03849",
+    "56181",
+    "61004",
+    "34285",
+    "30644",
+    "00238"
+  ]
+}

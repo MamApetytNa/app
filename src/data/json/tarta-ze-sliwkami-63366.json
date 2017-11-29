@@ -1,0 +1,66 @@
+{
+  "id": "63366",
+  "url": "/tarta-ze-sliwkami-63366",
+  "description": "Na poprawę humoru ciasto dyniowe będzie w sam raz. Wilgotne, pełne orzechów włoskich, suszonych śliwek i przypraw korzennych, na dodatek słodki krem kajmakowy. Jest dobrze.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 22,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.2,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 16,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": [
+      true,
+      false
+    ],
+    "vegan": false
+  },
+  "name": "Tarta ze śliwkami",
+  "photos": [
+    "23915",
+    "17561"
+  ],
+  "thumbnail": "59475",
+  "tags": [
+    "46683",
+    "01257",
+    "61004",
+    "34968",
+    "00238",
+    "26961",
+    "12115",
+    "42773"
+  ]
+}

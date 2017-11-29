@@ -1,0 +1,41 @@
+{
+  "id": "32174",
+  "url": "/ciastka-z-maslem-orzechowym-32174",
+  "description": "Ciastka masłem orzechowym mają czekoladę w kawałkach i są super.",
+  "minPrice": {
+    "value": 30,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 30,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": null,
+      "weight": {
+        "value": 500,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": false,
+    "vegan": false
+  },
+  "name": "Ciastka z masłem orzechowym",
+  "photos": [
+    "61546",
+    "17414"
+  ],
+  "thumbnail": "59893",
+  "tags": [
+    "45395",
+    "56181",
+    "30644",
+    "07673"
+  ]
+}

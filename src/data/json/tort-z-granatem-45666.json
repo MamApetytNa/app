@@ -1,0 +1,44 @@
+{
+  "id": "45666",
+  "url": "/tort-z-granatem-45666",
+  "description": "Taki ładny tort. Biszkopt nasączony sokiem z cytryny i odrobiną alkoholu, krem z białą czekoladą i granat. Proste i smaczne.",
+  "minPrice": {
+    "value": 70,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tort z granatem",
+  "photos": [
+    "48314",
+    "41163"
+  ],
+  "thumbnail": "59720",
+  "tags": [
+    "27151",
+    "35431",
+    "14104",
+    "33366"
+  ]
+}

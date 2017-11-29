@@ -1,0 +1,75 @@
+{
+  "id": "50339",
+  "url": "/ciasto-dyniowe-50339",
+  "description": "Dyniowe ciasto z włoskimi orzechami i żurawiną, polane karmelem, pachnące mieszanką przypraw korzennych.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 15,
+      "diameter": null,
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": [
+      true,
+      false
+    ],
+    "vegan": false
+  },
+  "name": "Ciasto dyniowe",
+  "photos": [
+    "46111"
+  ],
+  "thumbnail": "14405",
+  "tags": [
+    "61926",
+    "61004",
+    "00238",
+    "51988",
+    "12115",
+    "34968",
+    "35281"
+  ]
+}    "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": false,
+    "vegan": [
+      true,
+      false
+    ]
+  },
+  "name": "Ciasto dyniowe",
+  "photos": [
+    "20698",
+    "07002"
+  ],
+  "thumbnail": "43435",
+  "tags": [
+    "61926",
+    "61004",
+    "00238",
+    "26961",
+    "46683",
+    "42694",
+    "12115",
+    "34968"
+  ]
+}

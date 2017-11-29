@@ -1,0 +1,50 @@
+{
+  "id": "10038",
+  "url": "/rogale-marcinskie-10038",
+  "description": "Listopadowy król, Rogal. Ciasto półfrancuskie na maśle, które robi się pół dnia, nadzienie z białego maku z orzechami włoskich, migdałami i rodzynkami. Inne niż wszystkie, nie potrzebują certyfikatu, ich smak mówi sam za siebie.",
+  "minPrice": {
+    "value": 6,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 6,
+        "currency": "PLN"
+      },
+      "slices": 1,
+      "diameter": null,
+      "weight": {
+        "value": 120,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": false,
+    "vegan": false
+  },
+  "name": "Rogale marcińskie",
+  "photos": [
+    "38431",
+    "16505"
+  ],
+  "thumbnail": "34675",
+  "tags": [
+    "49820",
+    "61004",
+    "00238",
+    "02700",
+    "21859",
+    "60393",
+    "35423",
+    "41721",
+    "17475",
+    "32189",
+    "34968",
+    "06970",
+    "54471"
+  ]
+}

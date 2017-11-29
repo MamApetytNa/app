@@ -1,0 +1,75 @@
+{
+  "id": "09058",
+  "url": "/tarta-z-rabarbarem-i-beza-09058",
+  "description": "Wiosna przyszła, jest rabarbar! Tarta z rabarbarem i bezą. Może być wersja mini, może być maksi. Klasyka.",
+  "minPrice": {
+    "value": 20,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 20,
+        "currency": "PLN"
+      },
+      "slices": 2,
+      "diameter": {
+        "value": 12,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 250,
+        "unit": "g"
+      }
+    },
+    {
+      "price": {
+        "value": 40,
+        "currency": "PLN"
+      },
+      "slices": 8,
+      "diameter": {
+        "value": 18,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 60,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 22,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.75,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tarta z rabarbarem i bezą",
+  "photos": [
+    "44387",
+    "57532"
+  ],
+  "thumbnail": "13550",
+  "tags": [
+    "51543",
+    "12269",
+    "41552",
+    "01257",
+    "42773"
+  ]
+}

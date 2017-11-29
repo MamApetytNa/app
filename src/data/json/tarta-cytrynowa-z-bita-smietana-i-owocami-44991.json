@@ -1,0 +1,49 @@
+{
+  "id": "44991",
+  "url": "/tarta-cytrynowa-z-bita-smietana-i-owocami-44991",
+  "description": "Tarta cytrynowa, kolorowa, kwaśna i słodka. Z bitą śmietaną i dużą ilością owoców. Dobra nawet bardzo.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tarta cytrynowa z bitą śmietaną i owocami",
+  "photos": [
+    "40551",
+    "16625"
+  ],
+  "thumbnail": "43589",
+  "tags": [
+    "01257",
+    "02715",
+    "14285",
+    "02715",
+    "63546",
+    "46683",
+    "58923",
+    "54920",
+    "34767"
+  ]
+}

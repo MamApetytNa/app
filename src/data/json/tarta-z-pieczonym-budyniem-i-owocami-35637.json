@@ -1,0 +1,44 @@
+{
+  "id": "35637",
+  "url": "/tarta-z-pieczonym-budyniem-i-owocami-35637",
+  "description": "Tyle owoców, bo lato się zaczęło. Są porzeczki, czereśnie i truskawki, jest kruche ciasto. Czyli mamy tartę z pieczonym budyniem i owocami.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tarta z pieczonym budyniem i owocami",
+  "photos": [
+    "06683",
+    "13440"
+  ],
+  "thumbnail": "16218",
+  "tags": [
+    "01257",
+    "21272",
+    "48358",
+    "01257"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "63117",
+  "url": "/tort-bezowy-z-owocami-63117",
+  "description": "Tort bezowy poleca się sam. Miał być na urodziny, ale znikł zbyt szybko i nie dotrwał. Z kremem cytrynowym, owocami, i konfiturą z aronii, której nie widać.",
+  "minPrice": {
+    "value": 40,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 40,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 18,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 0.8,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": true,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tort bezowy z owocami",
+  "photos": [
+    "02350",
+    "15094"
+  ],
+  "thumbnail": "27716",
+  "tags": [
+    "12269",
+    "27151",
+    "02715",
+    "32551",
+    "54920",
+    "02979",
+    "12712",
+    "34767"
+  ]
+}

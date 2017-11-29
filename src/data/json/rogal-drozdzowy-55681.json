@@ -1,0 +1,42 @@
+{
+  "id": "55681",
+  "url": "/rogal-drozdzowy-55681",
+  "description": "Na drugie śniadanie i na obiad rogalikowa drożdżowa buła, najlepsza z domową konfiturą.",
+  "minPrice": {
+    "value": 4,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 4,
+        "currency": "PLN"
+      },
+      "slices": 1,
+      "diameter": null,
+      "weight": {
+        "value": 100,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Rogal drożdżowy",
+  "photos": [
+    "17171"
+  ],
+  "thumbnail": "54763",
+  "tags": [
+    "49820",
+    "02700",
+    "53305",
+    "41721",
+    "46583",
+    "32189"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "14119",
+  "url": "/tort-kokosowy-z-wisniami-14119",
+  "description": "Kokosowe ciasto, kokosowy krem, odrobina cytryny i wiśnie w porto. Tort kokosowy.",
+  "minPrice": {
+    "value": 70,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 18,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.2,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 80,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 100,
+        "currency": "PLN"
+      },
+      "slices": 16,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 2,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tort kokosowy z wiśniami",
+  "photos": [
+    "10720",
+    "63429"
+  ],
+  "thumbnail": "55667",
+  "tags": [
+    "05157",
+    "44386",
+    "33293",
+    "27151",
+    "57509"
+  ]
+}

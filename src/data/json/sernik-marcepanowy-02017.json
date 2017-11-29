@@ -1,0 +1,78 @@
+{
+  "id": "02017",
+  "url": "/sernik-marcepanowy-02017",
+  "description": "Dostojny sernik marcepanowy, kremowy, z czekoladą i jeszcze konfiturą wiśniową domowo robioną.",
+  "minPrice": {
+    "value": 80,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 80,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 100,
+        "currency": "PLN"
+      },
+      "slices": 13,
+      "diameter": {
+        "value": 22,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 120,
+        "currency": "PLN"
+      },
+      "slices": 16,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 2,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": [
+      true,
+      false
+    ],
+    "lactoseFree": true,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "sernik-marcepanowy",
+  "photos": [
+    "43804",
+    "39756"
+  ],
+  "thumbnail": "35758",
+  "tags": [
+    "56181",
+    "50894",
+    "44386",
+    "12712",
+    "04434"
+  ]
+}

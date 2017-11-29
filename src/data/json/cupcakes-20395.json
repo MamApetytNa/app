@@ -1,0 +1,39 @@
+{
+  "id": "20395",
+  "url": "/cupcakes-20395",
+  "description": "Czekoladowe cupcakes ze śmietankowym kremem.",
+  "minPrice": {
+    "value": 4,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 4,
+        "currency": "PLN"
+      },
+      "slices": 1,
+      "diameter": null,
+      "weight": {
+        "value": 80,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Cupcakes",
+  "photos": [
+    "35884"
+  ],
+  "thumbnail": "22896",
+  "tags": [
+    "10681",
+    "56181",
+    "45331"
+  ]
+}

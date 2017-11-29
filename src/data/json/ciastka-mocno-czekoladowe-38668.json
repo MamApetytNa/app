@@ -1,0 +1,40 @@
+{
+  "id": "38668",
+  "url": "/ciastka-mocno-czekoladowe-38668",
+  "description": "Turboczekoladowe ciastka, miękkie w środku, kruche na wierzchu, z kawałkami czekolady i orzechami. Kto bierze?",
+  "minPrice": {
+    "value": 30,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 30,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": null,
+      "weight": {
+        "value": 500,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": false,
+    "vegan": false
+  },
+  "name": "Ciastka mocno czekoladowe",
+  "photos": [
+    "41553",
+    "25780"
+  ],
+  "thumbnail": "64742",
+  "tags": [
+    "45395",
+    "56181",
+    "61004"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "36008",
+  "url": "/tarta-czekoladowa-z-mascarpone-36008",
+  "description": "Mało co na świecie prezentuje się tak dobrze na czarnym talerzu jak tarta czekoladowa z kremem mascarpone. Chciałabym, żeby ten talerz prezentował się równie dobrze bez tarty. ",
+  "minPrice": {
+    "value": 60,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 60,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.2,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tarta czekoladowa z mascarpone",
+  "photos": [
+    "45960"
+  ],
+  "thumbnail": "15167",
+  "tags": [
+    "56181",
+    "03541",
+    "01257",
+    "42773"
+  ]
+}

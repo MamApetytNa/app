@@ -1,0 +1,51 @@
+{
+  "id": "47771",
+  "url": "/tarta-z-kremem-patissiere-47771",
+  "description": "Kruchy spód, krem patissiere, pieczone gruszki, śliwki i morele. Słodki waniliowy krem, kwaśne owoce w porto i przyprawach korzennych, orzechy włoskie i maliny. Tarta pełna sprzeczności, które się lubią.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 30,
+        "currency": "PLN"
+      },
+      "slices": 3,
+      "diameter": {
+        "value": 12,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 400,
+        "unit": "g"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": false,
+    "nutsFree": [
+      true,
+      false
+    ],
+    "vegan": false
+  },
+  "name": "Tarta z kremem patissiere",
+  "photos": [
+    "30134"
+  ],
+  "thumbnail": "01394",
+  "tags": [
+    "61004",
+    "00238",
+    "01257",
+    "50093",
+    "42773",
+    "46683",
+    "40005",
+    "63546",
+    "48021"
+  ]
+}

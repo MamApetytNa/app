@@ -1,0 +1,342 @@
+[
+  {
+    "id": "12269",
+    "label": "beza"
+  },
+  {
+    "id": "03849",
+    "label": "brownie"
+  },
+  {
+    "id": "56181",
+    "label": "czekolada"
+  },
+  {
+    "id": "61004",
+    "label": "orzechy"
+  },
+  {
+    "id": "34285",
+    "label": "krówki"
+  },
+  {
+    "id": "30644",
+    "label": "masło orzechowe"
+  },
+  {
+    "id": "00238",
+    "label": "orzechy włoskie"
+  },
+  {
+    "id": "49820",
+    "label": "pieczywo"
+  },
+  {
+    "id": "02700",
+    "label": "ciasto drożdżowe"
+  },
+  {
+    "id": "41721",
+    "label": "mak"
+  },
+  {
+    "id": "46583",
+    "label": "bułka"
+  },
+  {
+    "id": "45395",
+    "label": "ciastka"
+  },
+  {
+    "id": "07673",
+    "label": "orzeszki ziemne"
+  },
+  {
+    "id": "11618",
+    "label": "orzechy laskowe"
+  },
+  {
+    "id": "37126",
+    "label": "nutella"
+  },
+  {
+    "id": "46127",
+    "label": "borówki"
+  },
+  {
+    "id": "00000",
+    "label": ""
+  },
+  {
+    "id": "51543",
+    "label": "wiosna"
+  },
+  {
+    "id": "41552",
+    "label": "rabarbar"
+  },
+  {
+    "id": "05981",
+    "label": "ciasto sufletowe"
+  },
+  {
+    "id": "33366",
+    "label": "krem"
+  },
+  {
+    "id": "45331",
+    "label": "krem śmietankowy"
+  },
+  {
+    "id": "61926",
+    "label": "dynia"
+  },
+  {
+    "id": "26961",
+    "label": "kajmak"
+  },
+  {
+    "id": "46683",
+    "label": "śliwki"
+  },
+  {
+    "id": "42694",
+    "label": "suszone śliwki"
+  },
+  {
+    "id": "12115",
+    "label": "przyprawy korzenne"
+  },
+  {
+    "id": "34968",
+    "label": "jesień"
+  },
+  {
+    "id": "51988",
+    "label": "karmel"
+  },
+  {
+    "id": "35281",
+    "label": "żurawina"
+  },
+  {
+    "id": "60393",
+    "label": "migdały"
+  },
+  {
+    "id": "53284",
+    "label": "ricotta"
+  },
+  {
+    "id": "35431",
+    "label": "granat"
+  },
+  {
+    "id": "40137",
+    "label": "płatki migdałowe"
+  },
+  {
+    "id": "40005",
+    "label": "gruszki"
+  },
+  {
+    "id": "23443",
+    "label": "cynamon"
+  },
+  {
+    "id": "10681",
+    "label": "cupcake"
+  },
+  {
+    "id": "55353",
+    "label": "drożdżówki"
+  },
+  {
+    "id": "53470",
+    "label": "ciasto duńskie"
+  },
+  {
+    "id": "12712",
+    "label": "konfitura"
+  },
+  {
+    "id": "02715",
+    "label": "truskawki"
+  },
+  {
+    "id": "44386",
+    "label": "wiśnie"
+  },
+  {
+    "id": "53305",
+    "label": "kruszonka"
+  },
+  {
+    "id": "32189",
+    "label": "rogal"
+  },
+  {
+    "id": "21859",
+    "label": "ciasto półfrancuskie"
+  },
+  {
+    "id": "35423",
+    "label": "rodzynki"
+  },
+  {
+    "id": "17475",
+    "label": "biały mak"
+  },
+  {
+    "id": "06970",
+    "label": "święto"
+  },
+  {
+    "id": "54471",
+    "label": "tradycyjne"
+  },
+  {
+    "id": "04434",
+    "label": "sernik"
+  },
+  {
+    "id": "41515",
+    "label": "lato"
+  },
+  {
+    "id": "35184",
+    "label": "jagody"
+  },
+  {
+    "id": "50894",
+    "label": "marcepan"
+  },
+  {
+    "id": "31511",
+    "label": "owoce"
+  },
+  {
+    "id": "42265",
+    "label": "czereśnie"
+  },
+  {
+    "id": "63546",
+    "label": "morele"
+  },
+  {
+    "id": "01257",
+    "label": "tarta"
+  },
+  {
+    "id": "14285",
+    "label": "bita śmietana"
+  },
+  {
+    "id": "58923",
+    "label": "kiwi"
+  },
+  {
+    "id": "54920",
+    "label": "krem cytrynowy"
+  },
+  {
+    "id": "34767",
+    "label": "cytryny"
+  },
+  {
+    "id": "32235",
+    "label": "tarta czekoladowa"
+  },
+  {
+    "id": "42773",
+    "label": "ciasto kruche"
+  },
+  {
+    "id": "55964",
+    "label": "chałwa"
+  },
+  {
+    "id": "55541",
+    "label": "krem chałwowy"
+  },
+  {
+    "id": "61455",
+    "label": "mus truskawkowy"
+  },
+  {
+    "id": "03541",
+    "label": "mascarpone"
+  },
+  {
+    "id": "43423",
+    "label": "kruche ciasto"
+  },
+  {
+    "id": "48358",
+    "label": "porzeczki"
+  },
+  {
+    "id": "32551",
+    "label": "brzoskwinie"
+  },
+  {
+    "id": "48021",
+    "label": "maliny"
+  },
+  {
+    "id": "32601",
+    "label": "papierówki"
+  },
+  {
+    "id": "02979",
+    "label": "aronia"
+  },
+  {
+    "id": "14104",
+    "label": "biała czekolada"
+  },
+  {
+    "id": "32557",
+    "label": "mus owocowy"
+  },
+  {
+    "id": "50093",
+    "label": "krem patissiere"
+  },
+  {
+    "id": "21272",
+    "label": "budyń"
+  },
+  {
+    "id": "27151",
+    "label": "tort"
+  },
+  {
+    "id": "63663",
+    "label": "lemon curd"
+  },
+  {
+    "id": "03529",
+    "label": "urodziny"
+  },
+  {
+    "id": "57509",
+    "label": "biszkopt"
+  },
+  {
+    "id": "05157",
+    "label": "kokos"
+  },
+  {
+    "id": "33293",
+    "label": "proto"
+  },
+  {
+    "id": "19503",
+    "label": "szałwia"
+  },
+  {
+    "id": "00417",
+    "label": "tort piętrowy"
+  }
+]

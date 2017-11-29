@@ -1,0 +1,63 @@
+{
+  "id": "46058",
+  "url": "/tarta-rustykalna-z-owocami-46058",
+  "description": "Dużo owoców, mało ciasta. Do tego migdały, trochę cukru trzcinowego. Morele, brzoskwinie, borówki, jagody, maliny, śliwki i papierówka z ogrodu też się znajdzie. Letnie ciasto, póki jest lato.",
+  "minPrice": {
+    "value": 50,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 50,
+        "currency": "PLN"
+      },
+      "slices": 12,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 65,
+        "currency": "PLN"
+      },
+      "slices": 16,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": true,
+    "vegan": false
+  },
+  "name": "Tarta rustykalna z owocami",
+  "photos": [
+    "65000",
+    "22881"
+  ],
+  "thumbnail": "11917",
+  "tags": [
+    "46683",
+    "01257",
+    "41515",
+    "63546",
+    "32551",
+    "48021",
+    "46127",
+    "32601"
+  ]
+}

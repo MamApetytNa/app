@@ -1,0 +1,65 @@
+{
+  "id": "03737",
+  "url": "/tort-czekoladowy-z-kremem-smietankowym-03737",
+  "description": "Tort czekoladowy ze śmietankowym kremem i konfiturą, na urodziny i na co dzień. Można zjeść samodzielnie, można się podzielić. Ciasto wielofunkcyjne i wspaniałe. Plus czekam na sezon truskawkowy.",
+  "minPrice": {
+    "value": 70,
+    "currency": "PLN"
+  },
+  "sizes": [
+    {
+      "price": {
+        "value": 70,
+        "currency": "PLN"
+      },
+      "slices": 10,
+      "diameter": {
+        "value": 20,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "price": {
+        "value": 90,
+        "currency": "PLN"
+      },
+      "slices": 13,
+      "diameter": {
+        "value": 24,
+        "unit": "cm"
+      },
+      "weight": {
+        "value": 1.5,
+        "unit": "kg"
+      }
+    }
+  ],
+  "features": {
+    "glutenFree": false,
+    "lactoseFree": true,
+    "nutsFree": [
+      true,
+      false
+    ],
+    "vegan": false
+  },
+  "name": "Tort czekoladowy z kremem śmietankowym",
+  "photos": [
+    "61557",
+    "19557"
+  ],
+  "thumbnail": "30960",
+  "tags": [
+    "02715",
+    "56181",
+    "57509",
+    "03529",
+    "33366",
+    "45331",
+    "12712"
+  ]
+}
