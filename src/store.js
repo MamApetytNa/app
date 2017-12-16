@@ -1,37 +1,57 @@
-
-import createHistory from 'history/createBrowserHistory';
+import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
 import { connectRoutes } from 'redux-first-router';
 import restoreScroll from 'redux-first-router-restore-scroll';
-import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import {
+  combineReducers,
+  createStore as createReduxStore,
+  applyMiddleware,
+  compose,
+} from 'redux';
 
 import * as reducers from './reducers';
 import { routesMap } from './routes';
 import * as actionCreators from './actions';
 
-const history = createHistory();
+export default function createStore(initialState, history) {
+  const {
+    reducer: locationReducer,
+    middleware: routerMiddleware,
+    enhancer,
+    thunk,
+  } = connectRoutes(history, routesMap, {
+    restoreScroll: restoreScroll(),
+  });
 
-const {
-  reducer: locationReducer,
-  middleware: routerMiddleware,
-  enhancer,
-} = connectRoutes(history, routesMap, {
-  restoreScroll: restoreScroll(),
-});
+  function createRootReducer(childReducers) {
+    return combineReducers({
+      ...childReducers,
+      location: locationReducer,
+    });
+  }
 
-const rootReducer = combineReducers({
-  ...reducers,
-  location: locationReducer,
-});
-const middlewares = applyMiddleware(routerMiddleware);
+  const rootReducer = createRootReducer(reducers);
+  const middlewares = applyMiddleware(routerMiddleware);
 
-/* eslint-disable no-underscore-dangle */
-const composeEnhancers = global.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-  ? global.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ actionCreators })
-  : compose;
-/* eslint-enable no-underscore-dangle */
+  /* eslint-disable no-underscore-dangle */
+  const composeEnhancers = global.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? composeWithDevTools({ actionCreators })
+    : compose;
+  /* eslint-enable no-underscore-dangle */
 
-export default createStore(
-  rootReducer,
-  global.REDUX_INITIAL_STATE,
-  composeEnhancers(enhancer, middlewares),
-);
+  const store = createReduxStore(
+    rootReducer,
+    initialState,
+    composeEnhancers(enhancer, middlewares),
+  );
+
+  if (module.hot && process.env.NODE_ENV === 'development') {
+    module.hot.accept('./reducers', () => {
+      // eslint-disable-next-line global-require
+      store.replaceReducer(createRootReducer(require('./reducers')));
+    });
+  }
+
+  console.log('state', store.getState());
+
+  return { store, thunk };
+}

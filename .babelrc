@@ -1,4 +1,14 @@
 {
     "presets": ["react-app"],
-    "plugins": ["transform-class-properties", "universal-import"]
+    "plugins": [
+        "transform-class-properties",
+        "universal-import"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        }
+    }
 }

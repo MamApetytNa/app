@@ -7,7 +7,7 @@
     },
     "rules": {
         "import/no-extraneous-dependencies": ["error", {
-            "devDependencies": ["config/**/*.js", "scripts/**/*.js", "src/stories/**/*.jsx", "src/**/*.spec.js"]
+            "devDependencies": ["config/**/*.js", "scripts/**/*.js", "src/stories/**/*.jsx", "src/**/*.spec.js", "src/server/dev.js"]
             }],
         "jsx-a11y/anchor-is-valid": "off",
         "react/prop-types": "off"
