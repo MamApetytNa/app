@@ -48,75 +48,67 @@ const config = {
   },
   module: {
     strictExportPresence: true,
-    rules: [
-      {
+    rules: [{
+      test: /\.(js|jsx)$/,
+      enforce: 'pre',
+      use: [{
+        options: {
+          formatter: eslintFormatter,
+          eslintPath: require.resolve('eslint'),
+        },
+        loader: require.resolve('eslint-loader'),
+      }],
+      include: paths.appSrc,
+    }, {
+      oneOf: [{
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: require.resolve('url-loader'),
+        options: {
+          limit: 10000,
+          name: 'static/media/[name].[hash:8].[ext]',
+        },
+      }, {
         test: /\.(js|jsx)$/,
-        enforce: 'pre',
-        use: [
-          {
-            options: {
-              formatter: eslintFormatter,
-              eslintPath: require.resolve('eslint'),
-
-            },
-            loader: require.resolve('eslint-loader'),
-          },
-        ],
         include: paths.appSrc,
-      },
-      {
-        oneOf: [
+        loader: require.resolve('babel-loader'),
+        options: {
+          cacheDirectory: true,
+        },
+      }, {
+        test: /\.css$/,
+        use: [
+          require.resolve('style-loader'),
           {
-            test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-            loader: require.resolve('url-loader'),
+            loader: require.resolve('css-loader'),
             options: {
-              limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
+              importLoaders: 1,
             },
           }, {
-            test: /\.(js|jsx)$/,
-            include: paths.appSrc,
-            loader: require.resolve('babel-loader'),
+            loader: require.resolve('postcss-loader'),
             options: {
-              cacheDirectory: true,
-            },
-          }, {
-            test: /\.css$/,
-            use: [
-              require.resolve('style-loader'),
-              {
-                loader: require.resolve('css-loader'),
-                options: {
-                  importLoaders: 1,
-                },
-              }, {
-                loader: require.resolve('postcss-loader'),
-                options: {
-                  ident: 'postcss',
-                  plugins: () => [
-                    postcssFlexbugsFixes,
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 2 versions',
-                        'not ie < 11',
-                      ],
-                      flexbox: 'no-2009',
-                    }),
+              ident: 'postcss',
+              plugins: () => [
+                postcssFlexbugsFixes,
+                autoprefixer({
+                  browsers: [
+                    '>1%',
+                    'last 2 versions',
+                    'not ie < 11',
                   ],
-                },
-              },
-            ],
-          }, {
-            exclude: [/\.js$/, /\.html$/, /\.json$/],
-            loader: require.resolve('file-loader'),
-            options: {
-              name: 'static/media/[name].[hash:8].[ext]',
+                  flexbox: 'no-2009',
+                }),
+              ],
             },
           },
         ],
-      },
-    ],
+      }, {
+        exclude: [/\.js$/, /\.html$/, /\.json$/],
+        loader: require.resolve('file-loader'),
+        options: {
+          name: 'static/media/[name].[hash:8].[ext]',
+        },
+      }],
+    }],
   },
   plugins: [
     new InterpolateHtmlPlugin(env.raw),
@@ -165,6 +157,7 @@ module.exports.clientConfig = mergeConfigs(config, {
     }),
   ],
 });
+
 module.exports.serverConfig = mergeConfigs(config, {
   name: 'server',
   target: 'node',

@@ -1,19 +1,28 @@
-const Koa = require('koa');
-const koaStatic = require('koa-static');
+import compression from 'compression';
+import express from 'express';
 
-const { clientConfig } = require('../../config/webpack.config.dev');
+import render from './render';
 
-const { publicPath, path: outputPath } = clientConfig.output;
+export default function run({
+  port,
+  buildDir,
+  clientStats,
+}) {
+  const app = express();
+  app.use(compression());
+  app.use(express.static(buildDir));
+  app.use(render({ clientStats }));
 
-module.exports = function run(port) {
-  const clientStats = require('../public/stats.json'); // eslint-disable-line import/no-unresolved, global-require
-  const serverRender = require('../public/main.js').default; // eslint-disable-line import/no-unresolved, global-require
+  return new Promise((resolve) => {
+    const url = `http://localhost:${port}/`;
 
-  const app = new Koa();
-  app.use(publicPath, koaStatic(outputPath));
-  app.use(serverRender({ clientStats, outputPath }));
+    const server = app.listen(port, () => {
+      console.log(`Listening @ ${url}`);
+    });
 
-  app.listen(port, () => {
-    console.log(`Listening @ http://localhost:${port}/`);
+    resolve({
+      close: () => server.close(),
+      url,
+    });
   });
-};
+}

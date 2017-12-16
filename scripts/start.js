@@ -1,9 +1,14 @@
 const { choosePort } = require('react-dev-utils/WebpackDevServerUtils');
 const openBrowser = require('react-dev-utils/openBrowser');
 
-const { dev, prod } = require('../src/server');
+const { appBuild, appPublic } = require('../config/paths');
 
-const server = process.env.NODE_ENV === 'development' ? dev : prod;
+const isDev = process.env.NODE_ENV === 'development';
+
+/* eslint-disable import/no-dynamic-require, global-require */
+const { default: server } = require(`../build/server/${isDev ? 'dev' : 'main'}`);
+const clientStats = require(`${appBuild}/stats.json`);
+/* eslint-enable */
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
@@ -13,7 +18,12 @@ choosePort(HOST, DEFAULT_PORT)
       return null;
     }
 
-    return server(port);
+    return server({
+      clientStats,
+      port,
+      buildDir: appBuild,
+      publicDir: appPublic,
+    });
   })
   .then(({ close, url }) => {
     openBrowser(url);

@@ -1,7 +1,6 @@
 {
     "presets": ["react-app"],
     "plugins": [
-        "transform-class-properties",
         "universal-import"
     ],
     "env": {

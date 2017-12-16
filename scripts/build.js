@@ -18,7 +18,7 @@ const path = require('path');
 const chalk = require('chalk');
 const fs = require('fs-extra');
 const webpack = require('webpack');
-const config = require('../config/webpack.config.prod');
+const { clientConfig, serverConfig } = require('../config/webpack.config.prod');
 const paths = require('../config/paths');
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
@@ -35,7 +35,7 @@ const WARN_AFTER_BUNDLE_GZIP_SIZE = 512 * 1024;
 const WARN_AFTER_CHUNK_GZIP_SIZE = 1024 * 1024;
 
 // Warn and crash if required files are missing
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+if (!checkRequiredFiles([paths.appIndexJs])) {
   process.exit(1);
 }
 
@@ -44,7 +44,7 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 function build(previousFileSizes) {
   console.log('Creating an optimized production build...');
 
-  const compiler = webpack(config);
+  const compiler = webpack([clientConfig, serverConfig]);
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err) {
@@ -69,6 +69,7 @@ function build(previousFileSizes) {
               'Most CI servers set it automatically.\n'));
         return reject(new Error(messages.warnings.join('\n\n')));
       }
+
       return resolve({
         stats,
         previousFileSizes,
@@ -83,6 +84,20 @@ function copyPublicFolder() {
     dereference: true,
     filter: file => file !== paths.appHtml,
   });
+}
+
+function handleMutliStats(stats) {
+  const assets = stats
+    .toJson()
+    .children
+    .map(child => child.assets)
+    .reduce((a, b) => a.concat(b));
+
+  return {
+    toJson() {
+      return { assets };
+    },
+  };
 }
 
 // First, read the current file sizes in build directory.
@@ -114,7 +129,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
 
       console.log('File sizes after gzip:\n');
       printFileSizesAfterBuild(
-        stats,
+        handleMutliStats(stats),
         previousFileSizes,
         paths.appBuild,
         WARN_AFTER_BUNDLE_GZIP_SIZE,
@@ -124,7 +139,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
       // eslint-disable-next-line import/no-dynamic-require, global-require
       const appPackage = require(paths.appPackageJson);
       const { publicUrl } = paths;
-      const { publicPath } = config.output;
+      const { publicPath } = clientConfig.output;
       const buildFolder = path.relative(process.cwd(), paths.appBuild);
       printHostingInstructions(
         appPackage,
@@ -133,6 +148,9 @@ measureFileSizesBeforeBuild(paths.appBuild)
         buildFolder,
         useYarn,
       );
+
+      const clientStats = stats.toJson().children.find(stat => stat.name === 'client');
+      return fs.writeFileSync(path.join(buildFolder, 'stats.json'), JSON.stringify(clientStats));
     },
     (err) => {
       console.log(chalk.red('Failed to compile.\n'));

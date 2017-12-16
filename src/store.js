@@ -51,7 +51,5 @@ export default function createStore(initialState, history) {
     });
   }
 
-  console.log('state', store.getState());
-
   return { store, thunk };
 }

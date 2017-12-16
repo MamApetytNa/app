@@ -1,16 +1,15 @@
-const express = require('express');
-const webpack = require('webpack');
-const mergeWebpackConfigs = require('webpack-merge');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
+import express from 'express';
+import webpack from 'webpack';
+import mergeWebpackConfigs from 'webpack-merge';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
+import webpackHotServerMiddleware from 'webpack-hot-server-middleware';
 
-const { clientConfig, serverConfig } = require('../../config/webpack.config.dev');
-const { appPublic } = require('../../config/paths');
+import { clientConfig, serverConfig } from '../../config/webpack.config.dev';
 
 const { publicPath, path: outputPath } = clientConfig.output;
 
-module.exports = function run(port) {
+export default function run({ port, buildDir }) {
   const customizedClientConfig = mergeWebpackConfigs(clientConfig, {
     devServer: { port },
   });
@@ -20,7 +19,7 @@ module.exports = function run(port) {
   const multiCompiler = webpack([customizedClientConfig, serverConfig]);
   const clientCompiler = multiCompiler.compilers[0];
 
-  app.use(express.static(appPublic));
+  app.use(express.static(buildDir));
   app.use(webpackDevMiddleware(multiCompiler, { publicPath, stats: { colors: true } }));
   app.use(webpackHotMiddleware(clientCompiler));
   app.use(webpackHotServerMiddleware(multiCompiler, {
@@ -39,4 +38,4 @@ module.exports = function run(port) {
       url,
     });
   });
-};
+}
