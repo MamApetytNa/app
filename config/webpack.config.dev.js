@@ -65,7 +65,7 @@ const config = {
         loader: require.resolve('url-loader'),
         options: {
           limit: 10000,
-          name: 'static/media/[name].[hash:8].[ext]',
+          name: 'public/media/[name].[ext]',
         },
       }, {
         test: /\.(js|jsx)$/,
@@ -105,7 +105,7 @@ const config = {
         exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: require.resolve('file-loader'),
         options: {
-          name: 'static/media/[name].[hash:8].[ext]',
+          name: 'public/media/[name].[ext]',
         },
       }],
     }],
@@ -141,8 +141,8 @@ module.exports.clientConfig = mergeConfigs(config, {
     paths.appIndexJs,
   ],
   output: {
-    filename: 'static/js/bundle.js',
-    chunkFilename: 'static/js/[name].chunk.js',
+    filename: 'public/js/bundle.js',
+    chunkFilename: 'public/js/[name].chunk.js',
     publicPath,
   },
   devServer: {
@@ -164,8 +164,7 @@ module.exports.serverConfig = mergeConfigs(config, {
   externals,
   entry: [path.resolve(__dirname, '../src/server/render')],
   output: {
-    filename: 'server/[name].js',
-    chunkFilename: 'server/[name].chunk.js',
+    filename: 'server.js',
     libraryTarget: 'commonjs2',
   },
   plugins: [

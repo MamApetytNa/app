@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { AppContainer } from 'react-hot-loader'; // eslint-disable-line import/no-extraneous-dependencies
-import { create } from 'jss';
-import JssProvider from 'react-jss/lib/JssProvider';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import preset from 'jss-preset-default';
 import createGenerateClassName from 'material-ui/styles/createGenerateClassName';
 
 import App from './components/App';
+
+import { jss, JssProvider } from './utils/jss';
 
 class Bootstrap extends Component {
   constructor(props) {
@@ -18,7 +16,7 @@ class Bootstrap extends Component {
         type: 'light',
       },
     });
-    this.jss = create(preset());
+    this.jss = jss;
     this.jss.options.createGenerateClassName = createGenerateClassName;
   }
 
@@ -30,7 +28,7 @@ class Bootstrap extends Component {
   }
 
   render() {
-    const { store, sheetsRegistry } = this.props;
+    const { store, sheetsRegistry, appContainer: AppContainer } = this.props;
     return (
       <AppContainer>
         <Provider store={store}>
@@ -45,8 +43,9 @@ class Bootstrap extends Component {
   }
 }
 
-export default function createApp(store, sheetsRegistry) {
+export default function createApp(store, sheetsRegistry, appContainer) {
   return (<Bootstrap
+    appContainer={appContainer}
     store={store}
     sheetsRegistry={sheetsRegistry}
   />);

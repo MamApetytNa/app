@@ -11,6 +11,7 @@ const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
@@ -38,7 +39,7 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
   throw new Error('Production builds must have NODE_ENV=production.');
 }
 
-const cssFilename = 'static/css/[name].[contenthash:8].css';
+const cssFilename = 'public/css/[name].[contenthash:8].css';
 
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
   ? { publicPath: Array(cssFilename.split('/').length).join('../') }
@@ -120,7 +121,7 @@ const config = {
         loader: require.resolve('file-loader'),
         exclude: [/\.js$/, /\.html$/, /\.json$/],
         options: {
-          name: 'static/media/[name].[hash:8].[ext]',
+          name: 'public/media/[name].[hash:8].[ext]',
         },
       }],
     }],
@@ -139,14 +140,14 @@ module.exports.clientConfig = mergeConfigs(config, {
   target: 'web',
   entry: [require.resolve('./polyfills'), paths.appIndexJs],
   output: {
-    filename: 'static/js/[name].[chunkhash:8].js',
-    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+    filename: 'public/js/[name].[chunkhash:8].js',
+    chunkFilename: 'public/js/[name].[chunkhash:8].chunk.js',
     publicPath,
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       names: ['bootstrap'],
-      filename: '[name].[chunkhash].js',
+      filename: 'public/js/[name].[chunkhash].js',
       minChunks: Infinity,
     }),
     new webpack.DefinePlugin(env.stringified),
@@ -169,7 +170,7 @@ module.exports.clientConfig = mergeConfigs(config, {
     }),
     new SWPrecacheWebpackPlugin({
       dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: 'service-worker.js',
+      filename: 'public/service-worker.js',
       logger(message) {
         if (message.indexOf('Total precache size is') === 0) {
           return;
@@ -187,6 +188,12 @@ module.exports.clientConfig = mergeConfigs(config, {
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new FaviconsWebpackPlugin({
+      logo: path.join(paths.appSrc, 'logo.svg'),
+      prefix: 'public/icons/',
+      emitStats: true,
+      statsFilename: 'icons.json',
+    }),
   ],
 });
 
@@ -196,8 +203,7 @@ module.exports.serverConfig = mergeConfigs(config, {
   externals: nodeModulesExternals,
   entry: path.resolve(__dirname, '../src/server/prod'),
   output: {
-    filename: 'server/[name].js',
-    chunkFilename: 'server/[name].chunk.js',
+    filename: 'server.js',
     libraryTarget: 'commonjs2',
   },
   plugins: [

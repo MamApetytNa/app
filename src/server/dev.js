@@ -5,11 +5,9 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackHotServerMiddleware from 'webpack-hot-server-middleware';
 
-import { clientConfig, serverConfig } from '../../config/webpack.config.dev';
+export default function run({ port, buildDir, webpackConfig: { clientConfig, serverConfig } }) {
+  const { publicPath, path: outputPath } = clientConfig.output;
 
-const { publicPath, path: outputPath } = clientConfig.output;
-
-export default function run({ port, buildDir }) {
   const customizedClientConfig = mergeWebpackConfigs(clientConfig, {
     devServer: { port },
   });

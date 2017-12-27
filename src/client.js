@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-filename-extension */
 
 import 'typeface-roboto-multilang/latin-ext.css';
-
 import createHistory from 'history/createBrowserHistory';
-
 import { hydrate } from 'react-dom';
-import { SheetsRegistry } from 'react-jss/lib/jss';
+
+import { SheetsRegistry } from './utils/jss';
 
 import './index.css';
 import createStore from './store';
@@ -22,12 +21,25 @@ function renderApp(app) {
   hydrate(app, container);
 }
 
-renderApp(createApp(store, sheetsRegistry));
+function getAppContainer() {
+  if (module.hot && process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line import/no-extraneous-dependencies, global-require
+    return require('react-hot-loader').AppContainer;
+  }
+
+  return ({ children }) => children;
+}
+
+const AppContainer = getAppContainer();
+
+setTimeout(() => {
+  renderApp(createApp(store, sheetsRegistry, AppContainer));
+}, 0);
 
 if (module.hot && process.env.NODE_ENV === 'development') {
   module.hot.accept('./app', () => {
     // eslint-disable-next-line global-require
-    renderApp(require('./app').default(store, sheetsRegistry));
+    renderApp(require('./app').default(store, sheetsRegistry, AppContainer));
   });
 } else {
   registerServiceWorker();

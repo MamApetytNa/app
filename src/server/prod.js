@@ -5,13 +5,14 @@ import render from './render';
 
 export default function run({
   port,
-  buildDir,
+  publicDir,
   clientStats,
+  iconStats,
 }) {
   const app = express();
   app.use(compression());
-  app.use(express.static(buildDir));
-  app.use(render({ clientStats }));
+  app.use('/public', express.static(publicDir));
+  app.use(render({ clientStats, iconStats }));
 
   return new Promise((resolve) => {
     const url = `http://localhost:${port}/`;
