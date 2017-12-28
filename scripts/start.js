@@ -9,7 +9,7 @@ const appPublic = path.resolve(__dirname, '..', 'public');
 const clientStats = require(`${appBuild}/stats.json`);
 const iconStats = require(`${appBuild}/icons.json`);
 /* eslint-enable */
-const PORT = parseInt(process.env.PORT, 10) || 8080;
+const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 server({
   clientStats,
