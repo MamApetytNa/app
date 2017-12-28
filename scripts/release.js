@@ -1,12 +1,37 @@
+const archiver = require('archiver');
 const fs = require('fs-extra');
 const path = require('path');
-const { zip } = require('node-zip-dir');
 
 const paths = require('../config/paths');
 
 async function prepareDir(dirPath) {
   await fs.ensureDir(dirPath);
   await fs.emptyDir(dirPath);
+}
+
+function zipDir(dirPath, zipPath) {
+  const destStream = fs.createWriteStream(zipPath);
+  const archive = archiver('zip');
+
+  return new Promise(((resolve, reject) => {
+    destStream.on('close', () => {
+      resolve(destStream.path);
+    });
+
+    // Reject on Error
+    archive.on('error', reject);
+
+    archive.directory(dirPath, '.');
+
+    // Some logs
+    archive.on('entry', (file) => {
+      console.log(`Zipping ${file.name}`);
+    });
+
+    // Pipe the stream
+    archive.pipe(destStream);
+    archive.finalize();
+  }));
 }
 
 async function release() {
@@ -30,10 +55,16 @@ async function release() {
     path.join(paths.appRelease, 'scripts', 'start.js'),
   );
 
+  await prepareDir(path.join(paths.appRelease, '.ebextensions'));
+  await fs.copy(
+    path.join(paths.appEbExtensionsConfig, 'logging.config'),
+    path.join(paths.appRelease, '.ebextensions', 'logging.config'),
+  );
+
   await fs.copy(paths.appPackageJson, path.join(paths.appRelease, 'package.json'));
   await fs.copy(paths.appYarnLock, path.join(paths.appRelease, 'yarn.lock'));
 
-  await zip(paths.appRelease, 'release.zip');
+  await zipDir(paths.appRelease, 'release.zip');
   await fs.remove(paths.appRelease);
 }
 

@@ -43,6 +43,7 @@ module.exports = {
   appConfig: resolveApp('config'),
   appScripts: resolveApp('scripts'),
   appRelease: resolveApp('release'),
+  appEbExtensionsConfig: resolveApp('.ebextensions'),
   yarnLockFile: resolveApp('yarn.lock'),
   testsSetup: resolveApp('src/setupTests.js'),
   appNodeModules: resolveApp('node_modules'),
