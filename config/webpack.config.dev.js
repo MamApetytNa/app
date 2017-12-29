@@ -65,7 +65,7 @@ const config = {
         loader: require.resolve('url-loader'),
         options: {
           limit: 10000,
-          name: 'public/media/[name].[ext]',
+          name: 'media/[name].[ext]',
         },
       }, {
         test: /\.(js|jsx)$/,
@@ -105,7 +105,7 @@ const config = {
         exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: require.resolve('file-loader'),
         options: {
-          name: 'public/media/[name].[ext]',
+          name: 'media/[name].[ext]',
         },
       }],
     }],
@@ -141,8 +141,8 @@ module.exports.clientConfig = mergeConfigs(config, {
     paths.appIndexJs,
   ],
   output: {
-    filename: 'public/js/bundle.js',
-    chunkFilename: 'public/js/[name].chunk.js',
+    filename: 'js/bundle.js',
+    chunkFilename: 'js/[name].chunk.js',
     publicPath,
   },
   devServer: {

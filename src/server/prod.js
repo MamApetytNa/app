@@ -5,7 +5,6 @@ import morgan from 'morgan';
 
 import render from './render';
 
-
 export default function run({
   port,
   publicDir,
@@ -19,7 +18,7 @@ export default function run({
   const app = express();
   app.use(morgan('combined', { stream: accessLogStream }));
   app.use(compression());
-  app.use('/public', express.static(publicDir));
+  app.use('/', express.static(publicDir));
   app.use(render({ clientStats, iconStats }));
 
   return new Promise((resolve) => {

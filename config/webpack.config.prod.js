@@ -39,7 +39,7 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
   throw new Error('Production builds must have NODE_ENV=production.');
 }
 
-const cssFilename = 'public/css/[name].[contenthash:8].css';
+const cssFilename = 'css/[name].[contenthash:8].css';
 
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
   ? { publicPath: Array(cssFilename.split('/').length).join('../') }
@@ -121,7 +121,7 @@ const config = {
         loader: require.resolve('file-loader'),
         exclude: [/\.js$/, /\.html$/, /\.json$/],
         options: {
-          name: 'public/media/[name].[hash:8].[ext]',
+          name: 'media/[name].[hash:8].[ext]',
         },
       }],
     }],
@@ -140,14 +140,14 @@ module.exports.clientConfig = mergeConfigs(config, {
   target: 'web',
   entry: [require.resolve('./polyfills'), paths.appIndexJs],
   output: {
-    filename: 'public/js/[name].[chunkhash:8].js',
-    chunkFilename: 'public/js/[name].[chunkhash:8].chunk.js',
+    filename: 'js/[name].[chunkhash:8].js',
+    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
     publicPath,
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       names: ['bootstrap'],
-      filename: 'public/js/[name].[chunkhash].js',
+      filename: 'js/[name].[chunkhash].js',
       minChunks: Infinity,
     }),
     new webpack.DefinePlugin(env.stringified),
@@ -170,18 +170,7 @@ module.exports.clientConfig = mergeConfigs(config, {
     }),
     new SWPrecacheWebpackPlugin({
       dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: 'public/service-worker.js',
-      logger(message) {
-        if (message.indexOf('Total precache size is') === 0) {
-          return;
-        }
-
-        if (message.indexOf('Skipping static resource') === 0) {
-          return;
-        }
-
-        console.log(message); // eslint-disable-line no-console
-      },
+      filename: 'service-worker.js',
       minify: true,
       navigateFallback: `${publicUrl}/index.html`,
       navigateFallbackWhitelist: [/^(?!\/__).*/],
@@ -190,7 +179,7 @@ module.exports.clientConfig = mergeConfigs(config, {
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new FaviconsWebpackPlugin({
       logo: path.join(paths.appSrc, 'logo.svg'),
-      prefix: 'public/icons/',
+      prefix: 'icons/',
       emitStats: true,
       statsFilename: 'icons.json',
     }),

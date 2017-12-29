@@ -12,7 +12,7 @@ const styles = {
 };
 
 const texts = {
-  TITLE: 'Olga ma wypieki',
+  TITLE: 'Olga ma Wypieki',
 };
 
 function Header({
