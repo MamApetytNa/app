@@ -3,7 +3,7 @@ import fs from 'fs';
 import express from 'express';
 import morgan from 'morgan';
 
-import render from './render';
+import render from './index';
 
 export default function run({
   port,

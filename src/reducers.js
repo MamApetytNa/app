@@ -1,7 +1,7 @@
 import { propEq } from 'ramda';
 
 import { pages } from './routes';
-import data from './data';
+import data from './data/js';
 
 global.REDUX_INITIAL_STATE = {
   featured: [

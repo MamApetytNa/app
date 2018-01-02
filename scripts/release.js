@@ -56,8 +56,8 @@ async function adjustManifest(src, dest) {
 async function release() {
   await fs.remove('release.zip');
   await prepareDir(paths.appRelease);
-  await prepareDir(path.join(paths.appRelease, 'public'));
 
+  await prepareDir(path.join(paths.appRelease, 'public'));
   await fs.copy(
     path.join(paths.appBuild, 'js'),
     path.join(paths.appRelease, 'public', 'js'),
@@ -78,6 +78,7 @@ async function release() {
     path.join(paths.appBuild, 'service-worker.js'),
     path.join(paths.appRelease, 'public', 'service-worker.js'),
   );
+
   await fs.copy(
     path.join(paths.appBuild, 'server.js'),
     path.join(paths.appRelease, 'server.js'),
@@ -105,6 +106,12 @@ async function release() {
   await fs.copy(
     path.join(paths.appScripts, 'start.js'),
     path.join(paths.appRelease, 'scripts', 'start.js'),
+  );
+
+  await prepareDir(path.join(paths.appRelease, 'data'));
+  await fs.copy(
+    path.join(paths.appSrc, 'data', 'json'),
+    path.join(paths.appRelease, 'data'),
   );
 
   await prepareDir(path.join(paths.appRelease, '.ebextensions'));

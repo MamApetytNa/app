@@ -1,3 +1,7 @@
+const path = require('path');
+
+process.env.DATA_DIR = path.resolve(__dirname, '..', 'src', 'data', 'json');
+
 const { choosePort } = require('react-dev-utils/WebpackDevServerUtils');
 const openBrowser = require('react-dev-utils/openBrowser');
 

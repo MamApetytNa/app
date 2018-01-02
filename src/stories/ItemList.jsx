@@ -7,7 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import ItemList from '../components/ItemList';
 
-import data from '../data';
+import data from '../data/js';
 
 function ItemLink({ name, ...props }) {
   return (

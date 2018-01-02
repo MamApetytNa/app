@@ -125,6 +125,8 @@ const config = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty',
+    __dirname: false,
+    __filename: false,
   },
   performance: {
     hints: false,
@@ -162,7 +164,7 @@ module.exports.serverConfig = mergeConfigs(config, {
   name: 'server',
   target: 'node',
   externals,
-  entry: [path.resolve(__dirname, '../src/server/render')],
+  entry: [path.resolve(__dirname, '../src/server/index.js')],
   output: {
     filename: 'server.js',
     libraryTarget: 'commonjs2',

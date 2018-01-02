@@ -40,28 +40,28 @@ export default ({
   const icons = iconStats.html.join('\n');
 
   res.send(minifyHtml(`
-    <!doctype html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="theme-color" content="#000000">
-        <link rel="manifest" href="/manifest.json">
+        <!doctype html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="theme-color" content="#000000">
+            <link rel="manifest" href="/manifest.json">
 
-        ${icons}
+            ${icons}
 
-        <title>Olga ma Wypieki</title>
-        ${styles}
-        <style id="jss-server-side">
-          ${jssStyles}
-        </style>
-      </head>
-      <body>
-        <div id="root">${app}</div>
-        ${cssHash}
-        ${js}
-        <script>window.REDUX_INITIAL_STATE = ${stateJson}</script>
-      </body>
-    </html>
-  `));
+            <title>Olga ma Wypieki</title>
+            ${styles}
+            <style id="jss-server-side">
+            ${jssStyles}
+            </style>
+        </head>
+        <body>
+            <div id="root">${app}</div>
+            ${cssHash}
+            ${js}
+            <script>window.REDUX_INITIAL_STATE = ${stateJson}</script>
+        </body>
+        </html>
+    `));
 };

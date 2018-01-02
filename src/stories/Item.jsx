@@ -8,7 +8,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import Item from '../components/Item';
 
-import data from '../data';
+import data from '../data/js';
 
 function OrderLink(props) {
   return (

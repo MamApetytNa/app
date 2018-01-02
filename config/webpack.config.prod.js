@@ -132,6 +132,8 @@ const config = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty',
+    __dirname: false,
+    __filename: false,
   },
 };
 
