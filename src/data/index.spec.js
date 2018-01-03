@@ -4,9 +4,21 @@ import { getList, getItem } from './index';
 
 describe('api', () => {
   describe('list', () => {
-    it('should return some array', async () => {
+    it('should return array filled with objects', async () => {
       const list = await getList();
       expect(list).toContainEqual(expect.any(Object));
+    });
+
+    it('should the item to contain basic fields only', async () => {
+      const list = await getList();
+      expect(list[0]).toHaveProperty('id', expect.any(String));
+      expect(list[0]).toHaveProperty('name', expect.any(String));
+      expect(list[0]).toHaveProperty('thumbnail', expect.any(Object));
+      expect(list[0]).toHaveProperty('url', expect.any(String));
+      expect(list[0]).toHaveProperty('minPrice', expect.any(Object));
+
+      expect(list[0]).not.toHaveProperty('description');
+      expect(list[0]).not.toHaveProperty('photos');
     });
 
     it('should return only items with given tags', async () => {

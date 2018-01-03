@@ -68,13 +68,7 @@ export async function getItem(id) {
   return getFullItem(item);
 }
 
-async function getItemSkeleton(item) {
-  const photosIndex = await photosIndexPromise;
-  return {
-    ...pick(['id', 'minPrice', 'url', 'name'], item),
-    thumbnail: photosIndex.get(item.thumbnail),
-  };
-}
+const getItemSkeleton = pick(['id', 'minPrice', 'url', 'name', 'thumbnail']);
 
 export async function getList({ tag = '', limit = 0 } = {}) {
   const filesIndex = await filesIndexPromise;
@@ -92,9 +86,5 @@ export async function getList({ tag = '', limit = 0 } = {}) {
     ? filteredItems.slice(0, limit)
     : filteredItems;
 
-  return pmap(
-    slicedItems,
-    getItemSkeleton,
-    { concurrency: 4 },
-  );
+  return slicedItems.map(getItemSkeleton);
 }
