@@ -4,8 +4,8 @@ import universal from 'react-universal-component';
 
 import Loader from './Loader';
 
-const PageSwitcher = universal(({ page }) => import(`../pages/${page}`), {
+const PageSwitcher = universal(({ page, pages }) => import(`../pages/${pages[page]}`), {
   loading: Loader,
 });
 
-export default connect(pick(['page']))(PageSwitcher);
+export default connect(pick(['page', 'pages']))(PageSwitcher);

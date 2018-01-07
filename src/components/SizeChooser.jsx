@@ -34,6 +34,11 @@ function SizeChooser({
   sizes = [],
 }) {
   const currentSize = sizes[currentSizeIndex];
+  if (!currentSize) {
+    // TODO: create real placeholder
+    return null;
+  }
+
   return (
     <Grid container alignItems="center">
       <Grid item xs={6}>

@@ -1,4 +1,4 @@
-import { minify as minifyHtml } from 'html-minifier';
+import htmlMinifier from 'html-minifier';
 import postcss from 'postcss';
 import cssNano from 'cssnano';
 import { renderToString } from 'react-dom/server';
@@ -11,10 +11,38 @@ import flushChunks from 'webpack-flush-chunks';
 import createStore from '../store';
 import createApp from '../app';
 
+function minifyHtml(html) {
+  if (process.env.NODE_ENV === 'development') {
+    return html;
+  }
+
+  return htmlMinifier.minify(html);
+}
+
 function minifyCss(css) {
+  if (process.env.NODE_ENV === 'development') {
+    return css;
+  }
+
   return postcss([cssNano])
     .process(css, { from: 'src/app.css', to: 'dest/app.css' })
     .then(result => result.css);
+}
+
+function getManifest() {
+  if (process.env.NODE_ENV === 'development') {
+    return '';
+  }
+
+  return '<link rel="manifest" href="/manifest.json">';
+}
+
+function getIcons(iconStats) {
+  if (process.env.NODE_ENV === 'development') {
+    return '';
+  }
+
+  return iconStats.html.join('\n');
 }
 
 export default ({
@@ -37,7 +65,8 @@ export default ({
 
   const stateJson = JSON.stringify(store.getState());
   const jssStyles = await minifyCss(sheetsRegistry.toString());
-  const icons = iconStats.html.join('\n');
+  const icons = getIcons(iconStats);
+  const manifest = getManifest();
 
   res.send(minifyHtml(`
         <!doctype html>
@@ -46,7 +75,8 @@ export default ({
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="theme-color" content="#000000">
-            <link rel="manifest" href="/manifest.json">
+            <link rel="shortcut icon" href="/icons/favicon.ico" />
+            ${manifest}
 
             ${icons}
 

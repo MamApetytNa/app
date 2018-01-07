@@ -24,11 +24,11 @@ function HomeLink({ children, ...props }) {
   return (<Link to={goHome()} {...props}>{children}</Link>);
 }
 
-export default withStyles(styles)(({ classes }) => (
+export default withStyles(styles)(({ classes, pages }) => (
   <ScrollContext>
     <Header homeLink={HomeLink} />
     <div className={classes.container} >
-      <PageSwitcher />
+      <PageSwitcher pages={pages} />
     </div>
   </ScrollContext>
 ));

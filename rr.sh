@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "==================="
 echo "== Release & Run =="
 echo "==================="
@@ -23,3 +25,5 @@ yarn
 
 echo "= Starting ======="
 npm start
+
+set +e

@@ -5,18 +5,15 @@ const mergeConfigs = require('webpack-merge');
 const nodeExternals = require('webpack-node-externals');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 
-const getClientEnvironment = require('./env');
+const { getClientEnvironment, getServerEnvironment } = require('./env');
 const paths = require('./paths');
 
 const publicPath = '/';
 const publicUrl = '';
-
-const env = getClientEnvironment(publicUrl);
 
 const externals = nodeExternals({
   whitelist: [
@@ -111,9 +108,7 @@ const config = {
     }],
   },
   plugins: [
-    new InterpolateHtmlPlugin(env.raw),
     new webpack.NamedModulesPlugin(),
-    new webpack.DefinePlugin(env.stringified),
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
@@ -157,6 +152,7 @@ module.exports.clientConfig = mergeConfigs(config, {
       filename: '[name].js',
       minChunks: Infinity,
     }),
+    new webpack.DefinePlugin(getClientEnvironment(publicUrl).stringified),
   ],
 });
 
@@ -173,5 +169,6 @@ module.exports.serverConfig = mergeConfigs(config, {
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1,
     }),
+    new webpack.DefinePlugin(getServerEnvironment(publicUrl).stringified),
   ],
 });

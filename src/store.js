@@ -8,6 +8,7 @@ import {
   compose,
 } from 'redux';
 
+import logger from './logger';
 import * as reducers from './reducers';
 import { routesMap } from './routes';
 import * as actionCreators from './actions';
@@ -30,7 +31,10 @@ export default function createStore(initialState, history) {
   }
 
   const rootReducer = createRootReducer(reducers);
-  const middlewares = applyMiddleware(routerMiddleware);
+  const middlewares = applyMiddleware(
+    routerMiddleware,
+    logger,
+  );
 
   /* eslint-disable no-underscore-dangle */
   const composeEnhancers = global.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__

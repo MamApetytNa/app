@@ -13,8 +13,8 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
+const { getClientEnvironment } = require('./env');
 const paths = require('./paths');
-const getClientEnvironment = require('./env');
 
 const nodeModulesExternals = nodeExternals({
   whitelist: [
@@ -152,7 +152,7 @@ module.exports.clientConfig = mergeConfigs(config, {
       filename: 'js/[name].[chunkhash].js',
       minChunks: Infinity,
     }),
-    new webpack.DefinePlugin(env.stringified),
+    new webpack.DefinePlugin(getClientEnvironment(publicUrl).stringified),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,

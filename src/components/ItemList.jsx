@@ -47,7 +47,7 @@ function ItemList({
       minPrice = {},
       sizes = [],
       name = '',
-      thumbnail = '',
+      thumbnail = { url: '' },
     }) => (
       <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={id}>
         <ItemLink id={id} name={name} className={classes.tileLink}>
@@ -55,7 +55,7 @@ function ItemList({
             component="span"
             classes={{ root: classes.tileRoot, tile: classes.tile }}
           >
-            <img src={thumbnail} alt={name} className={classes.tileImage} />
+            <img src={thumbnail.url} alt={name} className={classes.tileImage} />
             <GridListTileBar
               title={name}
               subtitle={<Price {...minPrice} {...(sizes.length > 1 ? null : { prefix: '' })} color="inherit" />}

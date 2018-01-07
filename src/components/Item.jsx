@@ -77,7 +77,7 @@ function Item({
         <Grid container>
           <Grid item xs={12} sm={6}>
             <Showcase
-              images={photos.map(url => ({ url, title: name }))}
+              images={photos.map(photo => ({ ...photo, title: name }))}
               className={classes.showcase}
             />
           </Grid>

@@ -14,6 +14,13 @@ function MoreLink({ children, ...props }) {
   return <Link to={goToItemList()} {...props}>{children}</Link>;
 }
 
-const select = ({ featured }) => ({ lists: featured });
+function select({ featured, itemsIndex }) {
+  return {
+    lists: featured.map(({ items, ...rest }) => ({
+      ...rest,
+      items: items.map(id => itemsIndex[id]),
+    })),
+  };
+}
 
 export default connect(select)(withProps(Home, { itemLink: ItemLink, moreLink: MoreLink }));

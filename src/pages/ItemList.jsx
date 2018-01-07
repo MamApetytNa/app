@@ -10,6 +10,10 @@ function ItemLink({ id, children, ...props }) {
   return <Link to={goToItem(id)} {...props}>{children}</Link>;
 }
 
-const select = ({ itemList }) => ({ items: itemList });
+function select({ allItems, itemsIndex }) {
+  return {
+    items: allItems.map(id => itemsIndex[id]),
+  };
+}
 
 export default connect(select)(withProps(ItemList, { itemLink: ItemLink }));

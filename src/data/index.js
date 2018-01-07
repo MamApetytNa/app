@@ -8,6 +8,8 @@ const idPattern = /-([0-9]{0,5})\.json$/;
 
 const dataDir = process.env.DATA_DIR;
 
+const featuredPromise = fs.readJson(path.join(dataDir, 'featured.json'));
+
 function readGenericIndex(fileReader, indexGetter) {
   return (readerArg) => {
     const filePromise = fileReader(readerArg);
@@ -65,16 +67,20 @@ async function getFullItem(item) {
 
 export async function getItem(id) {
   const item = await getRawItem(id);
+  if (!item) {
+    return null;
+  }
+
   return getFullItem(item);
 }
 
 const getItemSkeleton = pick(['id', 'minPrice', 'url', 'name', 'thumbnail']);
 
-export async function getList({ tag = '', limit = 0 } = {}) {
+export async function getItems({ tag = '', limit = 0 } = {}) {
   const filesIndex = await filesIndexPromise;
   const items = await pmap(
     filesIndex.keys(),
-    getItem,
+    getRawItem,
     { concurrency: 4 },
   );
 
@@ -86,5 +92,24 @@ export async function getList({ tag = '', limit = 0 } = {}) {
     ? filteredItems.slice(0, limit)
     : filteredItems;
 
-  return slicedItems.map(getItemSkeleton);
+  const fullItems = await pmap(
+    slicedItems,
+    getFullItem,
+    { concurrency: 4 },
+  );
+
+  return fullItems.map(getItemSkeleton);
+}
+
+export async function getFeatured() {
+  const featured = await featuredPromise;
+  return pmap(
+    featured,
+    async ({ id, name }) => ({
+      id,
+      name,
+      items: await getItems({ tag: id, limit: 4 }),
+    }),
+    { concurrency: 4 },
+  );
 }

@@ -17,7 +17,7 @@ export default function run({ port, buildDir, webpackConfig: { clientConfig, ser
   const multiCompiler = webpack([customizedClientConfig, serverConfig]);
   const clientCompiler = multiCompiler.compilers[0];
 
-  app.use(express.static(buildDir));
+  app.use('/', express.static(buildDir));
   app.use(webpackDevMiddleware(multiCompiler, { publicPath, stats: { colors: true } }));
   app.use(webpackHotMiddleware(clientCompiler));
   app.use(webpackHotServerMiddleware(multiCompiler, {

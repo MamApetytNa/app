@@ -79,7 +79,7 @@ function Item({
       classes={{ root: classes.tileRoot, tile: classes.tile }}
     >
       <ItemLink name={name} id={id} className={classes.tileLink}>
-        <img src={thumbnail} alt={name} className={classes.tileImage} />
+        <img src={thumbnail.url} alt={name} className={classes.tileImage} />
         <GridListTileBar
           title={name}
           titlePosition="top"

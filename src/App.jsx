@@ -4,8 +4,8 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import createGenerateClassName from 'material-ui/styles/createGenerateClassName';
 
 import App from './components/App';
-
 import { jss, JssProvider } from './utils/jss';
+import { pages } from './routes';
 
 class Bootstrap extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class Bootstrap extends Component {
         <Provider store={store}>
           <JssProvider registry={sheetsRegistry} jss={this.jss}>
             <MuiThemeProvider theme={this.theme} sheetsManager={new Map()}>
-              <App />
+              <App pages={pages} />
             </MuiThemeProvider>
           </JssProvider>
         </Provider>

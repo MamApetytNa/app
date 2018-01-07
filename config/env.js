@@ -55,25 +55,30 @@ process.env.NODE_PATH = (process.env.NODE_PATH || '')
 // injected into the application via DefinePlugin in Webpack configuration.
 const REACT_APP = /^REACT_APP_/i;
 
-function getClientEnvironment(publicUrl) {
-  const raw = Object.keys(process.env)
-    .filter(key => REACT_APP.test(key))
-    .reduce((env, key) => {
-      env[key] = process.env[key]; // eslint-disable-line no-param-reassign
-      return env;
-    }, {
-      NODE_ENV: process.env.NODE_ENV || 'development',
-      PUBLIC_URL: publicUrl,
-      DATA_DIR: process.env.DATA_DIR,
-    });
-  const stringified = {
-    'process.env': Object.keys(raw).reduce((env, key) => {
-      env[key] = JSON.stringify(raw[key]); // eslint-disable-line no-param-reassign
-      return env;
-    }, {}),
-  };
+function createEnvironmentGetter(target) {
+  return (publicUrl) => {
+    const raw = Object.keys(process.env)
+      .filter(key => REACT_APP.test(key))
+      .reduce((env, key) => {
+        env[key] = process.env[key]; // eslint-disable-line no-param-reassign
+        return env;
+      }, {
+        NODE_ENV: process.env.NODE_ENV || 'development',
+        PUBLIC_URL: publicUrl,
+        DATA_DIR: process.env.DATA_DIR,
+        TARGET: target,
+      });
+    const stringified = {
+      'process.env': Object.keys(raw).reduce((env, key) => {
+        env[key] = JSON.stringify(raw[key]); // eslint-disable-line no-param-reassign
+        return env;
+      }, {}),
+    };
 
-  return { raw, stringified };
+    return { raw, stringified };
+  };
 }
 
-module.exports = getClientEnvironment;
+module.exports.getClientEnvironment = createEnvironmentGetter('web');
+
+module.exports.getServerEnvironment = createEnvironmentGetter('node');

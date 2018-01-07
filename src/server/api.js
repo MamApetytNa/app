@@ -2,13 +2,13 @@ import createRouter from 'express-promise-router';
 
 import { NOT_FOUND } from './status';
 
-import { getList, getItem } from '../data';
+import { getFeatured, getItems, getItem } from '../data';
 
 export default () => {
   const router = createRouter();
 
   router.get('/cake', async (req, res) => {
-    const list = await getList(req.query);
+    const list = await getItems(req.query);
     res.json(list);
   });
 
@@ -19,6 +19,11 @@ export default () => {
     } else {
       res.json(item);
     }
+  });
+
+  router.get('/featured', async (req, res) => {
+    const list = await getFeatured();
+    res.json(list);
   });
 
   return router;
