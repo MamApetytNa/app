@@ -2,13 +2,12 @@
 
 import React from 'react';
 
-import loremIpsum from 'lorem-ipsum';
 import { storiesOf } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
 
 import Item from '../components/Item';
 
-import data from '../data/js';
+import { getItem } from '../data/sample';
 
 function OrderLink(props) {
   return (
@@ -21,8 +20,27 @@ function OrderLink(props) {
 }
 
 storiesOf('Item', module)
-  .add('Sernik karmelowy', () => <Item {...data[0]} orderLink={OrderLink} />)
-  .add('Ciasto dyniowe', () => <Item {...data[1]} orderLink={OrderLink} />)
-  .add('Tarta ze śliwkami', () => <Item {...data[2]} orderLink={OrderLink} />)
-  .add('Ciasto z gruszkami', () => <Item {...data[3]} orderLink={OrderLink} />)
-  .add('Quite a long description', () => <Item {...data[3]} description={loremIpsum({ count: 10 })} orderLink={OrderLink} />);
+  .add('Default', () => (<Item
+    {...getItem(0)}
+    orderLink={OrderLink}
+  />))
+  .add('Quite long name', () => (<Item
+    {...getItem(1)}
+    orderLink={OrderLink}
+  />))
+  .add('Very long name', () => (<Item
+    {...getItem(2)}
+    orderLink={OrderLink}
+  />))
+  .add('Long description', () => (<Item
+    {...getItem(3)}
+    orderLink={OrderLink}
+  />))
+  .add('Vertical image', () => (<Item
+    {...getItem(4)}
+    orderLink={OrderLink}
+  />))
+  .add('Horizontal image', () => (<Item
+    {...getItem(5)}
+    orderLink={OrderLink}
+  />));

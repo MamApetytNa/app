@@ -7,7 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import ItemList from '../components/ItemList';
 
-import data from '../data/js';
+import { getItems } from '../data/sample';
 
 function ItemLink({ name, ...props }) {
   return (
@@ -21,6 +21,6 @@ function ItemLink({ name, ...props }) {
 
 storiesOf('ItemList', module)
   .add('default', () => (<ItemList
-    items={data}
+    items={getItems()}
     itemLink={ItemLink}
   />));

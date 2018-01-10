@@ -7,8 +7,15 @@
     },
     "rules": {
         "import/no-extraneous-dependencies": ["error", {
-            "devDependencies": ["config/**/*.js", "scripts/**/*.js", "src/stories/**/*.jsx", "src/**/*.spec.js", "src/server/dev.js"]
-            }],
+            "devDependencies": [
+                "config/**/*.js",
+                "scripts/**/*.js",
+                "src/stories/**/*.jsx",
+                "src/**/*.spec.js",
+                "src/server/dev.js",
+                "src/data/sample.js"
+            ]
+        }],
         "jsx-a11y/anchor-is-valid": "off",
         "react/prop-types": "off"
     }

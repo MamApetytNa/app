@@ -7,26 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import Home from '../components/Home';
 
-import data from '../data/js';
-
-function withTag(tag, items) {
-  return items.filter(({ tags }) => tags.find(({ label }) => label === tag));
-}
-
-const lists = [
-  {
-    name: 'Na jesień',
-    items: withTag('jesień', data),
-  },
-  {
-    name: 'Z orzechami',
-    items: withTag('orzechy', data),
-  },
-  {
-    name: 'Ze śliwkami',
-    items: withTag('śliwki', data),
-  },
-];
+import { getFeatured } from '../data/sample';
 
 function ItemLink({ name, ...props }) {
   return (
@@ -50,7 +31,7 @@ function MoreLink(props) {
 
 storiesOf('Home', module)
   .add('default', () => (<Home
-    lists={lists}
+    lists={getFeatured()}
     itemLink={ItemLink}
     moreLink={MoreLink}
   />));

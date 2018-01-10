@@ -41,7 +41,7 @@
     "dev:compile-server": "babel --plugins transform-es2015-modules-commonjs --out-file build/server.js src/server/dev.js",
     "debug": "kill -s USR1 $(ps uax | grep scripts/dev.js | grep -v grep | tr -s ' ' | cut -d ' ' -f 2)",
     "test": "node scripts/test.js",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook -s public",
     "lint": "eslint .",
     "release": "node scripts/release.js"

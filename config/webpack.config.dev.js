@@ -109,7 +109,6 @@ const config = {
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
@@ -127,6 +126,15 @@ const config = {
     hints: false,
   },
 };
+
+module.exports.storybookConfig = mergeConfigs(config, {
+  name: 'client',
+  target: 'web',
+  entry: [paths.appIndexJs],
+  plugins: [
+    new webpack.DefinePlugin(getClientEnvironment(publicUrl).stringified),
+  ],
+});
 
 module.exports.clientConfig = mergeConfigs(config, {
   name: 'client',
@@ -147,6 +155,7 @@ module.exports.clientConfig = mergeConfigs(config, {
     port: 3000,
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['bootstrap'], // needed to put webpack bootstrap code before chunks
       filename: '[name].js',
@@ -166,6 +175,7 @@ module.exports.serverConfig = mergeConfigs(config, {
     libraryTarget: 'commonjs2',
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1,
     }),

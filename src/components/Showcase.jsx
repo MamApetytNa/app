@@ -40,8 +40,8 @@ function Showcase({
         index={currentImage}
         onChangeIndex={onImageChange}
       >
-        {images.map(({ title, url }, index) => (
-          <div className={classes.imageWrapper} key={url}>
+        {images.map(({ id, title, url }, index) => (
+          <div className={classes.imageWrapper} key={id}>
             <img
               alt={title}
               src={url}
