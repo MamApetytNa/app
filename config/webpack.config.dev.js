@@ -99,7 +99,7 @@ const config = {
           },
         ],
       }, {
-        exclude: [/\.js$/, /\.html$/, /\.json$/],
+        exclude: [/\.js$/, /\.ejs$/, /\.html$/, /\.json$/],
         loader: require.resolve('file-loader'),
         options: {
           name: 'media/[name].[ext]',
