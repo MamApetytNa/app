@@ -43,4 +43,8 @@ storiesOf('Item', module)
   .add('Horizontal image', () => (<Item
     {...getItem(5)}
     orderLink={OrderLink}
+  />))
+  .add('Autoscaled image', () => (<Item
+    {...getItem(6)}
+    orderLink={OrderLink}
   />));

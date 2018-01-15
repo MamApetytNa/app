@@ -37,33 +37,39 @@ const minPrice = [{
 }];
 const thumbnails = [{
   id: '100',
-  url: 'http://via.placeholder.com/500x500/E8117F/FFFFFF?text=OMG',
+  url: 'http://via.placeholder.com/600x600/E8117F/FFFFFF?text=OMG',
 }, {
   id: '101',
-  url: 'http://via.placeholder.com/500x500/7fe811/FFFFFF?text=OMG',
+  url: 'http://via.placeholder.com/600x600/7fe811/FFFFFF?text=OMG',
 }, {
   id: '102',
-  url: 'http://via.placeholder.com/500x500/7a11e8/FFFFFF?text=OMG',
+  url: 'http://via.placeholder.com/600x600/7a11e8/FFFFFF?text=OMG',
 }, {
   id: '103',
-  url: 'http://via.placeholder.com/500x500/11e87a/FFFFFF?text=OMG',
+  url: 'http://via.placeholder.com/600x600/11e87a/FFFFFF?text=OMG',
 }, {
   id: '104',
-  url: 'http://via.placeholder.com/500x800/AAAAAA/FFFFFF?text=W%0AT%0AF',
+  url: 'http://via.placeholder.com/600x800/AAAAAA/FFFFFF?text=W%0AT%0AF',
 }, {
   id: '105',
-  url: 'http://via.placeholder.com/800x500/AAAAAA/FFFFFF?text=W%20T%20F',
+  url: 'http://via.placeholder.com/800x600/AAAAAA/FFFFFF?text=W%20T%20F',
+}, {
+  id: '106',
+  url: 'http://olgamawypieki.imgix.net/images/test.jpg',
 }];
 
 const photos = [{
   id: '200',
-  url: 'https://picsum.photos/500/500?image=0',
+  url: 'https://picsum.photos/600/600?image=0',
 }, {
   id: '201',
-  url: 'https://picsum.photos/500/500?image=2',
+  url: 'https://picsum.photos/600/600?image=2',
 }, {
   id: '202',
-  url: 'https://picsum.photos/500/500?image=4',
+  url: 'https://picsum.photos/600/600?image=4',
+}, {
+  id: '203',
+  url: 'http://olgamawypieki.imgix.net/images/test.jpg',
 }];
 
 const items = [{
@@ -112,6 +118,14 @@ const items = [{
   description,
   thumbnail: thumbnails[5],
   photos: [thumbnails[5]].concat(photos),
+  sizes,
+  minPrice,
+}, {
+  id: '7',
+  name: 'Auto scaled image',
+  description,
+  thumbnail: thumbnails[6],
+  photos: [thumbnails[6]].concat(photos),
   sizes,
   minPrice,
 }];

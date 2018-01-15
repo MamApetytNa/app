@@ -8,6 +8,7 @@ const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const { getClientEnvironment, getServerEnvironment } = require('./env');
 const paths = require('./paths');
@@ -52,6 +53,7 @@ const config = {
         options: {
           formatter: eslintFormatter,
           eslintPath: require.resolve('eslint'),
+          emitWarning: true,
         },
         loader: require.resolve('eslint-loader'),
       }],
@@ -140,6 +142,7 @@ module.exports.clientConfig = mergeConfigs(config, {
   name: 'client',
   target: 'web',
   entry: [
+    require.resolve('webpack-hud'),
     require.resolve('react-hot-loader/patch'),
     require.resolve('webpack-hot-middleware/client'),
     require.resolve('./polyfills'),
@@ -155,6 +158,7 @@ module.exports.clientConfig = mergeConfigs(config, {
     port: 3000,
   },
   plugins: [
+    new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['bootstrap'], // needed to put webpack bootstrap code before chunks

@@ -74,6 +74,7 @@ export default ({
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
             <meta name="theme-color" content="#000000">
             <link rel="shortcut icon" href="/icons/favicon.ico" />
             ${manifest}

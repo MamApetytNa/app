@@ -1,0 +1,62 @@
+{
+    "id": "51613",
+    "url": "/kokosowy-torcik-bezowy-51613",
+    "description": "Beza jest kokosowa, jest z kremem i sosem z czerwonych owoców. I nie jest za słodka. I nie ocenia, ciasto nigdy nie ocenia.",
+    "minPrice": {
+      "value": 10,
+      "currency": "PLN"
+    },
+    "sizes": [
+      {
+        "price": {
+          "value": 10,
+          "currency": "PLN"
+        },
+        "slices": 1,
+        "diameter": {
+          "value": 10,
+          "unit": "cm"
+        },
+        "weight": {
+          "value": 0.2,
+          "unit": "kg"
+        }
+      }, {
+        "price": {
+          "value": 40,
+          "currency": "PLN"
+        },
+        "slices": 6,
+        "diameter": {
+          "value": 18,
+          "unit": "cm"
+        },
+        "weight": {
+          "value": 0.8,
+          "unit": "kg"
+        }
+      }
+    ],
+    "features": {
+      "glutenFree": true,
+      "lactoseFree": false,
+      "nutsFree": true,
+      "vegan": false
+    },
+    "name": "Kokosowy torcik bezowy",
+    "photos": [
+      "64091"
+    ],
+    "thumbnail": "64091",
+    "tags": [
+      "12269",
+      "27151",
+      "02715",
+      "05157",
+      "32551",
+      "54920",
+      "02979",
+      "12712",
+      "34767"
+    ]
+  }
