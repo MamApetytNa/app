@@ -23,3 +23,9 @@ Run Storybook stories.
 ```bash
 $ npm run storybook
 ```
+
+### Creating image squares
+
+```
+http://output.jsbin.com/patiyok
+```

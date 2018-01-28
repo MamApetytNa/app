@@ -23,29 +23,6 @@
   "features": {
     "glutenFree": false,
     "lactoseFree": true,
-    "nutsFree": [
-      true,
-      false
-    ],
-    "vegan": false
-  },
-  "name": "Ciasto dyniowe",
-  "photos": [
-    "46111"
-  ],
-  "thumbnail": "14405",
-  "tags": [
-    "61926",
-    "61004",
-    "00238",
-    "51988",
-    "12115",
-    "34968",
-    "35281"
-  ],
-  "features": {
-    "glutenFree": false,
-    "lactoseFree": true,
     "nutsFree": false,
     "vegan": [
       true,
@@ -57,7 +34,7 @@
     "20698",
     "07002"
   ],
-  "thumbnail": "43435",
+  "thumbnail": "20698",
   "tags": [
     "61926",
     "61004",

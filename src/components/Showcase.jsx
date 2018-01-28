@@ -33,6 +33,7 @@ function Showcase({
   currentImage = 0,
   images = [],
   onImageChange = () => {},
+  imageProps = {},
 }) {
   return (
     <div className={classNames(className, classes.root)}>
@@ -40,9 +41,16 @@ function Showcase({
         index={currentImage}
         onChangeIndex={onImageChange}
       >
-        {images.map(({ id, title, url }, index) => (
+        {images.map(({
+            id,
+            title,
+            url,
+            ...rest
+        }, index) => (
           <div className={classes.imageWrapper} key={id}>
             <img
+              {...rest}
+              {...imageProps}
               alt={title}
               src={url}
               className={classNames(classes.image, {

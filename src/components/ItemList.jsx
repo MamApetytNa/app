@@ -49,7 +49,7 @@ function ItemList({
       minPrice = {},
       sizes = [],
       name = '',
-      thumbnail = { url: '' },
+      thumbnail = { square: '' },
     }) => (
       <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={id}>
         <ItemLink id={id} name={name} className={classes.tileLink}>
@@ -58,7 +58,7 @@ function ItemList({
             classes={{ root: classes.tileRoot, tile: classes.tile }}
           >
             <img
-              srcSet={getSrcSet(thumbnail.url, 600)}
+              srcSet={getSrcSet(thumbnail.square, 600)}
               sizes={getSizes({
                 [theme.breakpoints.up('lg')]: '25vw',
                 [theme.breakpoints.up('md')]: '33vw',

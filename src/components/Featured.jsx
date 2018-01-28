@@ -1,11 +1,13 @@
 import React from 'react';
+import { pipe } from 'ramda';
 
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import Typography from 'material-ui/Typography';
-import { withStyles } from 'material-ui/styles';
+import { withStyles, withTheme } from 'material-ui/styles';
 
+import { getSizes, getSrcSet } from '../components/Picture';
 import { linearGradient, rgba } from '../utils/css';
 
 const styles = theme => ({
@@ -71,6 +73,8 @@ function Item({
   itemLink: ItemLink = () => {},
   name,
   thumbnail,
+  size = 1,
+  theme,
 }) {
   return (
     <GridListTile
@@ -79,7 +83,18 @@ function Item({
       classes={{ root: classes.tileRoot, tile: classes.tile }}
     >
       <ItemLink name={name} id={id} className={classes.tileLink}>
-        <img src={thumbnail.url} alt={name} className={classes.tileImage} />
+        <img
+          src={thumbnail.square}
+          srcSet={getSrcSet(thumbnail.square, 600 * size)}
+          sizes={getSizes({
+            [theme.breakpoints.up('lg')]: '25vw',
+            [theme.breakpoints.up('md')]: '33vw',
+            [theme.breakpoints.up('sm')]: '50vw',
+            [theme.breakpoints.up('xs')]: '100vw',
+          })}
+          alt={name}
+          className={classes.tileImage}
+        />
         <GridListTileBar
           title={name}
           titlePosition="top"
@@ -101,6 +116,7 @@ function Featured({
   items = [],
   itemLink,
   moreLink: MoreLink = () => {},
+  theme,
 }) {
   return (
     <div className={classes.root}>
@@ -109,13 +125,24 @@ function Featured({
       </Typography>
       <Grid container spacing={0}>
         <Grid item xs={12} sm={6}>
-          <Item {...items[0]} classes={classes} itemLink={itemLink} />
+          <Item
+            {...items[0]}
+            classes={classes}
+            itemLink={itemLink}
+            theme={theme}
+            size={2}
+          />
         </Grid>
         <Grid item xs={12} sm={6}>
           <Grid container spacing={0} >
             {items.slice(1).map(props => (
               <Grid item xs={6} key={props.id}>
-                <Item {...props} classes={classes} itemLink={itemLink} />
+                <Item
+                  {...props}
+                  classes={classes}
+                  itemLink={itemLink}
+                  theme={theme}
+                />
               </Grid>
             ))}
             <Grid item xs={6} id="more" className={classes.moreTile}>
@@ -134,4 +161,7 @@ function Featured({
   );
 }
 
-export default withStyles(styles)(Featured);
+export default pipe(
+  withStyles(styles),
+  withTheme(),
+)(Featured);

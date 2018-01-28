@@ -1,12 +1,14 @@
 import classNames from 'classnames';
+import { pipe } from 'ramda';
 import React from 'react';
 
 import Button from 'material-ui/Button';
 import Card, { CardContent, CardHeader } from 'material-ui/Card';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import { withStyles } from 'material-ui/styles';
+import { withStyles, withTheme } from 'material-ui/styles';
 
+import { getSizes, getSrcSet } from '../components/Picture';
 import Price from '../components/Price';
 import Showcase from '../components/Showcase';
 import SizeChooser from '../components/SizeChooser';
@@ -61,6 +63,7 @@ function Item({
   orderLink: OrderLink = () => {},
   photos = [],
   tags,
+  theme,
 }) {
   return (
     <Card className={classNames(className, classes.root)}>
@@ -77,8 +80,19 @@ function Item({
         <Grid container>
           <Grid item xs={12} sm={6}>
             <Showcase
-              images={photos.map(photo => ({ ...photo, title: name }))}
+              images={photos.map(photo => ({
+                ...photo,
+                src: photo.square,
+                srcSet: getSrcSet(photo.square, 600),
+                title: name,
+              }))}
               className={classes.showcase}
+              imageProps={{
+                sizes: getSizes({
+                  [theme.breakpoints.up('sm')]: '360px',
+                  [theme.breakpoints.up('xs')]: '100vw',
+                }),
+              }}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -118,4 +132,7 @@ function Item({
   );
 }
 
-export default withStyles(styles)(Item);
+export default pipe(
+  withStyles(styles),
+  withTheme(),
+)(Item);

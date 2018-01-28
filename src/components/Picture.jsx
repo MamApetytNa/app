@@ -1,10 +1,13 @@
 import React from 'react';
 
-
 export function getSrcSet(src, maxWidth) {
+  if (!src) {
+    return '';
+  }
+
   const paramsSeparator = src.includes('?') ? '&' : '?';
   return [3, 2.5, 2, 1.5, 1]
-    .map(dpr => `${src}${paramsSeparator}w=${maxWidth}&dpr=${dpr}&ch=Width,DPR ${dpr}x`)
+    .map(dpr => `${src}${paramsSeparator}w=${maxWidth}&h=${maxWidth}&dpr=${dpr} ${dpr}x`)
     .join(',');
 }
 
