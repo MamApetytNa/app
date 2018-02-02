@@ -49,7 +49,7 @@ export default ({
   clientStats,
   iconStats = { html: [] },
 }) => async (req, res) => {
-  const history = createHistory({ initialEntries: [req.path] });
+  const history = createHistory({ initialEntries: [req.originalUrl] });
   const { store, thunk } = createStore(global.REDUX_INITIAL_STATE, history);
   await thunk(store);
 

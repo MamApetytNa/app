@@ -37,22 +37,22 @@ const minPrice = [{
 }];
 const thumbnails = [{
   id: '100',
-  square: 'http://via.placeholder.com/600x600/E8117F/FFFFFF?text=OMG',
+  square: 'http://via.placeholder.com/800x800/E8117F/FFFFFF?text=OMG',
 }, {
   id: '101',
-  square: 'http://via.placeholder.com/600x600/7fe811/FFFFFF?text=OMG',
+  square: 'http://via.placeholder.com/800x800/7fe811/FFFFFF?text=OMG',
 }, {
   id: '102',
-  square: 'http://via.placeholder.com/600x600/7a11e8/FFFFFF?text=OMG',
+  square: 'http://via.placeholder.com/800x800/7a11e8/FFFFFF?text=OMG',
 }, {
   id: '103',
-  square: 'http://via.placeholder.com/600x600/11e87a/FFFFFF?text=OMG',
+  square: 'http://via.placeholder.com/800x800/11e87a/FFFFFF?text=OMG',
 }, {
   id: '104',
-  square: 'http://via.placeholder.com/600x800/AAAAAA/FFFFFF?text=W%0AT%0AF',
+  square: 'http://via.placeholder.com/800x1200/AAAAAA/FFFFFF?text=W%0AT%0AF',
 }, {
   id: '105',
-  square: 'http://via.placeholder.com/800x600/AAAAAA/FFFFFF?text=W%20T%20F',
+  square: 'http://via.placeholder.com/1200x800/AAAAAA/FFFFFF?text=W%20T%20F',
 }, {
   id: '106',
   square: 'http://olgamawypieki.imgix.net/images/test_t.jpg',

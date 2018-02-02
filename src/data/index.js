@@ -98,17 +98,31 @@ export async function getItems({ tag = '', limit = 0 } = {}) {
     { concurrency: 4 },
   );
 
+  if (tag) {
+    // because of tags index cannot be build otherwise
+    return fullItems.map(fullItem => ({
+      ...getItemSkeleton(fullItem),
+      tags: fullItem.tags.filter(({ id }) => id === tag),
+    }));
+  }
+
   return fullItems.map(getItemSkeleton);
 }
 
 export async function getFeatured() {
   const featured = await featuredPromise;
+  const tagsIndex = await tagsIndexPromise;
+
   return pmap(
     featured,
-    async ({ id, name }) => ({
-      id,
+    async ({ tag, name, items }) => ({
+      id: tag,
+      tag: tagsIndex.get(tag),
       name,
-      items: await getItems({ tag: id, limit: 4 }),
+      items: await (items
+        ? Promise.all(items.slice(4).map(getItem))
+        : getItems({ tag, limit: 4 })
+      ),
     }),
     { concurrency: 4 },
   );

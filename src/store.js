@@ -7,6 +7,7 @@ import {
   applyMiddleware,
   compose,
 } from 'redux';
+import queryString from 'query-string';
 
 import logger from './logger';
 import * as reducers from './reducers';
@@ -21,6 +22,7 @@ export default function createStore(initialState, history) {
     thunk,
   } = connectRoutes(history, routesMap, {
     restoreScroll: restoreScroll(),
+    querySerializer: queryString,
   });
 
   function createRootReducer(childReducers) {

@@ -1,8 +1,10 @@
+import { stringify as stringifyQuery } from 'query-string';
+
 const API_ROOT = '/api';
 
-function createApiFetch(path, paramsList = []) {
+function createApiFetch(path, pathParams = []) {
   return async (...params) => {
-    const url = paramsList
+    const url = pathParams
       .map((name, index) => [name, params[index]])
       .reduce(
         (acc, [name, value]) =>
@@ -10,7 +12,9 @@ function createApiFetch(path, paramsList = []) {
         API_ROOT + path,
       );
 
-    const response = await fetch(url);
+    const queryParams = stringifyQuery(params[pathParams.length]);
+
+    const response = await fetch(`${url}?${queryParams}`);
     const json = await response.json();
 
     return json;

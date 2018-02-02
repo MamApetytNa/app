@@ -1,5 +1,6 @@
 import { featured, allItems, item, notFound } from './actions';
 import { getFeatured, getItems, getItem } from './api';
+import { selectTagParam } from './selectors';
 
 export async function HOME(dispatch) {
   const data = await getFeatured();
@@ -10,8 +11,11 @@ export async function HOME(dispatch) {
   }
 }
 
-export async function ITEM_LIST(dispatch) {
-  const data = await getItems();
+
+export async function ITEM_LIST(dispatch, getState) {
+  const state = getState();
+  const tagId = selectTagParam(state);
+  const data = await getItems({ tag: tagId });
 
   if (!data || data.length === 0) {
     dispatch(notFound());

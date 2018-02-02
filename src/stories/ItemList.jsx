@@ -23,4 +23,9 @@ storiesOf('ItemList', module)
   .add('default', () => (<ItemList
     items={getItems()}
     itemLink={ItemLink}
+  />))
+  .add('with tag', () => (<ItemList
+    tag="something nice"
+    items={getItems()}
+    itemLink={ItemLink}
   />));
