@@ -1,4 +1,5 @@
 import withProps from 'decorate-component-with-props';
+import { nAry, pathOr } from 'ramda';
 import React from 'react';
 import { connect } from 'react-redux';
 import Link from 'redux-first-router-link';
@@ -9,10 +10,6 @@ import ItemList from '../components/ItemList';
 
 function ItemLink({ id, children, ...props }) {
   return <Link to={goToItem(id)} {...props}>{children}</Link>;
-}
-
-function ListLink({ children, ...props }) {
-  return <Link to={goToItemList()} {...props}>{children}</Link>;
 }
 
 function select({
@@ -27,12 +24,11 @@ function select({
     photosIndex,
     tagsIndex,
   }));
-  const tag = tagsIndex[selectTagParam({ location })];
+  const tag = pathOr('', [selectTagParam({ location }), 'label'], tagsIndex);
 
   return { tag, items };
 }
 
-export default connect(select)(withProps(ItemList, {
-  itemLink: ItemLink,
-  listLink: ListLink,
-}));
+export default connect(select, {
+  goToItemList: nAry(0, goToItemList),
+})(withProps(ItemList, { itemLink: ItemLink }));

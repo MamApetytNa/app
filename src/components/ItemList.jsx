@@ -1,21 +1,23 @@
 import React from 'react';
 import { pipe } from 'ramda';
+import Button from 'material-ui/Button';
+import Chip from 'material-ui/Chip';
 import IconButton from 'material-ui/IconButton';
 import { withStyles, withTheme } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import InfoIcon from 'material-ui-icons/Info';
 import Typography from 'material-ui/Typography';
+import InfoIcon from 'material-ui-icons/Info';
 
 import { getSizes, getSrcSet } from '../components/Picture';
 import Price from '../components/Price';
 
 const texts = {
-  SUBHEADING: 'Przeglądasz rzeczy oznaczone słowem ',
-  SEE_ALL: 'zobacz wszystkie',
+  SUBHEADING: 'Filtr: ',
+  SEE_ALL: 'zobacz wszystkie ciasta',
 };
 
-const styles = {
+const styles = theme => ({
   tileRoot: {
     cursor: 'pointer',
     display: 'block',
@@ -41,27 +43,37 @@ const styles = {
     height: '100%',
     width: '100%',
   },
-};
+  tagHeading: {
+    marginBottom: theme.spacing.unit * 2,
+    textAlign: 'center',
+  },
+  seeAll: {
+    display: 'block',
+    margin: 'auto',
+    marginTop: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2,
+  },
+});
 
 function ItemList({
   classes,
   items = [],
   itemLink: ItemLink = () => {},
-  listLink: ListLink = () => {},
+  goToItemList = () => {},
   tag,
   theme,
 }) {
   return (
     <div className={classes.root}>
-      {tag
-        ? (
-          <Typography type="subheading">
-            {texts.SUBHEADING}
-            <strong>„{tag.label}”</strong>
-            <small><ListLink>{texts.SEE_ALL}</ListLink></small>
-          </Typography>
-        )
-        : null}
+      {tag && (
+        <Typography className={classes.tagHeading}>
+          {texts.SUBHEADING}
+          <Chip
+            label={tag}
+            onDelete={goToItemList}
+          />
+        </Typography>
+      )}
       <Grid container>{items.map(({
         id = '',
         minPrice = {},
@@ -100,6 +112,14 @@ function ItemList({
           </Grid>
         ))}
       </Grid>
+      {tag && (
+        <Button
+          className={classes.seeAll}
+          onClick={goToItemList}
+        >
+          {texts.SEE_ALL}
+        </Button>
+      )}
     </div>);
 }
 

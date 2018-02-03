@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Link from 'redux-first-router-link';
 
-import { goToOrder } from '../actions';
+import { goToOrder, goToItemList } from '../actions';
 import { resolveItem } from '../selectors';
 import Item from '../components/Item';
 
@@ -24,4 +24,4 @@ function select({
   })(location.payload.id);
 }
 
-export default connect(select)(withProps(Item, { orderLink: OrderLink }));
+export default connect(select, { goToItemList })(withProps(Item, { orderLink: OrderLink }));

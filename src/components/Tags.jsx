@@ -18,7 +18,11 @@ const styles = theme => ({
   },
 });
 
-function Tags({ classes, tags = [] }) {
+function Tags({
+  classes,
+  tags = [],
+  onClick = () => {},
+}) {
   if (tags.length === 0) {
     return null;
   }
@@ -29,6 +33,7 @@ function Tags({ classes, tags = [] }) {
         <Chip
           key={id}
           component="a"
+          onClick={() => onClick(id)}
           href={url}
           label={label}
           className={classes.chip}

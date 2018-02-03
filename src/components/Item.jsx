@@ -61,6 +61,7 @@ function Item({
   sizes = [],
   name = '',
   orderLink: OrderLink = () => {},
+  goToItemList = () => {},
   photos = [],
   tags,
   theme,
@@ -101,7 +102,7 @@ function Item({
                 <Typography component="p">{description}</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Tags tags={tags} />
+                <Tags tags={tags} onClick={goToItemList} />
               </Grid>
               <Grid item xs={12}>
                 <Grid container>

@@ -3,7 +3,7 @@ import { NOT_FOUND } from 'redux-first-router';
 
 export const goToItemList = tagId => ({
   type: 'ITEM_LIST_PAGE',
-  payload: {
+  payload: tagId && {
     query: {
       tag: tagId,
     },

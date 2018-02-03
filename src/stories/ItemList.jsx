@@ -9,12 +9,12 @@ import ItemList from '../components/ItemList';
 
 import { getItems } from '../data/sample';
 
-function ItemLink({ name, ...props }) {
+function ItemLink({ name, children, ...props }) {
   return (
     <a
       onClick={linkTo('Item', name)}
       {...props}
-    >{props.children}
+    >{children}
     </a>
   );
 }
@@ -23,9 +23,11 @@ storiesOf('ItemList', module)
   .add('default', () => (<ItemList
     items={getItems()}
     itemLink={ItemLink}
+    goToItemList={linkTo('ItemList')}
   />))
   .add('with tag', () => (<ItemList
     tag="something nice"
     items={getItems()}
     itemLink={ItemLink}
+    goToItemList={linkTo('ItemList')}
   />));
