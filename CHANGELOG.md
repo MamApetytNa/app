@@ -1,3 +1,9 @@
+## 0.2.0
+
+### Features
+
+ * filtering by tag
+
 ## 0.1.4
 
 ### Small UI
