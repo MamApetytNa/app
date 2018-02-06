@@ -5,21 +5,20 @@ import { withStyles } from 'material-ui/styles';
 
 import Featured from './Featured';
 
-const styles = {
-  listsContainer: {
-
+const styles = theme => ({
+  root: {
+    marginBottom: theme.spacing.unit * 2,
   },
-};
+});
 
 function Home({
   classes,
   itemLink,
   moreLink,
   lists = [],
-  // moreLink: MoreLink = () => {},
 }) {
   return (
-    <Grid container className={classes.listsContainer}>
+    <Grid container className={classes.root}>
       {lists.map(({ id, name, items }) => (
         <Grid item key={name} xs={12}>
           <Featured

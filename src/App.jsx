@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { SizesProvider } from 'react-sizes';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import createGenerateClassName from 'material-ui/styles/createGenerateClassName';
 
@@ -28,24 +29,33 @@ class Bootstrap extends Component {
   }
 
   render() {
-    const { store, sheetsRegistry, appContainer: AppContainer } = this.props;
+    const {
+      fallbackSize: { width: fallbackWidth, height: fallbackHeight },
+      store,
+      sheetsRegistry,
+      appContainer: AppContainer,
+    } = this.props;
+
     return (
       <AppContainer>
         <Provider store={store}>
-          <JssProvider registry={sheetsRegistry} jss={this.jss}>
-            <MuiThemeProvider theme={this.theme} sheetsManager={new Map()}>
-              <App pages={pages} />
-            </MuiThemeProvider>
-          </JssProvider>
+          <SizesProvider config={{ fallbackHeight, fallbackWidth }}>
+            <JssProvider registry={sheetsRegistry} jss={this.jss}>
+              <MuiThemeProvider theme={this.theme} sheetsManager={new Map()}>
+                <App pages={pages} />
+              </MuiThemeProvider>
+            </JssProvider>
+          </SizesProvider>
         </Provider>
       </AppContainer>
     );
   }
 }
 
-export default function createApp(store, sheetsRegistry, appContainer) {
+export default function createApp(store, sheetsRegistry, appContainer, fallbackSize = {}) {
   return (<Bootstrap
     appContainer={appContainer}
+    fallbackSize={fallbackSize}
     store={store}
     sheetsRegistry={sheetsRegistry}
   />);

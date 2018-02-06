@@ -7,7 +7,7 @@ import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import Typography from 'material-ui/Typography';
 import { withStyles, withTheme } from 'material-ui/styles';
 
-import { getSizes, getSrcSet } from '../components/Picture';
+import { getSizes, getAutoSrcSet } from '../utils/pic';
 import { linearGradient, rgba } from '../utils/css';
 
 const styles = theme => ({
@@ -85,7 +85,7 @@ function Item({
       <ItemLink name={name} id={id} className={classes.tileLink}>
         <img
           src={thumbnail.square}
-          srcSet={getSrcSet(thumbnail.square, 600 * size)}
+          srcSet={getAutoSrcSet(thumbnail.square, 600 * size)}
           sizes={getSizes({
             [theme.breakpoints.up('lg')]: '25vw',
             [theme.breakpoints.up('md')]: '33vw',

@@ -8,7 +8,7 @@ import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import { withStyles, withTheme } from 'material-ui/styles';
 
-import { getSizes, getSrcSet } from '../components/Picture';
+import { getSizes, getAutoSrcSet } from '../utils/pic';
 import Price from '../components/Price';
 import Showcase from '../components/Showcase';
 import SizeChooser from '../components/SizeChooser';
@@ -18,9 +18,11 @@ import { rules } from '../utils/css';
 
 const styles = theme => ({
   root: {
+    marginBottom: theme.spacing.unit * 2,
     maxWidth: theme.spacing.unit * 96,
     [theme.breakpoints.up('md')]: {
-      margin: '0 auto',
+      marginLeft: 'auto',
+      marginRight: 'auto',
     },
   },
   showcase: {
@@ -84,7 +86,7 @@ function Item({
               images={photos.map(photo => ({
                 ...photo,
                 src: photo.square,
-                srcSet: getSrcSet(photo.square, 600),
+                srcSet: getAutoSrcSet(photo.square, 600),
                 title: name,
               }))}
               className={classes.showcase}

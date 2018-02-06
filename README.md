@@ -1,5 +1,5 @@
-MamApetytNa.pl
-==============
+olgamawypieki.pl
+================
 
 PWA written using React.
 
@@ -29,3 +29,8 @@ $ npm run storybook
 ```
 http://output.jsbin.com/patiyok
 ```
+
+### Google Maps API keys
+
+ * **static:** `AIzaSyB7DdWEzPniEhyzxD8iCeaf0itsnqXC3jI`
+ * **full:** `AIzaSyAvc4_LYPwo68koSTSR-EMrRnJEFL6MsC4`

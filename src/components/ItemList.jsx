@@ -9,7 +9,7 @@ import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import Typography from 'material-ui/Typography';
 import InfoIcon from 'material-ui-icons/Info';
 
-import { getSizes, getSrcSet } from '../components/Picture';
+import { getSizes, getAutoSrcSet } from '../utils/pic';
 import Price from '../components/Price';
 
 const texts = {
@@ -18,6 +18,9 @@ const texts = {
 };
 
 const styles = theme => ({
+  root: {
+    marginBottom: theme.spacing.unit * 2,
+  },
   tileRoot: {
     cursor: 'pointer',
     display: 'block',
@@ -88,7 +91,7 @@ function ItemList({
                 classes={{ root: classes.tileRoot, tile: classes.tile }}
               >
                 <img
-                  srcSet={getSrcSet(thumbnail.square, 600)}
+                  srcSet={getAutoSrcSet(thumbnail.square, 600)}
                   sizes={getSizes({
                     [theme.breakpoints.up('lg')]: '25vw',
                     [theme.breakpoints.up('md')]: '33vw',

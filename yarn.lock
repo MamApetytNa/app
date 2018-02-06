@@ -6511,6 +6511,10 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
@@ -6915,6 +6919,10 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+mobile-detect@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/mobile-detect/-/mobile-detect-1.4.1.tgz#f4b67c49bb84bf0437f72e3067deb1c60ad7b23c"
 
 moment@^2.20.1:
   version "2.20.1"
@@ -8531,6 +8539,13 @@ react-scrollbar-size@^2.0.2:
     prop-types "^15.6.0"
     react-event-listener "^0.5.1"
     stifle "^1.0.2"
+
+react-sizes@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-sizes/-/react-sizes-1.0.0.tgz#c967e13286e184d2c2936fed130615f4b115eca4"
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.0"
 
 react-split-pane@^0.1.74:
   version "0.1.76"

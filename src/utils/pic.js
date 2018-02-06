@@ -1,6 +1,6 @@
-import React from 'react';
+import { join, map, pipe } from 'ramda';
 
-export function getSrcSet(src, maxWidth) {
+export function getAutoSrcSet(src, maxWidth) {
   if (!src) {
     return '';
   }
@@ -19,20 +19,4 @@ export function getSizes(sizes) {
     .join(',');
 }
 
-export default function Picture({
-  alt,
-  src = '',
-  srcSet = {},
-  sizes = {},
-  ...rest
-}) {
-  return (
-    <img
-      {...rest}
-      alt={alt}
-      sizes={getSizes(sizes)}
-      srcSet={getSrcSet(src, srcSet)}
-      src={src}
-    />
-  );
-}
+export const getSrcSetString = pipe(map(join(' ')), join(', '));
