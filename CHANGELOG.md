@@ -1,3 +1,9 @@
+## 0.3.0
+
+### Features
+
+ * footer with map
+
 ## 0.2.0
 
 ### Features
