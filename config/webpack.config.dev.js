@@ -7,9 +7,9 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
-const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
+const commonConfig = require('./webpack.config.common');
 const { getClientEnvironment, getServerEnvironment } = require('./env');
 const paths = require('./paths');
 
@@ -30,15 +30,8 @@ const devtoolModuleFilenameTemplate = info =>
   path.resolve(info.absoluteResourcePath).replace(/\\/g, '/');
 
 const config = {
+  ...commonConfig,
   devtool: 'inline-source-map',
-  resolve: {
-    modules: ['node_modules', paths.appNodeModules]
-      .concat(process.env.NODE_PATH.split(path.delimiter).filter(Boolean)),
-    extensions: ['.js', '.json', '.jsx'],
-    plugins: [
-      new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
-    ],
-  },
   output: {
     path: paths.appBuild,
     pathinfo: true,

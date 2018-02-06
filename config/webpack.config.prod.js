@@ -10,9 +10,9 @@ const nodeExternals = require('webpack-node-externals');
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
-const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
+const commonConfig = require('./webpack.config.common');
 const { getClientEnvironment } = require('./env');
 const paths = require('./paths');
 
@@ -46,16 +46,9 @@ const extractTextPluginOptions = shouldUseRelativeAssetPaths
   : {};
 
 const config = {
+  ...commonConfig,
   bail: true,
   devtool: 'source-map',
-  resolve: {
-    modules: ['node_modules', paths.appNodeModules]
-      .concat(process.env.NODE_PATH.split(path.delimiter).filter(Boolean)),
-    extensions: ['.js', '.json', '.jsx'],
-    plugins: [
-      new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
-    ],
-  },
   output: {
     path: paths.appBuild,
     devtoolModuleFilenameTemplate,
