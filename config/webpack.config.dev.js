@@ -53,6 +53,20 @@ const config = {
       include: paths.appSrc,
     }, {
       oneOf: [{
+        test: /\.svg$/,
+        include: paths.appSrc,
+        use: [{
+          loader: require.resolve('babel-loader'),
+          options: {
+            cacheDirectory: true,
+          },
+        }, {
+          loader: require.resolve('react-svg-loader'),
+          options: {
+            jsx: true,
+          },
+        }],
+      }, {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
         loader: require.resolve('url-loader'),
         options: {
