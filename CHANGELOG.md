@@ -1,3 +1,9 @@
+## 0.4.0
+
+### Features
+
+ * contact info in footer
+
 ## 0.3.0
 
 ### Features
