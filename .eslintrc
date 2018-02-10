@@ -7,6 +7,7 @@
     },
     "settings": {
         "import/resolver": {
+            "babel-module": {},
             "webpack": {
                 "config": "./config/webpack.config.common.js"
             }

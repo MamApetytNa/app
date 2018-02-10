@@ -1,7 +1,10 @@
 {
     "presets": ["react-app"],
     "plugins": [
-        "universal-import"
+        "universal-import",
+        ["module-resolver", {
+            "root": ["./src"]
+        }]
     ],
     "env": {
         "development": {
