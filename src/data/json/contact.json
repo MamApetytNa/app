@@ -1,0 +1,28 @@
+{
+    "name": "Pracownia cukiernicza Olga ma Wypieki – Olga Krysztofiak, Eryk Napierała s.c.",
+    "address": {
+        "street": "ul. Górna Wilda 96/1",
+        "zip": "61-576",
+        "city": "Poznań"
+    },
+    "phone": "600 475 167",
+    "email": "kontakt@olgamawypieki.pl",
+    "taxId": "783-176-42-12",
+    "social": {
+        "facebook": "olgamawypieki",
+        "instagram": "olgamawypieki"
+    },
+    "openHours": [{
+        "label": "Poniedziałek",
+        "value": "Odpoczywam :)"
+    }, {
+        "label": "Wtorek - Piątek",
+        "value": "12:00 - 18:00"
+    }, {
+        "label": "Sobota",
+        "value": "10:00 - 14:00"
+    }, {
+        "label": "Niedziela",
+        "value": "Odpoczywam :)"
+    }]
+}

@@ -2,7 +2,7 @@ import createRouter from 'express-promise-router';
 
 import { NOT_FOUND } from './status';
 
-import { getFeatured, getItems, getItem } from '../data';
+import { getContactInfo, getFeatured, getItems, getItem } from '../data';
 
 export default () => {
   const router = createRouter();
@@ -24,6 +24,11 @@ export default () => {
   router.get('/featured', async (req, res) => {
     const list = await getFeatured();
     res.json(list);
+  });
+
+  router.get('/contact', async (req, res) => {
+    const info = await getContactInfo();
+    res.json(info);
   });
 
   return router;

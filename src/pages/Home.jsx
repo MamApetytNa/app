@@ -1,4 +1,5 @@
-import withProps from 'decorate-component-with-props';
+import { withProps } from 'recompose';
+import { pipe } from 'ramda';
 import React from 'react';
 import { connect } from 'react-redux';
 import Link from 'redux-first-router-link';
@@ -26,4 +27,7 @@ function select({
   return { lists };
 }
 
-export default connect(select)(withProps(Home, { itemLink: ItemLink, moreLink: MoreLink }));
+export default pipe(
+  connect(select),
+  withProps({ itemLink: ItemLink, moreLink: MoreLink }),
+)(Home);

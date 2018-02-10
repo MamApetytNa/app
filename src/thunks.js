@@ -1,6 +1,16 @@
-import { featured, allItems, item, notFound } from './actions';
-import { getFeatured, getItems, getItem } from './api';
+import { contactInfo, featured, allItems, item, notFound } from './actions';
+import { getContactInfo, getFeatured, getItems, getItem } from './api';
 import { selectTagParam } from './selectors';
+
+async function CONTACT_INFO(dispatch) {
+  const data = await getContactInfo();
+
+  if (data) {
+    dispatch(contactInfo(data));
+  }
+}
+
+export const COMMON = CONTACT_INFO;
 
 export async function HOME(dispatch) {
   const data = await getFeatured();

@@ -130,3 +130,11 @@ export function allItems(state = [], { type, payload } = {}) {
 export function page(state = 'HOME', { type } = {}) {
   return pages[type] ? type : state;
 }
+
+export function contact(state = {}, { type, payload } = {}) {
+  if (type === 'CONTACT_INFO_DATA') {
+    return payload;
+  }
+
+  return state;
+}

@@ -1,4 +1,5 @@
-import withProps from 'decorate-component-with-props';
+import { withProps } from 'recompose';
+import { pipe } from 'ramda';
 import React from 'react';
 import { connect } from 'react-redux';
 import Link from 'redux-first-router-link';
@@ -24,4 +25,7 @@ function select({
   })(location.payload.id);
 }
 
-export default connect(select, { goToItemList })(withProps(Item, { orderLink: OrderLink }));
+export default pipe(
+  connect(select, { goToItemList }),
+  withProps({ orderLink: OrderLink }),
+)(Item);

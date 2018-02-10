@@ -38,6 +38,7 @@ const filesIndexPromise = readGenericIndex(
 )();
 const photosIndexPromise = readIdIndex('photos');
 const tagsIndexPromise = readIdIndex('tags');
+const contactInfoPromise = fs.readJson(path.join(dataDir, 'contact.json'));
 
 async function getRawItem(id) {
   const filesIndex = await filesIndexPromise;
@@ -126,4 +127,8 @@ export async function getFeatured() {
     }),
     { concurrency: 4 },
   );
+}
+
+export async function getContactInfo() {
+  return contactInfoPromise;
 }

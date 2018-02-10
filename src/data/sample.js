@@ -148,6 +148,31 @@ const featured = [{
   items: items.slice(0, 4),
 }];
 
+const contactInfo = {
+  name: 'A place with a pretty long name, it should be two lines at least',
+  address: {
+    street: 'The Elm Street 666/11',
+    zip: '12-345',
+    city: 'The city',
+  },
+  taxId: '123-456-78-90',
+  phone: '123 456 789',
+  email: 'example@domain.com',
+  social: {
+    facebook: 'exampleaccount',
+    instagram: 'exampleaccount',
+  },
+  openHours: [{
+    label: 'Tue - Fri',
+    value: '12:00 - 18:00',
+  }, {
+    label: 'Sat',
+    value: '10:00 - 14:00',
+  }, {
+    label: 'Sun - Mon',
+    value: 'Odpoczywam :)',
+  }],
+};
 
 export function getItem(id) {
   return items[id];
@@ -157,7 +182,10 @@ export function getItems() {
   return items;
 }
 
-
 export function getFeatured() {
   return featured;
+}
+
+export function getContactInfo() {
+  return contactInfo;
 }

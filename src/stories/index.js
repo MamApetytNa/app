@@ -1,6 +1,7 @@
 import '../index.css';
 
 import './Featured';
+import './Footer';
 import './Home';
 import './Item';
 import './ItemList';

@@ -1,12 +1,14 @@
-import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
-import { connectRoutes } from 'redux-first-router';
-import restoreScroll from 'redux-first-router-restore-scroll';
+
 import {
   combineReducers,
   createStore as createReduxStore,
   applyMiddleware,
   compose,
 } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
+import { connectRoutes } from 'redux-first-router';
+import restoreScroll from 'redux-first-router-restore-scroll';
+import thunkMiddleware from 'redux-thunk';
 import queryString from 'query-string';
 
 import logger from './logger';
@@ -35,6 +37,7 @@ export default function createStore(initialState, history) {
   const rootReducer = createRootReducer(reducers);
   const middlewares = applyMiddleware(
     routerMiddleware,
+    thunkMiddleware,
     logger,
   );
 

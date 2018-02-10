@@ -2,21 +2,28 @@ import { mapObjIndexed, pick, prop } from 'ramda';
 
 import * as thunks from './thunks';
 
+function compose(...fns) {
+  return (...args) => fns.reduce(
+    (prev, thunk) => prev.then(() => thunk(...args)),
+    Promise.resolve(),
+  );
+}
+
 const routes = {
   HOME_PAGE: {
     path: '/',
     filename: 'Home',
-    thunk: thunks.HOME,
+    thunk: compose(thunks.COMMON, thunks.HOME),
   },
   ITEM_LIST_PAGE: {
     path: '/ciasta',
     filename: 'ItemList',
-    thunk: thunks.ITEM_LIST,
+    thunk: compose(thunks.COMMON, thunks.ITEM_LIST),
   },
   ITEM_PAGE: {
     path: '/ciasto/:id',
     filename: 'Item',
-    thunk: thunks.ITEM,
+    thunk: compose(thunks.COMMON, thunks.ITEM),
   },
   ORDER_FORM_PAGE: {
     path: '/zamowienie',

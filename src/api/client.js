@@ -26,3 +26,5 @@ export const getFeatured = createApiFetch('/featured');
 export const getItems = createApiFetch('/cake');
 
 export const getItem = createApiFetch('/cake/:id', ['id']);
+
+export const getContactInfo = createApiFetch('/contact');

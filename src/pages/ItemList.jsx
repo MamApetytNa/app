@@ -1,5 +1,5 @@
-import withProps from 'decorate-component-with-props';
-import { nAry, pathOr } from 'ramda';
+import { withProps } from 'recompose';
+import { nAry, pathOr, pipe } from 'ramda';
 import React from 'react';
 import { connect } from 'react-redux';
 import Link from 'redux-first-router-link';
@@ -29,6 +29,9 @@ function select({
   return { tag, items };
 }
 
-export default connect(select, {
-  goToItemList: nAry(0, goToItemList),
-})(withProps(ItemList, { itemLink: ItemLink }));
+export default pipe(
+  connect(select, {
+    goToItemList: nAry(0, goToItemList),
+  }),
+  withProps({ itemLink: ItemLink }),
+)(ItemList);
