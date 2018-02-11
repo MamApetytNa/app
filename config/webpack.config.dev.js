@@ -1,12 +1,8 @@
-const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
 const mergeConfigs = require('webpack-merge');
-const nodeExternals = require('webpack-node-externals');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
-const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const commonConfig = require('./webpack.config.common');
@@ -16,105 +12,31 @@ const paths = require('./paths');
 const publicPath = '/';
 const publicUrl = '';
 
-const externals = nodeExternals({
-  whitelist: [
-    /^babel-plugin-universal-import/,
-    /^react-universal-component/,
-    /^require-universal-module/,
-    /^webpack-flush-chunks/,
-    /^webpack\/hot\/dev-server/,
-  ],
-});
-
-const devtoolModuleFilenameTemplate = info =>
-  path.resolve(info.absoluteResourcePath).replace(/\\/g, '/');
-
 const config = {
-  ...commonConfig,
+  node: commonConfig.node,
+  resolve: commonConfig.resolve,
   devtool: 'inline-source-map',
   output: {
-    path: paths.appBuild,
+    ...commonConfig.output,
     pathinfo: true,
-    devtoolModuleFilenameTemplate,
   },
   module: {
     strictExportPresence: true,
-    rules: [{
-      test: /\.(js|jsx)$/,
-      enforce: 'pre',
-      use: [{
-        options: {
-          formatter: eslintFormatter,
-          eslintPath: require.resolve('eslint'),
-          emitWarning: true,
-        },
-        loader: require.resolve('eslint-loader'),
-      }],
-      include: paths.appSrc,
-    }, {
-      oneOf: [{
-        test: /\.svg$/,
-        include: paths.appSrc,
-        use: [{
-          loader: require.resolve('babel-loader'),
-          options: {
-            cacheDirectory: true,
+    rules: [
+      ...commonConfig.eslintLoaders, {
+        oneOf: [
+          ...commonConfig.svgLoaders,
+          ...commonConfig.imageLoaders,
+          ...commonConfig.jsLoaders, {
+            test: /\.css$/,
+            use: [
+              require.resolve('style-loader'),
+              ...commonConfig.cssLoaders,
+            ],
           },
-        }, {
-          loader: require.resolve('react-svg-loader'),
-          options: {
-            jsx: true,
-          },
-        }],
-      }, {
-        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader: require.resolve('url-loader'),
-        options: {
-          limit: 10000,
-          name: 'media/[name].[ext]',
-        },
-      }, {
-        test: /\.(js|jsx)$/,
-        include: paths.appSrc,
-        loader: require.resolve('babel-loader'),
-        options: {
-          cacheDirectory: true,
-        },
-      }, {
-        test: /\.css$/,
-        use: [
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              importLoaders: 1,
-            },
-          }, {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              ident: 'postcss',
-              plugins: () => [
-                postcssFlexbugsFixes,
-                autoprefixer({
-                  browsers: [
-                    '>1%',
-                    'last 2 versions',
-                    'not ie < 11',
-                  ],
-                  flexbox: 'no-2009',
-                }),
-              ],
-            },
-          },
+          ...commonConfig.otherLoaders,
         ],
-      }, {
-        exclude: [/\.js$/, /\.ejs$/, /\.html$/, /\.json$/],
-        loader: require.resolve('file-loader'),
-        options: {
-          name: 'media/[name].[ext]',
-        },
       }],
-    }],
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
@@ -122,15 +44,6 @@ const config = {
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
-  node: {
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty',
-    __dirname: false,
-    __filename: false,
-  },
   performance: {
     hints: false,
   },
@@ -179,7 +92,7 @@ module.exports.clientConfig = mergeConfigs(config, {
 module.exports.serverConfig = mergeConfigs(config, {
   name: 'server',
   target: 'node',
-  externals,
+  externals: commonConfig.serverExternals,
   entry: [path.resolve(__dirname, '../src/server/index.js')],
   output: {
     filename: 'server.js',
