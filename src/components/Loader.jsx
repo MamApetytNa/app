@@ -1,7 +1,7 @@
-import React from 'react';
-
+import classNames from 'classnames';
 import { withStyles } from 'material-ui/styles';
 import { CircularProgress } from 'material-ui/Progress';
+import React from 'react';
 
 const styles = {
   root: {
@@ -19,9 +19,9 @@ const styles = {
   },
 };
 
-function Loader({ classes }) {
+function Loader({ className, classes }) {
   return (
-    <div className={classes.root}>
+    <div className={classNames(classes.root, className)}>
       <CircularProgress className={classes.loader} size={64} />
     </div>
   );

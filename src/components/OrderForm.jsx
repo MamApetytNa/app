@@ -1,12 +1,11 @@
-import React from 'react';
-
-import TextField from 'material-ui/TextField';
-
+import classNames from 'classnames';
 import Button from 'material-ui/Button';
 import Card, { CardContent, CardHeader, CardActions } from 'material-ui/Card';
 import List, { ListItem } from 'material-ui/List';
 import { withStyles } from 'material-ui/styles';
+import TextField from 'material-ui/TextField';
 import { path, pipe } from 'ramda';
+import React from 'react';
 
 import withState from '../utils/with-state';
 import { preventDefault } from '../utils/dom';
@@ -34,6 +33,7 @@ const texts = {
 const getInputValue = path(['target', 'value']);
 
 function OrderForm({
+  className,
   classes,
   currentName = '',
   currentPhone = '',
@@ -42,7 +42,7 @@ function OrderForm({
   onSubmit = () => {},
 }) {
   return (
-    <Card>
+    <Card className={classNames(classes.root, className)}>
       <CardHeader
         title={texts.TITLE}
         subheader={texts.SUBHEADER}

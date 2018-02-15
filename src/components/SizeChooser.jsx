@@ -86,7 +86,6 @@ function SizeChooser({
         />
         <Price
           align="center"
-          color="secondary"
           currency={currentSize.price.currency}
           prefix={texts.FOR_ONE_SLICE}
           type="subheading"

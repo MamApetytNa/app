@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from 'redux-first-router-link';
-import withStyles from 'material-ui/styles/withStyles';
+import { withStyles } from 'material-ui/styles';
 
 import { goHome } from '../actions';
 
@@ -12,7 +12,7 @@ import PageSwitcher from './PageSwitcher';
 
 const styles = theme => ({
   container: {
-    minHeight: `calc(100vh - ${theme.spacing.unit * 2})`,
+    minHeight: `calc(100vh - ${theme.spacing.unit * 2}px)`,
     maxWidth: '100vw',
     overflow: 'hidden',
     [theme.breakpoints.up('md')]: {

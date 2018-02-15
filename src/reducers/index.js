@@ -98,8 +98,19 @@ export function photosIndex(state = {}, { type, payload } = {}) {
   return state;
 }
 
+function updateItem(currentItem, newItem) {
+  if (currentItem && ('description' in currentItem)) {
+    return currentItem;
+  }
+
+  return newItem;
+}
+
 export function itemsIndex(state = {}, { type, payload } = {}) {
-  const addToState = addToIndex(state);
+  const addToState = reduce((acc, data) => (data ? ({
+    ...acc,
+    [data.id]: updateItem(acc[data.id], data),
+  }) : acc))(state);
 
   if (type === 'ITEM_DATA') {
     return addToState([normalizeItem(payload)]);
@@ -134,6 +145,56 @@ export function page(state = 'HOME', { type } = {}) {
 export function contact(state = {}, { type, payload } = {}) {
   if (type === 'CONTACT_INFO_DATA') {
     return payload;
+  }
+
+  return state;
+}
+
+export function direction(state = 'forward', { type, meta }) {
+  if (!meta || !meta.location) {
+    return state;
+  }
+
+  const { type: prevType } = meta.location.prev;
+
+  if (type === prevType) {
+    return state;
+  }
+
+  if (type === 'HOME_PAGE') {
+    if (prevType) {
+      return 'back';
+    }
+
+    return 'forward';
+  }
+
+  if (type === 'ITEM_LIST_PAGE') {
+    if (prevType === 'HOME_PAGE') {
+      return 'forward';
+    }
+
+    if (prevType === 'ITEM_PAGE') {
+      return 'back';
+    }
+  }
+
+  if (type === 'ITEM_PAGE') {
+    if (prevType === 'ITEM_LIST_PAGE') {
+      return 'forward';
+    }
+
+    if (prevType === 'HOME_PAGE') {
+      return 'forward';
+    }
+
+    if (prevType === 'ORDER_FORM_PAGE') {
+      return 'back';
+    }
+  }
+
+  if (type === 'ORDER_FORM_PAGE') {
+    return 'forward';
   }
 
   return state;

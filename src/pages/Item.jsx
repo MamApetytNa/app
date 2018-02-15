@@ -22,7 +22,7 @@ function select({
     itemsIndex,
     tagsIndex,
     photosIndex,
-  })(location.payload.id);
+  })(location.payload.id || location.prev.payload.id);
 }
 
 export default pipe(

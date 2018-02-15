@@ -1,12 +1,11 @@
 import classNames from 'classnames';
-import { pipe } from 'ramda';
-import React from 'react';
-
 import Button from 'material-ui/Button';
 import Card, { CardContent, CardHeader } from 'material-ui/Card';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import { withStyles, withTheme } from 'material-ui/styles';
+import { pipe } from 'ramda';
+import React from 'react';
 
 import { getSizes, getAutoSrcSet } from '../utils/pic';
 import Price from '../components/Price';
@@ -69,7 +68,7 @@ function Item({
   theme,
 }) {
   return (
-    <Card className={classNames(className, classes.root)}>
+    <Card className={classNames(classes.root, className)}>
       <CardHeader
         title={name}
         subheader={<Price

@@ -1,7 +1,7 @@
-import React from 'react';
-
+import classNames from 'classnames';
 import Grid from 'material-ui/Grid';
 import { withStyles } from 'material-ui/styles';
+import React from 'react';
 
 import Featured from './Featured';
 
@@ -12,13 +12,14 @@ const styles = theme => ({
 });
 
 function Home({
+  className,
   classes,
   itemLink,
   moreLink,
   lists = [],
 }) {
   return (
-    <Grid container className={classes.root}>
+    <Grid container className={classNames(classes.root, className)}>
       {lists.map(({ id, name, items }) => (
         <Grid item key={name} xs={12}>
           <Featured

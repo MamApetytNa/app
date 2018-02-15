@@ -1,5 +1,4 @@
-import React from 'react';
-import { pipe } from 'ramda';
+import classNames from 'classnames';
 import Button from 'material-ui/Button';
 import Chip from 'material-ui/Chip';
 import IconButton from 'material-ui/IconButton';
@@ -8,6 +7,8 @@ import Grid from 'material-ui/Grid';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import Typography from 'material-ui/Typography';
 import InfoIcon from 'material-ui-icons/Info';
+import { pipe } from 'ramda';
+import React from 'react';
 
 import { getSizes, getAutoSrcSet } from '../utils/pic';
 import Price from '../components/Price';
@@ -59,6 +60,7 @@ const styles = theme => ({
 });
 
 function ItemList({
+  className,
   classes,
   items = [],
   itemLink: ItemLink = () => {},
@@ -67,7 +69,7 @@ function ItemList({
   theme,
 }) {
   return (
-    <div className={classes.root}>
+    <div className={classNames(classes.root, className)}>
       {tag && (
         <Typography className={classes.tagHeading}>
           {texts.SUBHEADING}

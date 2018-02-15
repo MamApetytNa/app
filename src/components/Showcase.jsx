@@ -68,7 +68,7 @@ function Showcase({
         classes={{ root: classes.stepper }}
         backButton={
           <Button
-            dense
+            size="small"
             onClick={() => onImageChange(currentImage - 1)}
             disabled={currentImage === 0}
           >
@@ -77,7 +77,7 @@ function Showcase({
       }
         nextButton={
           <Button
-            dense
+            size="small"
             onClick={() => onImageChange(currentImage + 1)}
             disabled={currentImage === images.length - 1}
           >

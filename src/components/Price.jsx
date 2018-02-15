@@ -19,7 +19,7 @@ export default function Price({
   return (
     <Typography
       {...props}
-      {...(accent && { color: 'accent' })}
+      {...(accent && { color: 'secondary' })}
       classes={classes}
       component="strong"
     >
