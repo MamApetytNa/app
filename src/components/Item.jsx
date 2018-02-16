@@ -18,16 +18,18 @@ import { rules } from '../utils/css';
 const styles = theme => ({
   root: {
     marginBottom: theme.spacing.unit * 2,
-    maxWidth: theme.spacing.unit * 96,
-    [theme.breakpoints.up('md')]: {
+    maxWidth: theme.breakpoints.values.md,
+    [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
       marginRight: 'auto',
     },
   },
   showcase: {
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: -theme.spacing.unit * 2,
-      marginRight: -theme.spacing.unit * 2,
+    marginLeft: -theme.spacing.unit * 2,
+    marginRight: -theme.spacing.unit * 2,
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: 0,
+      marginRight: 0,
     },
   },
   infoContainer: {
