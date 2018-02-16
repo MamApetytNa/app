@@ -1,10 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const path = require('path');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const webpack = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const mergeConfigs = require('webpack-merge');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const commonConfig = require('./webpack.config.common');
 const { getClientEnvironment } = require('./env');
@@ -101,6 +102,7 @@ module.exports.clientConfig = mergeConfigs(config, {
       emitStats: true,
       statsFilename: 'icons.json',
     }),
+    new BundleAnalyzerPlugin(),
   ],
 });
 

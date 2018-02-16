@@ -4,6 +4,8 @@ const mergeConfigs = require('webpack-merge');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
 
 const commonConfig = require('./webpack.config.common');
 const { getClientEnvironment, getServerEnvironment } = require('./env');
@@ -86,6 +88,10 @@ module.exports.clientConfig = mergeConfigs(config, {
       minChunks: Infinity,
     }),
     new webpack.DefinePlugin(getClientEnvironment(publicUrl).stringified),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
   ],
 });
 
