@@ -5,7 +5,7 @@ import { updateScroll } from 'redux-first-router';
 class ScrollContext extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.path !== this.props.path) {
-      updateScroll();
+      requestAnimationFrame(updateScroll);
     }
   }
 
