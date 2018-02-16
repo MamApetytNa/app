@@ -25,6 +25,7 @@ export default function run({
     const url = `http://localhost:${port}/`;
 
     const server = app.listen(port, () => {
+      // eslint-disable-next-line no-console
       console.log(`Listening @ ${url}`);
     });
 

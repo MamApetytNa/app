@@ -11,7 +11,7 @@ import { SheetsRegistry } from 'react-jss/lib/jss'; // eslint-disable-line impor
 import flushChunks from 'webpack-flush-chunks';
 
 import createStore from '../store';
-import createApp from '../app';
+import createApp from '../App';
 
 function minifyHtml(html) {
   if (process.env.NODE_ENV === 'development') {

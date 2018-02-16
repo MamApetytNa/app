@@ -8,7 +8,7 @@ import { SheetsRegistry } from './utils/jss';
 
 import './index.css';
 import createStore from './store';
-import createApp from './app';
+import createApp from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const sheetsRegistry = new SheetsRegistry();
@@ -37,9 +37,9 @@ setTimeout(() => {
 }, 0);
 
 if (module.hot && process.env.NODE_ENV === 'development') {
-  module.hot.accept('./app', () => {
+  module.hot.accept('./App', () => {
     // eslint-disable-next-line global-require
-    renderApp(require('./app').default(store, sheetsRegistry, AppContainer));
+    renderApp(require('./App').default(store, sheetsRegistry, AppContainer));
   });
 } else {
   registerServiceWorker();
