@@ -2,6 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -31,14 +32,9 @@ const config = {
     rules: [...commonConfig.eslintLoaders, {
       oneOf: [
         ...commonConfig.svgLoaders,
-        ...commonConfig.imageLoaders, {
-          test: /\.(js|jsx)$/,
-          include: paths.appSrc,
-          loader: require.resolve('babel-loader'),
-          options: {
-            compact: true,
-          },
-        }, {
+        ...commonConfig.imageLoaders,
+        ...commonConfig.getJsLoaders({ compact: true }),
+        {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract(Object.assign(
             {
@@ -57,7 +53,7 @@ const config = {
 module.exports.clientConfig = mergeConfigs(config, {
   name: 'client',
   target: 'web',
-  entry: [require.resolve('./polyfills'), paths.appIndexJs],
+  entry: paths.appIndexJs,
   output: {
     filename: 'js/[name].[chunkhash:8].js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
@@ -65,20 +61,14 @@ module.exports.clientConfig = mergeConfigs(config, {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['bootstrap'],
-      filename: 'js/[name].[chunkhash].js',
-      minChunks: Infinity,
+      names: 'main',
+      children: true,
+      minChunks: 2,
     }),
     new webpack.DefinePlugin(getClientEnvironment(publicUrl).stringified),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        comparisons: false,
-      },
-      output: {
-        comments: false,
-        ascii_only: true,
-      },
+    new UglifyJsPlugin({
+      cache: true,
+      parallel: true,
       sourceMap: true,
     }),
     new ExtractTextPlugin({
@@ -102,7 +92,10 @@ module.exports.clientConfig = mergeConfigs(config, {
       emitStats: true,
       statsFilename: 'icons.json',
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
   ],
 });
 

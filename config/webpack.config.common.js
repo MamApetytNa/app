@@ -44,6 +44,7 @@ module.exports.resolve = {
 
 module.exports.output = {
   path: paths.appBuild,
+  chunkFilename: 'js/[name].[chunkhash].js',
   devtoolModuleFilenameTemplate(info) {
     return path.resolve(info.absoluteResourcePath).replace(/\\/g, '/');
   },
@@ -63,13 +64,11 @@ module.exports.eslintLoaders = [{
   include: paths.appSrc,
 }];
 
-module.exports.jsLoaders = [{
+module.exports.getJsLoaders = babelOptions => [{
   test: /\.(js|jsx)$/,
   include: paths.appSrc,
   loader: require.resolve('babel-loader'),
-  options: {
-    cacheDirectory: true,
-  },
+  options: babelOptions,
 }];
 
 module.exports.svgLoaders = [{

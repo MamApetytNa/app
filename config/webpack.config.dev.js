@@ -29,7 +29,7 @@ const config = {
         oneOf: [
           ...commonConfig.svgLoaders,
           ...commonConfig.imageLoaders,
-          ...commonConfig.jsLoaders, {
+          ...commonConfig.getJsLoaders({ cacheDirectory: true }), {
             test: /\.css$/,
             use: [
               require.resolve('style-loader'),
@@ -67,7 +67,6 @@ module.exports.clientConfig = mergeConfigs(config, {
     require.resolve('webpack-hud'),
     require.resolve('react-hot-loader/patch'),
     require.resolve('webpack-hot-middleware/client'),
-    require.resolve('./polyfills'),
     paths.appIndexJs,
   ],
   output: {

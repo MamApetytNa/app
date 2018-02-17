@@ -77,6 +77,26 @@ const metaTags = [
   '<meta name="theme-color" content="#000000">',
 ].join('\n');
 
+function renderScripts(scripts, publicPath) {
+  return scripts
+    .map(filepath => ({
+      src: `${publicPath}${filepath}`,
+      isMain: filepath.startsWith('js/main.'),
+    })).sort((a, b) => {
+      if (a.isMain && !b.isMain) {
+        return -1;
+      }
+
+      if (b.isMain) {
+        return 1;
+      }
+
+      return 0;
+    })
+    .map(({ src }) => `<script src="${src}" defer></script>`)
+    .join('\n');
+}
+
 export default ({
   clientStats,
   iconStats = { html: [] },
@@ -97,10 +117,13 @@ export default ({
     const chunkNames = flushChunkNames();
 
     const {
-      js,
+      scripts,
+      publicPath,
       styles,
       cssHash,
     } = flushChunks(clientStats, { chunkNames });
+
+    console.log(renderScripts(scripts, publicPath));
 
     const stateJson = JSON.stringify(store.getState());
     const jssStyles = await minifyCss(sheetsRegistry.toString());
@@ -125,7 +148,7 @@ export default ({
       <body>
         <div id="root">${appString}</div>
         ${cssHash}
-        ${js}
+        ${renderScripts(scripts, publicPath)}
         <script>window.REDUX_INITIAL_STATE = ${stateJson}</script>
       </body>
       </html>
