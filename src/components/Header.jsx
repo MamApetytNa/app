@@ -3,7 +3,7 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import withStyles from 'material-ui/styles/withStyles';
+import { withStyles } from 'material-ui/styles';
 
 import { rules } from '../utils/css';
 
