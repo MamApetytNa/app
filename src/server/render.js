@@ -123,8 +123,6 @@ export default ({
       cssHash,
     } = flushChunks(clientStats, { chunkNames });
 
-    console.log(renderScripts(scripts, publicPath));
-
     const stateJson = JSON.stringify(store.getState());
     const jssStyles = await minifyCss(sheetsRegistry.toString());
     const icons = getIcons(iconStats);

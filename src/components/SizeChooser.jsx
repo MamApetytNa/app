@@ -82,13 +82,13 @@ function SizeChooser({
           accent
           align="center"
           prefix=""
-          type="headline"
+          variant="headline"
         />
         <Price
           align="center"
           currency={currentSize.price.currency}
           prefix={texts.FOR_ONE_SLICE}
-          type="subheading"
+          variant="subheading"
           value={currentSize.price.value / currentSize.slices}
         />
       </Grid>

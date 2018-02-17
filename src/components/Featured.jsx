@@ -120,7 +120,7 @@ function Featured({
 }) {
   return (
     <div className={classes.root}>
-      <Typography component="h2" type="title" className={classes.header}>
+      <Typography component="h2" variant="title" className={classes.header}>
         {name}
       </Typography>
       <Grid container spacing={0}>

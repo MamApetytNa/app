@@ -1,11 +1,13 @@
 {
     "presets": [
-        "env",
+        ["env", { "modules": false }],
         "stage-0",
         "react"
     ],
     "plugins": [
         "universal-import",
+        "ramda",
+        ["direct-import", ["material-ui"]],
         ["module-resolver", {
             "root": ["./src"]
         }],

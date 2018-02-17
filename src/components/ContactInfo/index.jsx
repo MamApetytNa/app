@@ -136,7 +136,7 @@ function ContactInfo({
         </Section>
         <Section sm={6}>
           <Typography
-            type="subheading"
+            variant="subheading"
             className={classes.sectionHeading}
           >
             {texts.OPEN_HOURS_HEADING}
@@ -149,7 +149,7 @@ function ContactInfo({
         </Section>
         <Section component="address" sm={6}>
           <Typography
-            type="subheading"
+            variant="subheading"
             className={classes.sectionHeading}
           >
             {texts.CONTACT_HEADING}

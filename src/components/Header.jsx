@@ -22,7 +22,7 @@ function Header({
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography type="title" color="inherit">
+        <Typography variant="title" color="inherit" component="h1">
           <HomeLink className={classes.homeLink}>{texts.TITLE}</HomeLink>
         </Typography>
       </Toolbar>

@@ -76,7 +76,7 @@ function Item({
         subheader={<Price
           {...minPrice}
           accent
-          type="subheading"
+          variant="subheading"
           {...(sizes.length > 1 ? null : { prefix: '' })}
         />}
       />
@@ -119,7 +119,7 @@ function Item({
               </Grid>
               <Grid item xs={12} className={classes.ctaContainer}>
                 <Button
-                  raised
+                  variant="raised"
                   color="primary"
                   classes={{ root: classes.cta }}
                 >
