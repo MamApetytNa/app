@@ -1,3 +1,14 @@
+## 0.5.0
+
+### Features
+
+ * animated transition for page switching
+
+### Small UI
+
+ * Fix styles on bigger mobile devices
+ * Delay resetting scroll position when switching pages
+
 ## 0.4.0
 
 ### Features
