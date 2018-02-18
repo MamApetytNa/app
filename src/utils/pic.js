@@ -7,7 +7,7 @@ export function getAutoSrcSet(src, maxWidth) {
 
   const paramsSeparator = src.includes('?') ? '&' : '?';
   return [3, 2.5, 2, 1.5, 1]
-    .map(dpr => `${src}${paramsSeparator}w=${maxWidth}&h=${maxWidth}&dpr=${dpr} ${dpr}x`)
+    .map(dpr => `${src}${paramsSeparator}fit=min&w=${maxWidth}&h=${maxWidth}&dpr=${dpr} ${dpr}x`)
     .join(',');
 }
 
