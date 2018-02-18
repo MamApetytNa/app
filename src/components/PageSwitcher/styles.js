@@ -69,7 +69,7 @@ export default theme => ({
     position: 'relative',
     minHeight: '100%',
     display: 'flex',
-    width: `calc(200% + ${theme.spacing.unit * 4}px)`,
+    width: '200%',
     [theme.breakpoints.up('sm')]: {
       width: '100%',
       display: 'block',
