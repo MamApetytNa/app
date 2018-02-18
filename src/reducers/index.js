@@ -155,6 +155,10 @@ export function direction(state = 'forward', { type, meta }) {
     return state;
   }
 
+  if (meta.location.kind === 'pop') {
+    return 'pop';
+  }
+
   const { type: prevType } = meta.location.prev;
 
   if (type === prevType) {
