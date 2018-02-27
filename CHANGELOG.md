@@ -1,3 +1,15 @@
+## 0.6.0
+
+### Features
+
+ * new CTAs on offer page
+ * remove order page
+
+### Fixes
+
+ * add `fit=min` query param to default image src
+ * prevent flashing content when switching pages on desktop
+
 ## 0.5.0
 
 ### Features
