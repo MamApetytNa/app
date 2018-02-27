@@ -191,14 +191,6 @@ export function direction(state = 'forward', { type, meta }) {
     if (prevType === 'HOME_PAGE') {
       return 'forward';
     }
-
-    if (prevType === 'ORDER_PAGE') {
-      return 'back';
-    }
-  }
-
-  if (type === 'ORDER_PAGE') {
-    return 'forward';
   }
 
   return state;

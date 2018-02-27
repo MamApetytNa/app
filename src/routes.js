@@ -25,10 +25,6 @@ const routes = {
     filename: 'Item',
     thunk: compose(thunks.COMMON, thunks.ITEM),
   },
-  ORDER_PAGE: {
-    path: '/zamowienie',
-    filename: 'OrderForm',
-  },
 };
 
 export const routesMap = mapObjIndexed(pick(['path', 'thunk']), routes);

@@ -52,11 +52,6 @@ const styles = theme => ({
     maxWidth: theme.spacing.unit * 25,
     width: '100%',
   },
-  orderLink: {
-    ...rules.unstyledLink,
-    ...rules.absoluteFill,
-    ...rules.flexCenter,
-  },
 });
 
 function Item({

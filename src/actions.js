@@ -11,7 +11,6 @@ export const goToItemList = tagId => ({
 });
 
 export const goToItem = createAction('ITEM_PAGE', id => ({ id }));
-export const goToOrder = createAction('ORDER_PAGE');
 export const goHome = createAction('HOME_PAGE');
 export const notFound = createAction(NOT_FOUND);
 
