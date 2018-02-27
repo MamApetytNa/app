@@ -25,7 +25,7 @@ const routes = {
     filename: 'Item',
     thunk: compose(thunks.COMMON, thunks.ITEM),
   },
-  ORDER_FORM_PAGE: {
+  ORDER_PAGE: {
     path: '/zamowienie',
     filename: 'OrderForm',
   },

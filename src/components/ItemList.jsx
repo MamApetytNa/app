@@ -74,6 +74,7 @@ function ItemList({
         <Typography className={classes.tagHeading}>
           {texts.SUBHEADING}
           <Chip
+            component="span"
             label={tag}
             onDelete={goToItemList}
           />

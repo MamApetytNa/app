@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import Button from 'material-ui/Button';
 import Card, { CardContent, CardHeader } from 'material-ui/Card';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
@@ -7,12 +6,15 @@ import { withStyles, withTheme } from 'material-ui/styles';
 import { pipe } from 'ramda';
 import React from 'react';
 
-import { getSizes, getAutoSrcSet } from '../utils/pic';
-import Price from '../components/Price';
-import Showcase from '../components/Showcase';
-import SizeChooser from '../components/SizeChooser';
-import TimeChooser from '../components/TimeChooser';
-import Tags from '../components/Tags';
+import { addQueryString, getSizes, getAutoSrcSet } from '../utils/pic';
+
+import MessengerButton from './MessengerButton';
+import PhoneButton from './PhoneButton';
+import Price from './Price';
+import Showcase from './Showcase';
+import SizeChooser from './SizeChooser';
+import Tags from './Tags';
+
 import { rules } from '../utils/css';
 
 const styles = theme => ({
@@ -37,12 +39,17 @@ const styles = theme => ({
   },
   ctaContainer: {
     alignSelf: 'flex-end',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
     textAlign: 'center',
+    marginBottom: -theme.spacing.unit,
   },
-  cta: {
+  ctaButton: {
+    marginBottom: theme.spacing.unit,
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxWidth: theme.spacing.unit * 24,
+    maxWidth: theme.spacing.unit * 25,
     width: '100%',
   },
   orderLink: {
@@ -52,10 +59,6 @@ const styles = theme => ({
   },
 });
 
-const texts = {
-  ORDER: 'Zamów',
-};
-
 function Item({
   className,
   classes,
@@ -63,10 +66,10 @@ function Item({
   minPrice = { value: 0, currency: 'PLN' },
   sizes = [],
   name = '',
-  orderLink: OrderLink = () => {},
   goToItemList = () => {},
+  phone = '',
   photos = [],
-  tags,
+  tags = [],
   theme,
 }) {
   return (
@@ -86,7 +89,7 @@ function Item({
             <Showcase
               images={photos.map(photo => ({
                 ...photo,
-                src: photo.square,
+                src: addQueryString(photo.square, 'fit=min'),
                 srcSet: getAutoSrcSet(photo.square, 600),
                 title: name,
               }))}
@@ -108,25 +111,18 @@ function Item({
                 <Tags tags={tags} onClick={goToItemList} />
               </Grid>
               <Grid item xs={12}>
-                <Grid container>
-                  <Grid item xs={12}>
-                    <SizeChooser sizes={sizes} />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TimeChooser />
-                  </Grid>
-                </Grid>
+                <SizeChooser sizes={sizes} />
               </Grid>
               <Grid item xs={12} className={classes.ctaContainer}>
-                <Button
+                <MessengerButton
+                  className={classes.ctaButton}
+                  id="olgamawypieki"
+                />
+                <PhoneButton
+                  className={classes.ctaButton}
                   variant="raised"
-                  color="primary"
-                  classes={{ root: classes.cta }}
-                >
-                  <OrderLink className={classes.orderLink}>
-                    {texts.ORDER}
-                  </OrderLink>
-                </Button>
+                  number={phone}
+                />
               </Grid>
             </Grid>
           </Grid>

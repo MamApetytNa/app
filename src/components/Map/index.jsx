@@ -1,3 +1,5 @@
+import { withTheme } from 'material-ui/styles';
+import { pipe } from 'ramda';
 import React from 'react';
 import { withSizes } from 'react-sizes';
 
@@ -12,4 +14,7 @@ function Map({ isLite, ...props }) {
   return <Full {...props} />;
 }
 
-export default withSizes(({ width }) => ({ isLite: width < 600 }))(Map);
+export default pipe(
+  withSizes(({ width }, { theme }) => ({ isLite: width < theme.breakpoints.values.sm })),
+  withTheme(),
+)(Map);

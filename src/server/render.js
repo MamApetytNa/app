@@ -80,7 +80,7 @@ const metaTags = [
 function renderScripts(scripts, publicPath) {
   return scripts
     .map(filepath => ({
-      src: `${publicPath}${filepath}`,
+      src: `${publicPath}/${filepath}`,
       isMain: filepath.startsWith('js/main.'),
     })).sort((a, b) => {
       if (a.isMain && !b.isMain) {

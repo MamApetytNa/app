@@ -23,7 +23,7 @@ const styles = {
   },
 };
 
-function Map({ className, classes }) {
+function FullMap({ className, classes }) {
   return (
     <iframe
       className={classNames(className, classes.root)}
@@ -35,4 +35,4 @@ function Map({ className, classes }) {
   );
 }
 
-export default withStyles(styles)(Map);
+export default withStyles(styles)(FullMap);

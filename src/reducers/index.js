@@ -192,12 +192,12 @@ export function direction(state = 'forward', { type, meta }) {
       return 'forward';
     }
 
-    if (prevType === 'ORDER_FORM_PAGE') {
+    if (prevType === 'ORDER_PAGE') {
       return 'back';
     }
   }
 
-  if (type === 'ORDER_FORM_PAGE') {
+  if (type === 'ORDER_PAGE') {
     return 'forward';
   }
 

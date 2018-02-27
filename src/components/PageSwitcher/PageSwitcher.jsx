@@ -1,6 +1,5 @@
 import classNames from 'classnames';
-import { withStyles, withTheme } from 'material-ui/styles';
-import { pipe } from 'ramda';
+import { withStyles } from 'material-ui/styles';
 import React from 'react';
 import { Transition, TransitionGroup } from 'transition-group';
 
@@ -33,7 +32,4 @@ function PageSwitcher({
   );
 }
 
-export default pipe(
-  withStyles(styles),
-  withTheme(),
-)(PageSwitcher);
+export default withStyles(styles)(PageSwitcher);
