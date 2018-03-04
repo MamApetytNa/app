@@ -9,12 +9,15 @@ function select({
   tagsIndex,
   photosIndex,
   location,
+  contact: { phone },
 }) {
-  return resolveItem({
+  const item = resolveItem({
     itemsIndex,
     tagsIndex,
     photosIndex,
   })(location.payload.id || location.prev.payload.id);
+
+  return { ...item, phone };
 }
 
 export default connect(select, { goToItemList })(Item);
