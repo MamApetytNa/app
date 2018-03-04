@@ -15,8 +15,6 @@ import Showcase from './Showcase';
 import SizeChooser from './SizeChooser';
 import Tags from './Tags';
 
-import { rules } from '../utils/css';
-
 const styles = theme => ({
   root: {
     marginBottom: theme.spacing.unit * 2,
@@ -43,10 +41,14 @@ const styles = theme => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     textAlign: 'center',
+    marginTop: -theme.spacing.unit,
     marginBottom: -theme.spacing.unit,
+    [theme.breakpoints.up('sm')]: {
+      marginBottom: -2 * theme.spacing.unit,
+    },
   },
   ctaButton: {
-    marginBottom: theme.spacing.unit,
+    marginTop: theme.spacing.unit,
     marginLeft: 'auto',
     marginRight: 'auto',
     maxWidth: theme.spacing.unit * 25,
