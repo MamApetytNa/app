@@ -1,6 +1,6 @@
 {
   "name": "olgamawypieki.pl",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
   "dependencies": {
     "classnames": "2.2.5",
