@@ -1,3 +1,9 @@
+## 0.6.1
+
+### Fixes
+
+ * pass contact phone to item screen
+
 ## 0.6.0
 
 ### Features
