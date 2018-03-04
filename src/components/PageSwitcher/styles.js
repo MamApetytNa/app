@@ -29,17 +29,20 @@ function createTransitionClass(type, theme) {
     animation: {
       duration: ANIMATION_DURATION,
       iterationCount: 1,
+      fillMode: 'forwards',
     },
-    '$back &': {
-      animationName: `swipe-${type}-back`,
+    '$backward &': {
+      animationName: `swipe-${type}-backward`,
       [theme.breakpoints.up('sm')]: {
         animationName: `fade-${type}`,
+        opacity: type === 'in' ? 0 : 1,
       },
     },
     '$forward &': {
       animationName: `swipe-${type}-forward`,
       [theme.breakpoints.up('sm')]: {
         animationName: `fade-${type}`,
+        opacity: type === 'in' ? 0 : 1,
       },
     },
   };
@@ -50,12 +53,12 @@ const createSwipeLeaveAnimation = createSwipeAnimation('out', 1, 0);
 
 export default theme => ({
   ...createSwipeEnterAnimation('forward', '100%', '0'),
-  ...createSwipeLeaveAnimation('forward', '-100%', '-200%'),
-  ...createSwipeEnterAnimation('back', '-100%', '0'),
-  ...createSwipeLeaveAnimation('back', '-100%', '0'),
+  ...createSwipeLeaveAnimation('forward', '0', '-100%'),
+  ...createSwipeEnterAnimation('backward', '-100%', '0'),
+  ...createSwipeLeaveAnimation('backward', '0', '100%'),
   ...createFadeAnimation('in', 0, 1),
   ...createFadeAnimation('out', 1, 0),
-  back: {},
+  backward: {},
   forward: {},
   'page-enter': createTransitionClass('in', theme),
   'page-leave': {
@@ -76,11 +79,24 @@ export default theme => ({
     },
   },
   page: {
+    backgroundColor: theme.palette.background.paper,
     width: '50%',
     marginLeft: 0,
     marginRight: 0,
     [theme.breakpoints.up('sm')]: {
       width: '100%',
+    },
+    '&:first-child:not(:last-child)': {
+      // entering
+      position: 'absolute',
+      top: 0,
+      opacity: 0,
+      zIndex: 1,
+    },
+    '&:last-child:not(:first-child)': {
+      // leaving
+      opacity: 1,
+      zIndex: 0,
     },
   },
 });

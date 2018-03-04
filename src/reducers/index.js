@@ -167,7 +167,7 @@ export function direction(state = 'forward', { type, meta }) {
 
   if (type === 'HOME_PAGE') {
     if (prevType) {
-      return 'back';
+      return 'backward';
     }
 
     return 'forward';
@@ -179,7 +179,7 @@ export function direction(state = 'forward', { type, meta }) {
     }
 
     if (prevType === 'ITEM_PAGE') {
-      return 'back';
+      return 'backward';
     }
   }
 
