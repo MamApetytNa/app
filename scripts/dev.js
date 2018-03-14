@@ -11,7 +11,7 @@ const { default: server } = require(process.env.SERVER_PATH);
 const { appBuild, appPublic } = require('../config/paths');
 const webpackConfig = require('../config/webpack.config.dev');
 
-const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
+const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3003;
 const HOST = process.env.HOST || '0.0.0.0';
 
 
