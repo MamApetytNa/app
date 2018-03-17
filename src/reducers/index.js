@@ -150,6 +150,14 @@ export function contact(state = {}, { type, payload } = {}) {
   return state;
 }
 
+export function about(state = {}, { type, payload } = {}) {
+  if (type === 'ABOUT_CONTENT_DATA') {
+    return payload;
+  }
+
+  return state;
+}
+
 export function direction(state = 'forward', { type, meta }) {
   if (!meta || !meta.location) {
     return state;

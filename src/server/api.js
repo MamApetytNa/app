@@ -2,7 +2,13 @@ import createRouter from 'express-promise-router';
 
 import { NOT_FOUND } from './status';
 
-import { getContactInfo, getFeatured, getItems, getItem } from '../data';
+import {
+  getAboutContent,
+  getContactInfo,
+  getFeatured,
+  getItems,
+  getItem,
+} from '../data';
 
 export default () => {
   const router = createRouter();
@@ -28,6 +34,11 @@ export default () => {
 
   router.get('/contact', async (req, res) => {
     const info = await getContactInfo();
+    res.json(info);
+  });
+
+  router.get('/about', async (req, res) => {
+    const info = await getAboutContent();
     res.json(info);
   });
 

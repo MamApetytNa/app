@@ -4,6 +4,8 @@ import path from 'path';
 import pmap from 'p-map';
 import { match, nth, pick, pipe, prop, reduce } from 'ramda';
 
+import parseMarkdown from '../utils/markdown';
+
 const idPattern = /-([0-9]{0,5})\.json$/;
 
 const dataDir = process.env.DATA_DIR;
@@ -39,6 +41,7 @@ const filesIndexPromise = readGenericIndex(
 const photosIndexPromise = readIdIndex('photos');
 const tagsIndexPromise = readIdIndex('tags');
 const contactInfoPromise = fs.readJson(path.join(dataDir, 'contact.json'));
+const aboutContentPromise = fs.readFile(path.join(dataDir, 'about.md'), 'utf-8').then(parseMarkdown);
 
 async function getRawItem(id) {
   const filesIndex = await filesIndexPromise;
@@ -129,6 +132,10 @@ export async function getFeatured() {
   );
 }
 
-export async function getContactInfo() {
+export function getContactInfo() {
   return contactInfoPromise;
+}
+
+export function getAboutContent() {
+  return aboutContentPromise;
 }

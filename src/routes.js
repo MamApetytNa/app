@@ -25,6 +25,11 @@ const routes = {
     filename: 'Item',
     thunk: compose(thunks.COMMON, thunks.ITEM),
   },
+  ABOUT_PAGE: {
+    path: '/o-mnie',
+    filename: 'About',
+    thunk: compose(thunks.COMMON, thunks.ABOUT),
+  },
 };
 
 export const routesMap = mapObjIndexed(pick(['path', 'thunk']), routes);

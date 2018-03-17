@@ -1,5 +1,5 @@
-import { contactInfo, featured, allItems, item, notFound } from './actions';
-import { getContactInfo, getFeatured, getItems, getItem } from './api';
+import { aboutContent, allItems, contactInfo, featured, item, notFound } from './actions';
+import { getAboutContent, getContactInfo, getFeatured, getItems, getItem } from './api';
 import { selectTagParam } from './selectors';
 
 async function CONTACT_INFO(dispatch) {
@@ -42,5 +42,13 @@ export async function ITEM(dispatch, getState) {
     dispatch(notFound());
   } else {
     dispatch(item(data));
+  }
+}
+
+export async function ABOUT(dispatch) {
+  const data = await getAboutContent();
+
+  if (data) {
+    dispatch(aboutContent(data));
   }
 }
