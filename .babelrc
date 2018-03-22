@@ -30,6 +30,11 @@
             "plugins": [
                 "react-hot-loader/babel"
             ]
+        },
+        "test": {
+            "presets": [
+                ["env", { "modules" : "commonjs" }]
+            ]
         }
     }
 }
