@@ -81,7 +81,7 @@ describe('reducers', () => {
 
     describe('FEATURED_DATA action', () => {
       it('should add items from all groups to index', () => {
-        const state = itemsIndex(null, actions.featured(data.featured));
+        const state = itemsIndex({}, actions.featured(data.featured));
 
         expect(Object.keys(state)).toHaveLength(4);
         expect(Object.keys(state)).toEqual(expect.arrayContaining(['1', '2', '3', '4']));
@@ -98,7 +98,7 @@ describe('reducers', () => {
       });
 
       it('should normalize items before adding to index', () => {
-        const state = itemsIndex(null, actions.featured(data.featured));
+        const state = itemsIndex({}, actions.featured(data.featured));
 
         expect(state['1'].id).toEqual(data.items[0].id);
         expect(state['1'].name).toEqual(data.items[0].name);
@@ -108,7 +108,7 @@ describe('reducers', () => {
 
     describe('ALL_ITEMS_DATA action', () => {
       it('should add all items to index', () => {
-        const state = itemsIndex(null, actions.allItems(data.items));
+        const state = itemsIndex({}, actions.allItems(data.items));
 
         expect(Object.keys(state)).toHaveLength(6);
         expect(Object.keys(state)).toEqual(expect.arrayContaining(['1', '2', '3', '4', '5', '6']));
@@ -127,7 +127,7 @@ describe('reducers', () => {
       });
 
       it('should normalize items before adding to index', () => {
-        const state = itemsIndex(null, actions.allItems(data.items));
+        const state = itemsIndex({}, actions.allItems(data.items));
 
         expect(state['1'].id).toEqual(data.items[0].id);
         expect(state['1'].name).toEqual(data.items[0].name);
@@ -137,7 +137,7 @@ describe('reducers', () => {
 
     describe('ITEM_DATA action', () => {
       it('should add item to index', () => {
-        const state = itemsIndex(null, actions.item(data.items[0]));
+        const state = itemsIndex({}, actions.item(data.items[0]));
 
         expect(Object.keys(state)).toHaveLength(1);
         expect(Object.keys(state)).toEqual(['1']);
@@ -151,7 +151,7 @@ describe('reducers', () => {
       });
 
       it('should normalize items before adding to index', () => {
-        const state = itemsIndex(null, actions.item(data.items[0]));
+        const state = itemsIndex({}, actions.item(data.items[0]));
 
         expect(state['1'].id).toEqual(data.items[0].id);
         expect(state['1'].name).toEqual(data.items[0].name);
