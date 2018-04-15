@@ -4,7 +4,7 @@ import IconButton from 'material-ui/IconButton';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
-import MenuIcon from 'material-ui-icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
 import { not, pipe } from 'ramda';
 import React from 'react';
 import { withProps, withState } from 'recompose';

@@ -81,7 +81,7 @@ function Item({
         />}
       />
       <CardContent>
-        <Grid container>
+        <Grid container spacing={16}>
           <Grid item xs={12} sm={6}>
             <Showcase
               images={photos.map(photo => ({
@@ -100,7 +100,7 @@ function Item({
             />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Grid container className={classes.infoContainer}>
+            <Grid container className={classes.infoContainer} spacing={16}>
               <Grid item xs={12}>
                 <Typography component="p">{description}</Typography>
               </Grid>

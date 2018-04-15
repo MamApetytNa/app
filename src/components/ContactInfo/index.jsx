@@ -3,8 +3,8 @@ import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import SvgIcon from 'material-ui/SvgIcon';
-import PhoneIcon from 'material-ui-icons/Phone';
-import EmailIcon from 'material-ui-icons/Email';
+import PhoneIcon from '@material-ui/icons/Phone';
+import EmailIcon from '@material-ui/icons/Email';
 import React from 'react';
 import { withProps } from 'recompose';
 
@@ -123,7 +123,7 @@ function ContactInfo({
 
   return (
     <div className={classNames(classes.root, className)}>
-      <Grid container className={classes.sectionContainer}>
+      <Grid container className={classes.sectionContainer} spacing={16}>
         <Section component="address" sm={12}>
           <Typography className={classes.paragraph}>
             <strong>{name}</strong><br />

@@ -6,7 +6,7 @@ import { withStyles, withTheme } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import Typography from 'material-ui/Typography';
-import InfoIcon from 'material-ui-icons/Info';
+import InfoIcon from '@material-ui/icons/Info';
 import { pipe } from 'ramda';
 import React from 'react';
 
@@ -80,7 +80,7 @@ function ItemList({
           />
         </Typography>
       )}
-      <Grid container>{items.map(({
+      <Grid container spacing={16}>{items.map(({
         id = '',
         minPrice = {},
         sizes = [],

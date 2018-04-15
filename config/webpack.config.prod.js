@@ -87,7 +87,7 @@ module.exports.clientConfig = mergeConfigs(config, {
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new FaviconsWebpackPlugin({
-      logo: path.join(paths.appSrc, 'logo.svg'),
+      logo: path.join(paths.appSrc, 'images', 'logo.svg'),
       prefix: 'icons/',
       emitStats: true,
       statsFilename: 'icons.json',

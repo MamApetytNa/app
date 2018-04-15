@@ -3,10 +3,10 @@ import { withStyles } from 'material-ui/styles';
 import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-import InfoIcon from 'material-ui-icons/Info';
-import MapIcon from 'material-ui-icons/Map';
-import PhoneIcon from 'material-ui-icons/Phone';
-import ViewListIcon from 'material-ui-icons/ViewList';
+import InfoIcon from '@material-ui/icons/Info';
+import MapIcon from '@material-ui/icons/Map';
+import PhoneIcon from '@material-ui/icons/Phone';
+import ViewListIcon from '@material-ui/icons/ViewList';
 import React from 'react';
 
 import Logo from '../../images/logo.svg';

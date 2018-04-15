@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 
 import Button from 'material-ui/Button';
-import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
-import KeyboardArrowRight from 'material-ui-icons/KeyboardArrowRight';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import MobileStepper from 'material-ui/MobileStepper';
 import React from 'react';
 import SwipableViews from 'react-swipeable-views';

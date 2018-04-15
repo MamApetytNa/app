@@ -40,7 +40,7 @@ function SizeChooser({
   }
 
   return (
-    <Grid container alignItems="center">
+    <Grid container alignItems="center" spacing={16}>
       <Grid item xs={6}>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="size">{texts.SIZE}</InputLabel>
@@ -54,7 +54,7 @@ function SizeChooser({
             ))}
           </Select>
         </FormControl>
-        <Grid container>
+        <Grid container spacing={16}>
           <Grid item xs={6}>
             {currentSize.diameter &&
               <Typography component="p">

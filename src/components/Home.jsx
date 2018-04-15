@@ -19,7 +19,7 @@ function Home({
   lists = [],
 }) {
   return (
-    <Grid container className={classNames(classes.root, className)}>
+    <Grid container className={classNames(classes.root, className)} spacing={16}>
       {lists.map(({ id, name, items }) => (
         <Grid item key={name} xs={12}>
           <Featured

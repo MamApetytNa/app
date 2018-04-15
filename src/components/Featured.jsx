@@ -134,7 +134,7 @@ function Featured({
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Grid container spacing={0} >
+          <Grid container>
             {items.slice(1).map(props => (
               <Grid item xs={6} key={props.id}>
                 <Item

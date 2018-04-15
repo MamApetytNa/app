@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'material-ui/Button';
-import PhoneIcon from 'material-ui-icons/Phone';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 const texts = {
   CALL: 'Zadzwoń',
