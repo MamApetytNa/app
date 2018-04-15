@@ -2,6 +2,10 @@ import { curryN } from 'ramda';
 
 export function noop() {}
 
+export function noopComponent({ children }) {
+  return children || null;
+}
+
 export const updateProp = curryN(3, (updater, prop, obj) => {
   if (!(prop in obj)) {
     return obj;

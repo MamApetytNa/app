@@ -34,7 +34,7 @@ function HomeLink({ children, ...props }) {
 
 export default withStyles(styles)(({ classes, pages }) => (
   <ScrollContext>
-    <Header homeLink={HomeLink} />
+    <Header homeLink={HomeLink} menuLink={Link} />
     <div className={classes.container} >
       <PageSwitcher pages={pages} />
     </div>
