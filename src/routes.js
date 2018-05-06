@@ -30,6 +30,11 @@ const routes = {
     filename: 'About',
     thunk: compose(thunks.COMMON, thunks.ABOUT),
   },
+  CONTACT_PAGE: {
+    path: '/kontakt',
+    filename: 'Contact',
+    thunk: thunks.CONTACT_INFO,
+  },
 };
 
 export const routesMap = mapObjIndexed(pick(['path', 'thunk']), routes);

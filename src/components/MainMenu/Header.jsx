@@ -3,7 +3,7 @@ import { withStyles } from 'material-ui/styles';
 import List, { ListItem } from 'material-ui/List';
 import React from 'react';
 
-import { goToAbout, goToAddress, goToContact, goToItemList } from '../../actions';
+import { goToAbout, goToContact, goToItemList } from '../../actions';
 import { noopComponent } from '../../utils/fun';
 
 const styles = ({
@@ -18,7 +18,6 @@ const styles = ({
 
 const texts = {
   ABOUT: 'O mnie',
-  ADDRESS: 'Dojazd',
   CONTACT: 'Kontakt',
   LIST: 'Ciasta',
 };
@@ -26,7 +25,6 @@ const texts = {
 const buttons = [
   [texts.LIST, goToItemList],
   [texts.ABOUT, goToAbout],
-  [texts.ADDRESS, goToAddress],
   [texts.CONTACT, goToContact],
 ];
 

@@ -4,13 +4,12 @@ import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import InfoIcon from '@material-ui/icons/Info';
-import MapIcon from '@material-ui/icons/Map';
 import PhoneIcon from '@material-ui/icons/Phone';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import React from 'react';
 
 import Logo from '../../images/logo.svg';
-import { goToAbout, goToAddress, goToContact, goToItemList } from '../../actions';
+import { goToAbout, goToContact, goToItemList } from '../../actions';
 import { noopComponent } from '../../utils/fun';
 
 const styles = theme => ({
@@ -34,7 +33,6 @@ const buttons = [
   [ViewListIcon, texts.LIST, goToItemList],
   [InfoIcon, texts.ABOUT, goToAbout],
   [PhoneIcon, texts.CONTACT, goToContact],
-  [MapIcon, texts.ADDRESS, goToAddress],
 ];
 
 function SidebarMainMenu({

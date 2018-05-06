@@ -2,7 +2,7 @@ import { aboutContent, allItems, contactInfo, featured, item, notFound } from '.
 import { getAboutContent, getContactInfo, getFeatured, getItems, getItem } from './api';
 import { selectTagParam } from './selectors';
 
-async function CONTACT_INFO(dispatch) {
+export async function CONTACT_INFO(dispatch) {
   const data = await getContactInfo();
 
   if (data) {
