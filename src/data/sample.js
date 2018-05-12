@@ -37,43 +37,61 @@ const minPrice = [{
 }];
 const thumbnails = [{
   id: '100',
-  square: 'http://via.placeholder.com/800x800/E8117F/FFFFFF?text=OMG',
+  name: 'mock_01',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '101',
-  square: 'http://via.placeholder.com/800x800/7fe811/FFFFFF?text=OMG',
+  name: 'mock_02',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '102',
-  square: 'http://via.placeholder.com/800x800/7a11e8/FFFFFF?text=OMG',
+  name: 'mock_03',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '103',
-  square: 'http://via.placeholder.com/800x800/11e87a/FFFFFF?text=OMG',
+  name: 'mock_04',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '104',
-  square: 'http://via.placeholder.com/800x1200/AAAAAA/FFFFFF?text=W%0AT%0AF',
+  name: 'mock_05',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '105',
-  square: 'http://via.placeholder.com/1200x800/AAAAAA/FFFFFF?text=W%20T%20F',
+  name: 'mock_06',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '106',
-  square: 'http://olgamawypieki.imgix.net/images/test_t.jpg',
+  name: 'photo_mock_04',
+  original: {},
+  square: { ar: 1 },
 }];
 
 const photos = [{
   id: '200',
-  original: 'https://picsum.photos/600/900?image=0',
-  square: 'https://picsum.photos/600/600?image=0',
+  name: 'photo_mock_01',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '201',
-  original: 'https://picsum.photos/600/900?image=2',
-  square: 'https://picsum.photos/600/600?image=2',
+  name: 'photo_mock_02',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '202',
-  original: 'https://picsum.photos/600/900?image=4',
-  square: 'https://picsum.photos/600/600?image=4',
+  name: 'photo_mock_03',
+  original: {},
+  square: { ar: 1 },
 }, {
   id: '203',
-  original: 'http://olgamawypieki.imgix.net/images/test.jpg',
-  square: 'http://olgamawypieki.imgix.net/images/test_t.jpg',
+  name: 'photo_mock_04',
+  original: {},
+  square: { ar: 1 },
 }];
 
 const items = [{

@@ -1,387 +1,796 @@
 [
   {
     "id": "51026",
-    "original": "https://olgamawypieki.imgix.net/beziki-51026.jpg",
-    "square": "https://olgamawypieki.imgix.net/beziki-51026.jpg?fp-y=0&fp-x=0"
+    "name": "beziki-51026.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0,
+        "x": 0
+      }
+    }
   },
   {
     "id": "28945",
-    "original": "https://olgamawypieki.imgix.net/beziki-28945.jpg",
-    "square": "https://olgamawypieki.imgix.net/beziki-28945.jpg?fp-y=1"
+    "name": "beziki-28945.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "60854",
-    "original": "https://olgamawypieki.imgix.net/brownie-60854.jpg",
-    "square": "https://olgamawypieki.imgix.net/brownie-60854.jpg?fp-x=1"
+    "name": "brownie-60854.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 1
+      }
+    }
   },
   {
     "id": "39669",
-    "original": "https://olgamawypieki.imgix.net/brownie-39669.jpg",
-    "square": "https://olgamawypieki.imgix.net/brownie-39669.jpg?fp-x=0"
+    "name": "brownie-39669.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0
+      }
+    }
   },
   {
     "id": "21276",
-    "original": "https://olgamawypieki.imgix.net/chalki-21276.jpg",
-    "square": "https://olgamawypieki.imgix.net/chalki-21276.jpg?fp-x=0.67"
+    "name": "chalki-21276.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.67
+      }
+    }
   },
   {
     "id": "23157",
-    "original": "https://olgamawypieki.imgix.net/chalki-23157.jpg",
-    "square": "https://olgamawypieki.imgix.net/chalki-23157.jpg?fp-x=0.59"
+    "name": "chalki-23157.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.59
+      }
+    }
   },
   {
     "id": "56770",
-    "original": "https://olgamawypieki.imgix.net/chalki-56770.jpg",
-    "square": "https://olgamawypieki.imgix.net/chalki-56770.jpg?fp-x=0.83"
+    "name": "chalki-56770.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.83
+      }
+    }
   },
   {
     "id": "41553",
-    "original": "https://olgamawypieki.imgix.net/ciastka-41553.jpg",
-    "square": "https://olgamawypieki.imgix.net/ciastka-41553.jpg?fp-x=0.83"
+    "name": "ciastka-41553.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.83
+      }
+    }
   },
   {
     "id": "25780",
-    "original": "https://olgamawypieki.imgix.net/ciastka-25780.jpg",
-    "square": "https://olgamawypieki.imgix.net/ciastka-25780.jpg?fit=min"
+    "name": "ciastka-25780.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "61546",
-    "original": "https://olgamawypieki.imgix.net/ciastka-61546.jpg",
-    "square": "https://olgamawypieki.imgix.net/ciastka-61546.jpg?fit=min"
+    "name": "ciastka-61546.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "17414",
-    "original": "https://olgamawypieki.imgix.net/ciastka-17414.jpg",
-    "square": "https://olgamawypieki.imgix.net/ciastka-17414.jpg?fp-x=0.31"
+    "name": "ciastka-17414.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.31
+      }
+    }
   },
   {
     "id": "45523",
-    "original": "https://olgamawypieki.imgix.net/nutella-45523.jpg",
-    "square": "https://olgamawypieki.imgix.net/nutella-45523.jpg?fp-x=0.31"
+    "name": "nutella-45523.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.31
+      }
+    }
   },
   {
     "id": "28818",
-    "original": "https://olgamawypieki.imgix.net/nutella-28818.jpg",
-    "square": "https://olgamawypieki.imgix.net/nutella-28818.jpg?fp-x=0.15"
+    "name": "nutella-28818.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.15
+      }
+    }
   },
   {
     "id": "13039",
-    "original": "https://olgamawypieki.imgix.net/czekoladowe-13039.jpg",
-    "square": "https://olgamawypieki.imgix.net/czekoladowe-13039.jpg?fp-y=0.7"
+    "name": "czekoladowe-13039.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.7
+      }
+    }
   },
   {
     "id": "49082",
-    "original": "https://olgamawypieki.imgix.net/czekoladowe-49082.jpg",
-    "square": "https://olgamawypieki.imgix.net/czekoladowe-49082.jpg?fit=min"
+    "name": "czekoladowe-49082.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "27174",
-    "original": "https://olgamawypieki.imgix.net/sufletowe-08350.jpg",
-    "square": "https://olgamawypieki.imgix.net/sufletowe-08350.jpg?fp-y=0.11"
+    "name": "sufletowe-08350.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.11
+      }
+    }
   },
   {
     "id": "08350",
-    "original": "https://olgamawypieki.imgix.net/sufletowe-27174.jpg",
-    "square": "https://olgamawypieki.imgix.net/sufletowe-27174.jpg?fp-y=0.82"
+    "name": "sufletowe-27174.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.82
+      }
+    }
   },
   {
     "id": "20698",
-    "original": "https://olgamawypieki.imgix.net/dyniowe-20698.jpg",
-    "square": "https://olgamawypieki.imgix.net/dyniowe-20698.jpg?fp-y=0.64"
+    "name": "dyniowe-20698.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.64
+      }
+    }
   },
   {
     "id": "07002",
-    "original": "https://olgamawypieki.imgix.net/dyniowe-07002.jpg",
-    "square": "https://olgamawypieki.imgix.net/dyniowe-07002.jpg?fp-y=1"
+    "name": "dyniowe-07002.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "46111",
-    "original": "https://olgamawypieki.imgix.net/dyniowe-46111.jpg",
-    "square": "https://olgamawypieki.imgix.net/dyniowe-46111.jpg?fit=min"
+    "name": "dyniowe-46111.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "44565",
-    "original": "https://olgamawypieki.imgix.net/migdalowe-44565.jpg",
-    "square": "https://olgamawypieki.imgix.net/migdalowe-44565.jpg?fp-y=0.82"
+    "name": "migdalowe-44565.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.82
+      }
+    }
   },
   {
     "id": "09491",
-    "original": "https://olgamawypieki.imgix.net/migdalowe-09491.jpg",
-    "square": "https://olgamawypieki.imgix.net/migdalowe-09491.jpg?fp-y=0.93"
+    "name": "migdalowe-09491.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.93
+      }
+    }
   },
   {
     "id": "20765",
-    "original": "https://olgamawypieki.imgix.net/z-gruszkami-20765.jpg",
-    "square": "https://olgamawypieki.imgix.net/z-gruszkami-20765.jpg?fit=min"
+    "name": "z-gruszkami-20765.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "45126",
-    "original": "https://olgamawypieki.imgix.net/z-gruszkami-45126.jpg",
-    "square": "https://olgamawypieki.imgix.net/z-gruszkami-45126.jpg?fp-y=0.54"
+    "name": "z-gruszkami-45126.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.54
+      }
+    }
   },
   {
     "id": "35884",
-    "original": "https://olgamawypieki.imgix.net/babeczki-35884.jpg",
-    "square": "https://olgamawypieki.imgix.net/babeczki-35884.jpg?fp-y=0.8"
+    "name": "babeczki-35884.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.8
+      }
+    }
   },
   {
     "id": "47634",
-    "original": "https://olgamawypieki.imgix.net/ciasto-dunskie-47634.jpg",
-    "square": "https://olgamawypieki.imgix.net/ciasto-dunskie-47634.jpg?fp-y=0.93"
+    "name": "ciasto-dunskie-47634.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.93
+      }
+    }
   },
   {
     "id": "10269",
-    "original": "https://olgamawypieki.imgix.net/chalki-10269.jpg",
-    "square": "https://olgamawypieki.imgix.net/chalki-10269.jpg?fit=min"
+    "name": "chalki-10269.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "17171",
-    "original": "https://olgamawypieki.imgix.net/rogale-17171.jpg",
-    "square": "https://olgamawypieki.imgix.net/rogale-17171.jpg?fp-y=1"
+    "name": "rogale-17171.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "38431",
-    "original": "https://olgamawypieki.imgix.net/rogale-marcinskie-38431.jpg",
-    "square": "https://olgamawypieki.imgix.net/rogale-marcinskie-38431.jpg?fp-y=0.71"
+    "name": "rogale-marcinskie-38431.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.71
+      }
+    }
   },
   {
     "id": "16505",
-    "original": "https://olgamawypieki.imgix.net/rogale-marcinskie-16505.jpg",
-    "square": "https://olgamawypieki.imgix.net/rogale-marcinskie-16505.jpg?fit=min"
+    "name": "rogale-marcinskie-16505.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "02083",
-    "original": "https://olgamawypieki.imgix.net/sernik-jagodowy-02083.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-jagodowy-02083.jpg?fit=min"
+    "name": "sernik-jagodowy-02083.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "28679",
-    "original": "https://olgamawypieki.imgix.net/sernik-jagodowy-28679.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-jagodowy-28679.jpg?fp-x=0"
+    "name": "sernik-jagodowy-28679.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0
+      }
+    }
   },
   {
     "id": "43078",
-    "original": "https://olgamawypieki.imgix.net/sernik-karmelowy-43078.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-karmelowy-43078.jpg?fp-y=0.24"
+    "name": "sernik-karmelowy-43078.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.24
+      }
+    }
   },
   {
     "id": "37333",
-    "original": "https://olgamawypieki.imgix.net/sernik-karmelowy-37333.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-karmelowy-37333.jpg?fp-y=0"
+    "name": "sernik-karmelowy-37333.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0
+      }
+    }
   },
   {
     "id": "43804",
-    "original": "https://olgamawypieki.imgix.net/sernik-czekoladowy-43804.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-czekoladowy-43804.jpg?fp-x=0.62"
+    "name": "sernik-czekoladowy-43804.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.62
+      }
+    }
   },
   {
     "id": "39756",
-    "original": "https://olgamawypieki.imgix.net/sernik-czekoladowy-39756.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-czekoladowy-39756.jpg?fp-x=1"
+    "name": "sernik-czekoladowy-39756.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 1
+      }
+    }
   },
   {
     "id": "59304",
-    "original": "https://olgamawypieki.imgix.net/sernik-z-maslem-orzechowym-59304.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-z-maslem-orzechowym-59304.jpg?fp-y=0.33"
+    "name": "sernik-z-maslem-orzechowym-59304.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.33
+      }
+    }
   },
   {
     "id": "36373",
-    "original": "https://olgamawypieki.imgix.net/sernik-z-maslem-orzechowym-36373.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-z-maslem-orzechowym-36373.jpg?fp-y=0.67"
+    "name": "sernik-z-maslem-orzechowym-36373.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.67
+      }
+    }
   },
   {
     "id": "61945",
-    "original": "https://olgamawypieki.imgix.net/sernik-z-owocami-61945.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-z-owocami-61945.jpg?fp-y=0.35"
+    "name": "sernik-z-owocami-61945.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.35
+      }
+    }
   },
   {
     "id": "47341",
-    "original": "https://olgamawypieki.imgix.net/sernik-z-owocami-47341.jpg",
-    "square": "https://olgamawypieki.imgix.net/sernik-z-owocami-47341.jpg?fp-y=0.24"
+    "name": "sernik-z-owocami-47341.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.24
+      }
+    }
   },
   {
     "id": "40551",
-    "original": "https://olgamawypieki.imgix.net/tarta-cytrynowa-40551.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-cytrynowa-40551.jpg?fp-x=0.26"
+    "name": "tarta-cytrynowa-40551.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.26
+      }
+    }
   },
   {
     "id": "16625",
-    "original": "https://olgamawypieki.imgix.net/tarta-cytrynowa-16625.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-cytrynowa-16625.jpg?fit=min"
+    "name": "tarta-cytrynowa-16625.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "32573",
-    "original": "https://olgamawypieki.imgix.net/tarta-chalwowa-32573.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-chalwowa-32573.jpg?fp-x=0.45"
+    "name": "tarta-chalwowa-32573.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.45
+      }
+    }
   },
   {
     "id": "48740",
-    "original": "https://olgamawypieki.imgix.net/tarta-chalwowa-48740.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-chalwowa-48740.jpg?fp-x=0.45"
+    "name": "tarta-chalwowa-48740.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.45
+      }
+    }
   },
   {
     "id": "45960",
-    "original": "https://olgamawypieki.imgix.net/tarta-czekoladowa-45960.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-czekoladowa-45960.jpg?fp-x=0.54"
+    "name": "tarta-czekoladowa-45960.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.54
+      }
+    }
   },
   {
     "id": "49503",
-    "original": "https://olgamawypieki.imgix.net/tarta-czekoladowa-49503.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-czekoladowa-49503.jpg?fp-x=0.17"
+    "name": "tarta-czekoladowa-49503.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.17
+      }
+    }
   },
   {
     "id": "14825",
-    "original": "https://olgamawypieki.imgix.net/tarta-czekoladowa-14825.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-czekoladowa-14825.jpg?fp-y=0.67"
+    "name": "tarta-czekoladowa-14825.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.67
+      }
+    }
   },
   {
     "id": "65000",
-    "original": "https://olgamawypieki.imgix.net/tarta-z-owocami-65000.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-z-owocami-65000.jpg?fp-x=0.45"
+    "name": "tarta-z-owocami-65000.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.45
+      }
+    }
   },
   {
     "id": "22881",
-    "original": "https://olgamawypieki.imgix.net/tarta-z-owocami-22881.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-z-owocami-22881.jpg?fp-x=0.81"
+    "name": "tarta-z-owocami-22881.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.81
+      }
+    }
   },
   {
     "id": "62713",
-    "original": "https://olgamawypieki.imgix.net/tarta-sernikowa-62713.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-sernikowa-62713.jpg?fit=min"
+    "name": "tarta-sernikowa-62713.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "49398",
-    "original": "https://olgamawypieki.imgix.net/tarta-sernikowa-49398.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-sernikowa-49398.jpg?fp-x=0.15"
+    "name": "tarta-sernikowa-49398.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.15
+      }
+    }
   },
   {
     "id": "44147",
-    "original": "https://olgamawypieki.imgix.net/tarta-sernikowa-44147.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-sernikowa-44147.jpg?fit=min"
+    "name": "tarta-sernikowa-44147.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "30134",
-    "original": "https://olgamawypieki.imgix.net/tarta-patissiere-30134.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-patissiere-30134.jpg?fit=min"
+    "name": "tarta-patissiere-30134.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "06683",
-    "original": "https://olgamawypieki.imgix.net/tarta-smietanowa-06683.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-smietanowa-06683.jpg?fp-y=1"
+    "name": "tarta-smietanowa-06683.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "13440",
-    "original": "https://olgamawypieki.imgix.net/tarta-smietanowa-13440.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-smietanowa-13440.jpg?fp-y=1"
+    "name": "tarta-smietanowa-13440.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "44387",
-    "original": "https://olgamawypieki.imgix.net/tarteczka-z-beza-44387.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarteczka-z-beza-44387.jpg?fp-y=1"
+    "name": "tarteczka-z-beza-44387.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "57532",
-    "original": "https://olgamawypieki.imgix.net/tarteczka-z-beza-57532.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarteczka-z-beza-57532.jpg?fp-x=0.46"
+    "name": "tarteczka-z-beza-57532.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.46
+      }
+    }
   },
   {
     "id": "23915",
-    "original": "https://olgamawypieki.imgix.net/tarta-sliwkowa-23915.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-sliwkowa-23915.jpg?fp-y=1"
+    "name": "tarta-sliwkowa-23915.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "17561",
-    "original": "https://olgamawypieki.imgix.net/tarta-sliwkowa-17561.jpg",
-    "square": "https://olgamawypieki.imgix.net/tarta-sliwkowa-17561.jpg?fit=min"
+    "name": "tarta-sliwkowa-17561.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "02350",
-    "original": "https://olgamawypieki.imgix.net/beza-02350.jpg",
-    "square": "https://olgamawypieki.imgix.net/beza-02350.jpg?fit=min"
+    "name": "beza-02350.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "15094",
-    "original": "https://olgamawypieki.imgix.net/beza-15094.jpg",
-    "square": "https://olgamawypieki.imgix.net/beza-15094.jpg?fit=min"
+    "name": "beza-15094.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "15142",
-    "original": "https://olgamawypieki.imgix.net/tort-cytrynowy-15142.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-cytrynowy-15142.jpg?fp-y=0.87"
+    "name": "tort-cytrynowy-15142.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.87
+      }
+    }
   },
   {
     "id": "36476",
-    "original": "https://olgamawypieki.imgix.net/tort-cytrynowy-36476.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-cytrynowy-36476.jpg?fp-y=1"
+    "name": "tort-cytrynowy-36476.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "61557",
-    "original": "https://olgamawypieki.imgix.net/przekladane-na-trzy-61557.jpg",
-    "square": "https://olgamawypieki.imgix.net/przekladane-na-trzy-61557.jpg?fp-x=0.58"
+    "name": "przekladane-na-trzy-61557.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.58
+      }
+    }
   },
   {
     "id": "19557",
-    "original": "https://olgamawypieki.imgix.net/przekladane-na-trzy-19557.jpg",
-    "square": "https://olgamawypieki.imgix.net/przekladane-na-trzy-19557.jpg?fit=min"
+    "name": "przekladane-na-trzy-19557.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "08894",
-    "original": "https://olgamawypieki.imgix.net/tort-z-maslem-orzechowym-08894.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-z-maslem-orzechowym-08894.jpg?fp-x=0"
+    "name": "tort-z-maslem-orzechowym-08894.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0
+      }
+    }
   },
   {
     "id": "55077",
-    "original": "https://olgamawypieki.imgix.net/tort-z-maslem-orzechowym-55077.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-z-maslem-orzechowym-55077.jpg?fit=min"
+    "name": "tort-z-maslem-orzechowym-55077.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "41744",
-    "original": "https://olgamawypieki.imgix.net/tort-kokosowy-41744.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-kokosowy-41744.jpg?fp-y=1"
+    "name": "tort-kokosowy-41744.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 1
+      }
+    }
   },
   {
     "id": "10720",
-    "original": "https://olgamawypieki.imgix.net/tort-kokosowy-10720.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-kokosowy-10720.jpg?fp-x=0.34"
+    "name": "tort-kokosowy-10720.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.34
+      }
+    }
   },
   {
     "id": "63429",
-    "original": "https://olgamawypieki.imgix.net/tort-kokosowy-63429.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-kokosowy-63429.jpg?fp-x=0"
+    "name": "tort-kokosowy-63429.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0
+      }
+    }
   },
   {
     "id": "47467",
-    "original": "https://olgamawypieki.imgix.net/tort-migdalowy-47467.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-migdalowy-47467.jpg?fp-y=0.57"
+    "name": "tort-migdalowy-47467.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.57
+      }
+    }
   },
   {
     "id": "00688",
-    "original": "https://olgamawypieki.imgix.net/tort-migdalowy-00688.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-migdalowy-00688.jpg?fp-y=0.8"
+    "name": "tort-migdalowy-00688.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.8
+      }
+    }
   },
   {
     "id": "11839",
-    "original": "https://olgamawypieki.imgix.net/tort-pietrowy-11839.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-pietrowy-11839.jpg?fp-y=0"
+    "name": "tort-pietrowy-11839.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0
+      }
+    }
   },
   {
     "id": "43924",
-    "original": "https://olgamawypieki.imgix.net/tort-pietrowy-43924.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-pietrowy-43924.jpg?fp-y=0.37"
+    "name": "tort-pietrowy-43924.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.37
+      }
+    }
   },
   {
     "id": "48314",
-    "original": "https://olgamawypieki.imgix.net/tort-z-granatem-48314.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-z-granatem-48314.jpg?fp-x=0.4"
+    "name": "tort-z-granatem-48314.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "x": 0.4
+      }
+    }
   },
   {
     "id": "41163",
-    "original": "https://olgamawypieki.imgix.net/tort-z-granatem-41163.jpg",
-    "square": "https://olgamawypieki.imgix.net/tort-z-granatem-41163.jpg?fit=min"
+    "name": "tort-z-granatem-41163.jpg",
+    "original": {},
+    "square": {
+      "ar": 1
+    }
   },
   {
     "id": "64091",
-    "original": "https://olgamawypieki.imgix.net/kokosowy-torcik-bezowy-51613.jpg",
-    "square": "https://olgamawypieki.imgix.net/kokosowy-torcik-bezowy-51613.jpg?fp-y=0.72"
+    "name": "kokosowy-torcik-bezowy-51613.jpg",
+    "original": {},
+    "square": {
+      "ar": 1,
+      "fp": {
+        "y": 0.72
+      }
+    }
   }
 ]

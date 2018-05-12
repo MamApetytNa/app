@@ -7,7 +7,7 @@ import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import Typography from 'material-ui/Typography';
 import { withStyles, withTheme } from 'material-ui/styles';
 
-import { getSizes, getAutoSrcSet } from '../utils/pic';
+import { getSizes, getPhotoUrl, getAutoSrcSet } from '../utils/pic';
 import { linearGradient, rgba } from '../utils/css';
 
 const styles = theme => ({
@@ -31,6 +31,7 @@ const styles = theme => ({
   },
   tile: {
     position: 'absolute',
+    width: '100%',
   },
   tileLink: {
     display: 'block',
@@ -84,13 +85,13 @@ function Item({
     >
       <ItemLink name={name} id={id} className={classes.tileLink}>
         <img
-          src={thumbnail.square}
-          srcSet={getAutoSrcSet(thumbnail.square, 600 * size)}
+          src={getPhotoUrl(thumbnail, 'square', { w: 'auto', dpr: 'auto' })}
+          srcSet={getAutoSrcSet(thumbnail, 'square', 600 * size)}
           sizes={getSizes({
-            [theme.breakpoints.up('lg')]: '25vw',
-            [theme.breakpoints.up('md')]: '33vw',
-            [theme.breakpoints.up('sm')]: '50vw',
-            [theme.breakpoints.up('xs')]: '100vw',
+            [theme.breakpoints.up('lg')]: `${size * 12}vw`,
+            [theme.breakpoints.up('md')]: `${size * 16}vw`,
+            [theme.breakpoints.up('sm')]: `${size * 25}vw`,
+            [theme.breakpoints.up('xs')]: `${size * 50}vw`,
           })}
           alt={name}
           className={classes.tileImage}

@@ -10,7 +10,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import { pipe } from 'ramda';
 import React from 'react';
 
-import { getSizes, getAutoSrcSet } from '../utils/pic';
+import { getSizes, getAutoSrcSet, getPhotoUrl } from '../utils/pic';
 import Price from '../components/Price';
 
 const texts = {
@@ -35,6 +35,7 @@ const styles = theme => ({
   },
   tile: {
     position: 'absolute',
+    width: '100%',
   },
   tileImage: {
     top: 'auto',
@@ -94,7 +95,8 @@ function ItemList({
                 classes={{ root: classes.tileRoot, tile: classes.tile }}
               >
                 <img
-                  srcSet={getAutoSrcSet(thumbnail.square, 600)}
+                  src={getPhotoUrl(thumbnail, 'square', { w: 'auto', dpr: 'auto' })}
+                  srcSet={getAutoSrcSet(thumbnail, 'square', 600)}
                   sizes={getSizes({
                     [theme.breakpoints.up('lg')]: '25vw',
                     [theme.breakpoints.up('md')]: '33vw',

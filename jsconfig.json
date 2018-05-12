@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "components/*": [
+        "./src/components/*"
+      ],
+      "utils/*": [
+        "./src/utils/*"
+      ],
+      "reducers/*": [
+        "./src/reducers/*"
+      ],
+      "selectors/*": [
+        "./src/selectors/*"
+      ],
+      "api/*": [
+        "./src/api/*"
+      ],
+      "pages/*": [
+        "./src/pages/*"
+      ],
+      "data/*": [
+        "./src/data/*"
+      ],
+      "actions": [
+        "./src/actions.js"
+      ],
+      "logger": [
+        "./src/logger.js"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "./scripts/**/*",
+    "./config/**/*"
+  ]
+}
