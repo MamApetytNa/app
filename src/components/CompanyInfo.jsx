@@ -5,6 +5,7 @@ import React from 'react';
 
 const texts = {
   TAX_ID: 'NIP',
+  IBAN: 'Konto bankowe',
 };
 
 const styles = theme => ({
@@ -12,6 +13,9 @@ const styles = theme => ({
     fontStyle: 'normal',
   },
   paragraph: {
+    color: 'inherit',
+  },
+  iban: {
     color: 'inherit',
   },
   name: {
@@ -29,6 +33,7 @@ function ContactInfo({
   address = {},
   classes = {},
   className = '',
+  iban = '',
   name = '',
   taxId = '',
 }) {
@@ -40,8 +45,13 @@ function ContactInfo({
         {address.zip}&nbsp;{address.city}
       </Typography>
       <Typography className={classes.taxId}>
-        {texts.TAX_ID}: {taxId}
+        <strong>{texts.TAX_ID}:</strong> {taxId}
       </Typography>
+      {iban && (
+        <Typography className={classes.iban}>
+          <strong>{texts.IBAN}:</strong><br />{iban}
+        </Typography>
+      )}
     </div>
   );
 }

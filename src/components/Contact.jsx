@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { withStyles } from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import React from 'react';
 import { withProps } from 'recompose';
@@ -21,6 +22,11 @@ const styles = theme => ({
       marginRight: 0,
     },
   },
+  sectionHeading: {
+    color: 'inherit',
+    fontWeight: 'bold',
+    marginBottom: theme.spacing.unit * 2,
+  },
 });
 
 function Contact({ classes, className, contact }) {
@@ -39,6 +45,7 @@ function Contact({ classes, className, contact }) {
           <Section>
             <CompanyInfo
               address={contact.address}
+              iban={contact.iban}
               name={contact.name}
               taxId={contact.taxId}
             />
