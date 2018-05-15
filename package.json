@@ -1,6 +1,6 @@
 {
   "name": "olgamawypieki.pl",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
   "dependencies": {
     "@material-ui/icons": "1.0.0-beta.42",
