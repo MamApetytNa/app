@@ -6,6 +6,7 @@ import Markdown from './Markdown';
 
 const styles = theme => ({
   root: {
+    marginBottom: theme.spacing.unit * 2,
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
   },

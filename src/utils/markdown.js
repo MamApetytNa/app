@@ -40,12 +40,14 @@ const defaultRenderers = {
 };
 
 export function createRenderer(customRenderers) {
-  return function render(node) {
+  return function render(node, commonProps) {
     const renderer = (customRenderers[node.type] || defaultRenderers[node.type])
       || (customRenderers.default || defaultRenderers.default);
     return renderer({
+      ...commonProps,
       ...node,
-      children: (node.children || []).map((child, index) => render({ ...child, key: index })),
+      children: (node.children || []).map((child, index) =>
+        render({ ...child, key: index }, commonProps)),
     });
   };
 }
