@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 
 import PageSwitcher from '../components/PageSwitcher/PageSwitcher';
 
-import jssProvider from './JssProvider';
+import jssProvider from './JssProvider.stories';
 
 function Page({ className, page }) {
   return (
