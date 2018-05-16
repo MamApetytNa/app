@@ -54,7 +54,6 @@ function Footer({ classes, contact }) {
           <CompanyInfo
             address={contact.address}
             name={contact.name}
-            taxId={contact.taxId}
             className={classes.info}
           />
         </Section>

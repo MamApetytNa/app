@@ -44,9 +44,11 @@ function ContactInfo({
         {address.street}<br />
         {address.zip}&nbsp;{address.city}
       </Typography>
-      <Typography className={classes.taxId}>
-        <strong>{texts.TAX_ID}:</strong> {taxId}
-      </Typography>
+      {taxId && (
+        <Typography className={classes.taxId}>
+          <strong>{texts.TAX_ID}:</strong> {taxId}
+        </Typography>
+      )}
       {iban && (
         <Typography className={classes.iban}>
           <strong>{texts.IBAN}:</strong><br />{iban}
