@@ -1,9 +1,10 @@
 import classNames from 'classnames';
 import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import React from 'react';
 import { withProps } from 'recompose';
+
+import { rules } from '../utils/css';
 
 import Map from './Map';
 import ContactInfo from './ContactInfo';
@@ -22,11 +23,7 @@ const styles = theme => ({
       marginRight: 0,
     },
   },
-  sectionHeading: {
-    color: 'inherit',
-    fontWeight: 'bold',
-    marginBottom: theme.spacing.unit * 2,
-  },
+  sectionHeading: rules.sectionHeading(theme),
 });
 
 function Contact({ classes, className, contact }) {

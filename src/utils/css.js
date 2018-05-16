@@ -27,5 +27,10 @@ export const rules = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  sectionHeading: theme => ({
+    color: 'inherit',
+    fontWeight: 'bold',
+    marginBottom: theme.spacing.unit,
+  }),
 };
 

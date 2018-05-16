@@ -7,6 +7,8 @@ import EmailIcon from '@material-ui/icons/Email';
 import React from 'react';
 import { withProps } from 'recompose';
 
+import { rules } from '../../utils/css';
+
 import FacebookIcon from './facebook.svg';
 import InstagramIcon from './instagram.svg';
 
@@ -32,11 +34,7 @@ const styles = theme => ({
   root: {
     fontStyle: 'normal',
   },
-  sectionHeading: {
-    color: 'inherit',
-    fontWeight: 'bold',
-    marginBottom: theme.spacing.unit * 2,
-  },
+  sectionHeading: rules.sectionHeading(theme),
   contact: {
     color: 'inherit',
     textDecoration: 'none',

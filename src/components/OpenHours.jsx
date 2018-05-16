@@ -3,6 +3,8 @@ import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import React from 'react';
 
+import { rules } from '../utils/css';
+
 const texts = {
   OPEN_HOURS_HEADING: 'Godziny otwarcia',
 };
@@ -15,11 +17,7 @@ const styles = theme => ({
       maxWidth: '15em',
     },
   },
-  sectionHeading: {
-    color: 'inherit',
-    fontWeight: 'bold',
-    marginBottom: theme.spacing.unit * 2,
-  },
+  sectionHeading: rules.sectionHeading(theme),
   paragraph: {
     color: 'inherit',
   },
