@@ -28,6 +28,7 @@ export default function run({ port, buildDir, webpackConfig: { clientConfig, ser
     const url = `http://localhost:${port}/`;
 
     const server = app.listen(port, () => {
+      // eslint-disable-next-line no-console
       console.log(`Listening @ ${url}`);
     });
 

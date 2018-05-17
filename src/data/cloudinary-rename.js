@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const cloudinary = require('cloudinary');
 
 cloudinary.config({
