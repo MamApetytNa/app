@@ -1,4 +1,4 @@
-import { withTheme } from 'material-ui/styles';
+import { withTheme } from '@material-ui/core/styles';
 import { pipe } from 'ramda';
 import React from 'react';
 import { withSizes } from 'react-sizes';

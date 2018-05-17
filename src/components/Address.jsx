@@ -1,1 +1,0 @@
-https://jakdojade.pl/poznan/trasa/?tc=52.394712:16.922746&tn=Olga%20ma%20Wypieki

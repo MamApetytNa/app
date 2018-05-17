@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from 'redux-first-router-link';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 import { goHome } from '../actions';
 

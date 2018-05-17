@@ -1,11 +1,12 @@
 import React from 'react';
 import { pipe } from 'ramda';
 
-import Button from 'material-ui/Button';
-import Grid from 'material-ui/Grid';
-import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Typography from 'material-ui/Typography';
-import { withStyles, withTheme } from 'material-ui/styles';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import Typography from '@material-ui/core/Typography';
+import { withStyles, withTheme } from '@material-ui/core/styles';
 
 import { getSizes, getPhotoUrl, getAutoSrcSet } from '../utils/pic';
 import { linearGradient, rgba } from '../utils/css';

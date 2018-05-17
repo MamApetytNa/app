@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import MobileStepper from 'material-ui/MobileStepper';
+import MobileStepper from '@material-ui/core/MobileStepper';
 import React from 'react';
 import SwipableViews from 'react-swipeable-views';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { pipe } from 'ramda';
 
 import withState from '../utils/with-state';

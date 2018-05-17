@@ -1,8 +1,8 @@
 import React from 'react';
 
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { path, pipe } from 'ramda';
 
 import withState from '../utils/with-state';

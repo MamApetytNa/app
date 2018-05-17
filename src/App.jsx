@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { SizesProvider } from 'react-sizes';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import createGenerateClassName from 'material-ui/styles/createGenerateClassName';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import createGenerateClassName from '@material-ui/core/styles/createGenerateClassName';
 
 import App from './components/App';
 import { jss, JssProvider } from './utils/jss';

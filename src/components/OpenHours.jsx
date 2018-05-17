@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import React from 'react';
 
 import { rules } from '../utils/css';

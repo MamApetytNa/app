@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import SvgIcon from 'material-ui/SvgIcon';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import SvgIcon from '@material-ui/core/SvgIcon';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import React from 'react';

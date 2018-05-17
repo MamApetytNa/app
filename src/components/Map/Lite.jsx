@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import { stringify } from 'query-string';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { getSrcSetString } from '../../utils/pic';
 
 const KEY = 'AIzaSyB7DdWEzPniEhyzxD8iCeaf0itsnqXC3jI';

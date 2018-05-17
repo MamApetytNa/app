@@ -1,6 +1,6 @@
 import React from 'react';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import createGenerateClassName from 'material-ui/styles/createGenerateClassName';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import createGenerateClassName from '@material-ui/core/styles/createGenerateClassName';
 
 import { jss, JssProvider, SheetsRegistry } from '../utils/jss';
 

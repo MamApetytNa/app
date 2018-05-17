@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import { withStyles } from 'material-ui/styles';
-import List, { ListItem } from 'material-ui/List';
+import { withStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import React from 'react';
 
 import { goToAbout, goToContact, goToItemList } from '../../actions';

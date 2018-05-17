@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import { stringify } from 'query-string';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const SITE_URL = 'https://beta.olgamawypieki.pl';
 const API_URL = 'https://www.google.com/maps/embed/v1/place';

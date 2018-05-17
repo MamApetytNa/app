@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import Grid from 'material-ui/Grid';
-import { withStyles } from 'material-ui/styles';
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
 import React from 'react';
 
 import Featured from './Featured';

@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Input, { InputLabel } from 'material-ui/Input';
-import { FormControl } from 'material-ui/Form';
-import Grid from 'material-ui/Grid';
-import Select from 'material-ui/Select';
-import Typography from 'material-ui/Typography';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Grid from '@material-ui/core/Grid';
+import Select from '@material-ui/core/Select';
+import Typography from '@material-ui/core/Typography';
 
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { path, pipe } from 'ramda';
 
 import withState from '../utils/with-state';

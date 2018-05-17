@@ -1,8 +1,10 @@
 import classNames from 'classnames';
-import Card, { CardContent, CardHeader } from 'material-ui/Card';
-import Grid from 'material-ui/Grid';
-import Typography from 'material-ui/Typography';
-import { withStyles, withTheme } from 'material-ui/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import { withStyles, withTheme } from '@material-ui/core/styles';
 import { pipe } from 'ramda';
 import React from 'react';
 
