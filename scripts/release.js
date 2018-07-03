@@ -125,7 +125,7 @@ async function release() {
   );
 
   await fs.copy(paths.appPackageJson, path.join(paths.appRelease, 'package.json'));
-  await fs.copy(paths.appYarnLock, path.join(paths.appRelease, 'yarn.lock'));
+  await fs.copy(paths.appPackageLock, path.join(paths.appRelease, 'package-lock.json'));
 
   await adjustManifest(
     path.join(paths.appRelease, 'public', 'icons', 'manifest.json'),
